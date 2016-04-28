@@ -45,7 +45,7 @@
 						<h1 class="site-title">
 						    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                             <!-- <?php bloginfo( 'name' ); ?> -->
-						    
+						      
 						    <?php if ( get_header_image() ) : ?>
                             <?php
                                 /**
