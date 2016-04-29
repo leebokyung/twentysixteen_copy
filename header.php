@@ -8,7 +8,7 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
-
+ 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -19,6 +19,12 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	
+	<!-- bxSlider Javascript file -->
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="<?php bloginfo('template_url'); ?>/jquery.bxslider.css" rel="stylesheet" />
+	
 </head>
 
 <body <?php body_class(); ?>>
@@ -111,6 +117,14 @@
 						<?php endif; ?>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
+				</div>
+				<div id="hd_sch">
+                    <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
+                        <label>
+                        <input type="search" class="search-field" placeholder="검색" value="" id=""/>
+                        </label>
+                        <button type="submit" class="search-submit"></button>
+				   </form>  
 				</div>
 			</div><!-- .site-header-main -->
 		</header><!-- .site-header -->

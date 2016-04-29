@@ -20,10 +20,16 @@ get_header(); ?>
 	    
 	    <div id="idx_banner">
             <h2>이벤트 및 광고 배너</h2>
-            <ul>
+            <ul class="bxslider">
+                <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/img/banner01.png" alt="" /></a></li>
                 <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/img/banner01.png" alt="" /></a></li>
             </ul>
         </div>
+        <script>
+            jQuery(document).ready(function($){
+                $('.bxslider').bxSlider();
+            });
+        </script>
         
         <div id="idx_shortcut">
             <ul>
@@ -239,7 +245,7 @@ get_header(); ?>
         
         <div id="idx-new-gallery">
             <h2><a href="#">갤러리</a></h2>
-            <ul class="">
+            <ul>
                 <li>
                     <a href="#none">
                     <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
@@ -365,8 +371,75 @@ get_header(); ?>
             </ul>    
         </div>
         
-        <div id="name">
-          
+        <div id="idx-new-tip">
+            <h2><a href="#">강좌/팁</a></h2>
+            <ul>
+                <li>
+                    <a href="#none">
+                        <div>
+                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                        </div>
+                        <div class="new-con-txt">
+                            <span class="new-title">게시글 제목</span>
+                            <span class="new-comment"><b>6</b></span>
+                            <br>
+                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</span>
+                            <br>
+                            <span class="new-name">닉네임</span>
+                            <span class="new-date">03:35</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="new-content-nomargin">
+                    <a href="#none">
+                        <div>
+                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                        </div>
+                        <div class="new-con-txt">
+                            <span class="new-title">게시글 제목</span>
+                            <span class="new-comment"><b>6</b></span>
+                            <br>
+                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</span>
+                            <br>
+                            <span class="new-name">닉네임</span>
+                            <span class="new-date">03:35</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <div>
+                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                        </div>
+                        <div class="new-con-txt">
+                            <span class="new-title">게시글 제목</span>
+                            <span class="new-comment"><b>6</b></span>
+                            <br>
+                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</span>
+                            <br>
+                            <span class="new-name">닉네임</span>
+                            <span class="new-date">03:35</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="new-content-nomargin">
+                    <a href="#none">
+                        <div>
+                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                        </div>
+                        <div class="new-con-txt">
+                            <span class="new-title">게시글 제목</span>
+                            <span class="new-comment"><b>6</b></span>
+                            <br>
+                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. </span>
+                            <br>
+                            <span class="new-name">닉네임</span>
+                            <span class="new-date">03:35</span>
+                        </div>
+                    </a>
+                </li>
+                <a href="#" class="new-content-more">더보기</a>
+            </ul>    
         </div>
 	</div>
 
