@@ -184,6 +184,7 @@ button,
 input,
 select,
 textarea {
+    font-family:Montserrat, "Helvetica Neue", sans-serif;
 	/*color: #1a1a1a;
 	font-family: Merriweather, Georgia, serif;
 	font-size: 16px;
@@ -964,6 +965,78 @@ a:active {
 	padding: 0 0.538461538em;
 }
 
+
+
+/* 메인 - main */
+
+#idx_banner{margin-bottom:15px;}
+#idx_banner h2{position:absolute;font-size:0;line-height:0;overflow:hidden}
+#idx_banner ul{margin:0;padding:0;list-style:none}
+#idx_banner li{width:100%;height:230px;background:tomato}
+
+#idx_shortcut{height:80px;margin-bottom:15px;}
+#idx_shortcut ul{margin:0;padding:0;list-style:none}
+#idx_shortcut li a{float:left;width:60px;height:52px;margin-left:20px;font-size:12px;color:#656565;text-align:center;}
+#idx_shortcut li span{display:inline-block;padding-top:60px;}
+
+#idx_shortcut li.sc_notice a{background: url('img/shortcut_icon_01.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_latest a{background: url('img/shortcut_icon_02.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_g5 a{background: url('img/shortcut_icon_03.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_yc5 a{background: url('img/shortcut_icon_04.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_data a{background: url('img/shortcut_icon_05.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_gallery a{background: url('img/shortcut_icon_06.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_nquiryt a{background: url('img/shortcut_icon_07.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_contact a{background: url('img/shortcut_icon_08.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_tip a{background: url('img/shortcut_icon_09.png') 0 -58px no-repeat}
+#idx_shortcut li.sc_customer a{background: url('img/shortcut_icon_10.png') 0 -58px no-repeat}
+
+#idx_shortcut li.sc_notice:hover a{background: url('img/shortcut_icon_01.png') no-repeat}
+#idx_shortcut li.sc_g5:hover a{background: url('img/shortcut_icon_02.png') no-repeat}
+#idx_shortcut li.sc_yc5:hover a{background: url('img/shortcut_icon_03.png') no-repeat}
+#idx_shortcut li.sc_data:hover a{background: url('img/shortcut_icon_04.png') no-repeat}
+#idx_shortcut li.sc_gallery:hover a{background: url('img/shortcut_icon_05.png') no-repeat}
+#idx_shortcut li.sc_nquiryt:hover a{background: url('img/shortcut_icon_06.png') no-repeat}
+#idx_shortcut li.sc_contact:hover a{background: url('img/shortcut_icon_07.png') no-repeat}
+#idx_shortcut li.sc_customer:hover a{background: url('img/shortcut_icon_08.png') no-repeat}
+
+#idx_shortcut:after{display:block;visibility:hidden;clear:both;content:""}
+
+#idx-new-content{}
+#idx-new-content:after{display:block;visibility:hidden;clear:both;content:""}
+.new-content{position:relative;float:left;width:396px;margin:0 20px 15px 0;border:1px solid #e3e3e3;background:#fff}
+.new-content-nomargin{margin-right:0;}
+.new-content h2{padding:15px;font-size:16px;border-bottom:1px solid #e3e3e3;}
+.new-content h2 a{color:#656565;}
+.new-content ul{margin:0;padding:0;list-style:none}
+.new-content li{padding:3px 15px;border-bottom:1px solid #e3e3e3;}
+.new-content li:last-child{border-bottom:none}
+.new-content li:hover{background:#f9f9f9}
+.new-content li:after{display:block;visibility:hidden;clear:both;content:""}
+.new-content li a{font-size:13px;font-family:Montserrat, "Helvetica Neue", sans-serif;color:#656565;}    
+.new-content li span{float:left;}
+
+.new-content li .new-cont-title{width:309px;}
+.new-content li .new-comment{width:20px;}
+.new-content li .new-date{width:35px;}
+.new-content b{color:#27b324;}
+
+.new-content-more{position:absolute;right:15px;top:15px;width:20px;height:20px;text-indent:-99999px;background:url('img/icon_sign.png') 5px -29px no-repeat}  
+
+#idx-new-gallery{}
+#idx-new-gallery:after{display:block;visibility:hidden;clear:both;content:""}
+#idx-new-gallery{position:relative;float:left;width:812px;margin:0 20px 15px 0;border:1px solid #e3e3e3;background:#fff}
+#idx-new-gallery h2{padding:15px;font-size:16px;border-bottom:1px solid #e3e3e3;}
+#idx-new-gallery h2 a{color:#656565;}
+#idx-new-gallery ul{margin:0;padding:0;list-style:none;padding:15px}
+#idx-new-gallery li{float:left;margin-right:14px;margin-bottom:15px}
+#idx-new-gallery li.new-content-nomargin{margin-right:0;}
+#idx-new-gallery li img{width:118px;height:118px;margin-bottom:10px;}
+#idx-new-gallery li span{text-align:center;}
+#idx-new-gallery li span.new-name{background:url('img/') no-repeat}
+#idx-new-gallery li span.new-name,
+#idx-new-gallery li span.new-date{color:#a1a1a1;}
+#idx-new-gallery li a{font-size:13px;color:#656565;}
+#idx-new-gallery li span b{color:#27b324;}
 
 /**
  * 7.0 - Accessibility

@@ -158,7 +158,7 @@ a.pg_page {border:0}
 
 /* 게시판 버튼 */
 /* 목록 버튼 */
-#bo_gall a.btn_b01 {}
+#bo_list a.btn_b01 {padding:8px 7px;}
 #bo_gall a.btn_b01:focus, #bo_gall a.btn_b01:hover {}
 #bo_gall a.btn_b02 {}
 #bo_gall a.btn_b02:focus, #bo_gall a.btn_b02:hover {}
@@ -239,7 +239,7 @@ a.pg_page {border:0}
 /* ### 기본 스타일 커스터마이징 끝 ### */
 
 /* 게시판용 버튼 */
-a.btn_b01 {display:inline-block;padding:7px;border:1px solid #d9ded9;background:#f2f5f9;color:#000;text-decoration:none;vertical-align:middle}
+a.btn_b01 {display:inline-block;padding:8px 7px;border:1px solid #d9ded9;background:#f2f5f9;color:#000;text-decoration:none;vertical-align:middle}
 a.btn_b01:focus, a.btn_b01:hover {text-decoration:none;border:1px solid #d9ded9;}
 a.btn_b02 {display:inline-block;padding:7px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
 a.btn_b02:focus, a.btn_b02:hover {text-decoration:none;border:1px solid #3b3c3f;}

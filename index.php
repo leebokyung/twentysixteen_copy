@@ -17,46 +17,358 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+	    
+	    <div id="idx_banner">
+            <h2>이벤트 및 광고 배너</h2>
+            <ul>
+                <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/img/banner01.png" alt="" /></a></li>
+            </ul>
+        </div>
+        
+        <div id="idx_shortcut">
+            <ul>
+                <li class="sc_notice"><a href="#"><span>공지</span></a></li>
+                <li class="sc_latest"><a href="#"><span>최근글</span></a></li>
+                <li class="sc_g5"><a href="#"><span>그누보드5</span></a></li>
+                <li class="sc_yc5"><a href="#"><span>영카트5</span></a></li>
+                <li class="sc_data"><a href="#"><span>회원자료</span></a></li>
+            <ul>
+            </ul>    
+                <li class="sc_gallery"><a href="#"><span>갤러리</span></a></li>
+                <li class="sc_nquiryt"><a href="#"><span>1:1문의</span></a></li>
+                <li class="sc_contact"><a href="#"><span>찾아오시는 길</span></a></li>
+                <li class="sc_tip"><a href="#"><span>강좌/팁</span></a></li>
+                <li class="sc_customer"><a href="#"><span>고객센터</span></a></li>
+            </ul>
+        </div>
+            
+	    <div id="idx-new-content">
+            <div class="new-content">
+                <h2><a href="#">커뮤니티</a></h2>
+                <ul>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"}> 게시글 1 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"}> 게시글 2 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"}> 게시글 3 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"}> 게시글 4 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"}> 게시글 5 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"}> 게시글 6 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="new-content-more">더보기</a>
+            </div>
+            <div class="new-content new-content-nomargin">
+                <h2><a href="#">회원자료실</a></h2>
+                <ul>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 1 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 2 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 3 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 4 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 5 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 6 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="new-content-more">더보기</a>
+            </div>
+            <div class="new-content">
+                <h2><a href="#">그누보드 5</a></h2>
+                <ul>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 1 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 2 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 3 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 4 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 5 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 6 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="new-content-more">더보기</a>
+            </div>
+            <div class="new-content new-content-nomargin">
+                <h2><a href="#">영카트 5</a></h2>
+                <ul>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 1 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 2 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 3 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 4 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 5 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.naver.com/">
+                        <span class="new-cont-title"> 게시글 6 입니다 </span>
+                        <span class="new-comment"><b>3</b></span>
+                        <span class="new-date">12:05</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="new-content-more">더보기</a>
+            </div>
+        </div>
+        
+        <div id="idx-new-gallery">
+            <h2><a href="#">갤러리</a></h2>
+            <ul class="">
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li class="new-content-nomargin">
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+                <li class="new-content-nomargin">
+                    <a href="#none">
+                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                    <span class="new-title">게시글 제목</span>
+                    <span class="new-comment"><b>6</b></span>
+                    <br>
+                    <span class="new-name">닉네임</span>
+                    <span class="new-date">03:35</span>
+                    </a>
+                </li>
+               
+                <a href="#" class="new-content-more">더보기</a>
+            </ul>    
+        </div>
+        
+        <div id="name">
+          
+        </div>
+	</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -160,7 +160,7 @@ a.pg_page {border:0}
 
 /* 게시판 버튼 */
 /* 목록 버튼 */
-#bo_list a.btn_b01 {padding: 4px 7px;}
+#bo_list a.btn_b01 {padding:8px 7px;}
 #bo_list a.btn_b01:focus, #bo_list a.btn_b01:hover {}
 #bo_list a.btn_b02 {}
 #bo_list a.btn_b02:focus, #bo_list a.btn_b02:hover {}
@@ -255,11 +255,11 @@ a.pg_page {border:0}
 /* ### 기본 스타일 커스터마이징 끝 ### */
 
 /* 게시판용 버튼 */
-a.btn_b01 {display:inline-block;padding:4px 7px;border:1px solid #d9ded9;background:#f2f5f9;color:#000;text-decoration:none;vertical-align:middle}
+a.btn_b01 {display:inline-block;padding:8px 7px;border:1px solid #d9ded9;background:#f2f5f9;color:#000;text-decoration:none;vertical-align:middle}
 a.btn_b01:focus, a.btn_b01:hover {text-decoration:none;border:1px solid #d9ded9;}
-a.btn_b02 {display:inline-block;padding:4px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
+a.btn_b02 {display:inline-block;padding:7px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
 a.btn_b02:focus, a.btn_b02:hover {text-decoration:none;border:1px solid #3b3c3f;}
-a.btn_admin {display:inline-block;padding:3px 7px;border:1px solid #e8180c;background:#e8180c;color:#fff;text-decoration:none;vertical-align:middle} /* 관리자 전용 버튼 */
+a.btn_admin {display:inline-block;padding:7px;border:1px solid #e8180c;background:#e8180c;color:#fff;text-decoration:none;vertical-align:middle} /* 관리자 전용 버튼 */
 a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e8180c;}
 
 /* 댓글 스타일 */
@@ -413,15 +413,15 @@ fieldset#bo_sch{border:0}
 .icon-comment-name{background:url('../../../img/icon-write.gif') 0 -24px no-repeat}
 .icon-comment-date{background:url('../../../img/icon-write.gif') -27px -24px no-repeat}
 
-.icon-btn-next{width:15px;background:url('../../../img/icon-button.png') -110px -26px no-repeat}
-.icon-btn-prev{width:15px;background:url('../../../img/icon-button.png') -95px -26px no-repeat}
-.icon-btn-modify{background:url('../../../img/icon-button.png') 0 0 no-repeat}
+.icon-btn-next{width:15px;background:url('../../../img/icon-button.png') -110px -30px no-repeat}
+.icon-btn-prev{width:15px;background:url('../../../img/icon-button.png') -95px -30px no-repeat}
+.icon-btn-modify{background:url('../../../img/icon-button.png') 0 -2px no-repeat}
 .icon-btn-delete{background:url('../../../img/icon-button.png') -24px 1px no-repeat}
-.icon-btn-copy{background:url('../../../img/icon-button.png') -25px -26px no-repeat}
+.icon-btn-copy{background:url('../../../img/icon-button.png') -25px -30px no-repeat}
 .icon-btn-move{background:url('../../../img/icon-button.png') -51px 0px no-repeat}
-.icon-btn-list{background:url('../../../img/icon-button.png') -102px 1px no-repeat}
-.icon-btn-comment{background:url('../../../img/icon-button.png') -76px -26px no-repeat}
-.icon-btn-write{background:url('../../../img/icon-button.png') -75px 0px no-repeat}
+.icon-btn-list{background:url('../../../img/icon-button.png') -102px -3px no-repeat}
+.icon-btn-comment{background:url('../../../img/icon-button.png') -76px -30px no-repeat}
+.icon-btn-write{background:url('../../../img/icon-button.png') -75px -2px no-repeat}
 .icon-btn-scrap{background:url('../../../img/icon-button.png') -51px -28px no-repeat}
 
 .icon-btn-like{}
