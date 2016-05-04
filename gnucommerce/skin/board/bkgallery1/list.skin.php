@@ -38,10 +38,10 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
 
     <!-- 게시판 페이지 정보 및 버튼 시작 { -->
     <div class="bo_fx">
-        <div id="bo_list_total">
+        <!-- <div id="bo_list_total">
             <span>Total <?php echo number_format($total_count) ?> /</span>
             <?php echo $page ?> <?php _e('페이지', GC_NAME); ?>
-        </div>
+        </div> -->
 
         <?php if ($rss_href || $write_href) { ?>
         <ul class="btn_bo_user">

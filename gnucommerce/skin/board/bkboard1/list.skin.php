@@ -50,10 +50,10 @@ if (!$is_show_field['wdate']) $colspan--;
 
     <!-- 게시판 페이지 정보 및 버튼 시작 { -->
     <div class="bo_fx">
-        <div id="bo_list_total">
+        <!-- <div id="bo_list_total">
             <span>Total <?php echo number_format($total_count) ?> /</span>
             <?php echo $page ?> <?php _e('페이지', GC_NAME); ?>
-        </div>
+        </div> -->
 
         <?php if ($rss_href || $write_href) { ?>
         <ul class="btn_bo_user">
@@ -138,12 +138,10 @@ if (!$is_show_field['wdate']) $colspan--;
                  ?>
                 <a href="<?php echo $list[$i]['ca_name_href'] ?>" class="bo_cate_link"><?php echo $list[$i]['ca_name'] ?></a>
                 <?php } ?>
-
                 <a href="<?php echo $list[$i]['href'] ?>">
                     <?php echo $list[$i]['subject'] ?>
                     <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only"><?php _e('댓글', GC_NAME);?></span><?php echo $list[$i]['comment_cnt']; ?><?php } ?>
                 </a>
-
                 <?php
                 // if ($list[$i]['link']['count']) { echo '['.$list[$i]['link']['count']}.']'; }
                 // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }

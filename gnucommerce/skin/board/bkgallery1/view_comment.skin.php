@@ -29,12 +29,12 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
             <h1><?php echo gc_get_text($list[$i]['user_display_name']); ?><?php _e('님의 댓글', GC_NAME);   //님의 댓글?></h1>
             <?php echo $list[$i]['name'] ?>
             <?php if ($cmt_depth) { ?><img src="<?php echo $board_skin_url ?>/img/icon_reply.gif" class="icon_reply" alt="댓글의 댓글"><?php } ?>
-            <?php if ($is_ip_view) { ?>
+            <!-- <?php if ($is_ip_view) { ?>
             아이피
             <span class="bo_vc_hdinfo"><?php echo $list[$i]['ip']; ?></span>
             <?php } ?>
             작성일
-            <span class="bo_vc_hdinfo"><time datetime="<?php echo date('Y-m-d\TH:i:s+09:00', strtotime($list[$i]['datetime'])) ?>"><?php echo $list[$i]['datetime'] ?></time></span>
+            <span class="bo_vc_hdinfo"><time datetime="<?php echo date('Y-m-d\TH:i:s+09:00', strtotime($list[$i]['datetime'])) ?>"><?php echo $list[$i]['datetime'] ?></time></span> -->
         </header>
 
         <!-- 댓글 출력 -->

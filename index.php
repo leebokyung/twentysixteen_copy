@@ -241,206 +241,206 @@ get_header(); ?>
                 </ul>
                 <a href="#" class="new-content-more">더보기</a>
             </div>
-        </div>
         
-        <div id="idx-new-gallery">
-            <h2><a href="#">갤러리</a></h2>
-            <ul>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li class="new-content-nomargin">
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-                <li class="new-content-nomargin">
-                    <a href="#none">
-                    <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
-                    <span class="new-title">게시글 제목</span>
-                    <span class="new-comment"><b>6</b></span>
-                    <br>
-                    <span class="new-name">닉네임</span>
-                    <span class="new-date">03:35</span>
-                    </a>
-                </li>
-               
-                <a href="#" class="new-content-more">더보기</a>
-            </ul>    
-        </div>
-        
-        <div id="idx-new-tip">
-            <h2><a href="#">강좌/팁</a></h2>
-            <ul>
-                <li>
-                    <a href="#none">
+            <div id="idx-new-gallery">
+                <h2><a href="#">갤러리</a></h2>
+                <ul>
+                    <li>
+                        <a href="#none"><img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /></a><br>
+                        <a href="#none"><span class="new-title">게시글 제목</a></span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li class="new-content-nomargin">
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                    <li class="new-content-nomargin">
+                        <a href="#none">
+                        <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" /><br>
+                        <span class="new-title">게시글 제목</span>
+                        <span class="new-comment"><b>6</b></span>
+                        <br>
+                        <span class="new-name">닉네임</span>
+                        <span class="new-date">03:35</span>
+                        </a>
+                    </li>
+                   
+                    <a href="#" class="new-content-more">더보기</a>
+                </ul>    
+            </div>
+            
+            <div id="idx-new-tip">
+                <h2><a href="#">강좌/팁</a></h2>
+                <ul>
+                    <li>
                         <div>
-                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                            <a href="#none">
+                                <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />
+                            </a>   
                         </div>
                         <div class="new-con-txt">
-                            <span class="new-title">게시글 제목</span>
+                            <span class="new-title"><a href="#">게시글 제목</a></span>
                             <span class="new-comment"><b>6</b></span>
                             <br>
-                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</span>
+                            <span class="new-txt"><a href="#">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</a></span>
                             <br>
                             <span class="new-name">닉네임</span>
                             <span class="new-date">03:35</span>
                         </div>
-                    </a>
-                </li>
-                <li class="new-content-nomargin">
-                    <a href="#none">
+                    </li>
+                    <li class="new-content-nomargin">
                         <div>
-                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                            <a href="#none">
+                                <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />
+                            </a>   
                         </div>
                         <div class="new-con-txt">
-                            <span class="new-title">게시글 제목</span>
+                            <span class="new-title"><a href="#">게시글 제목</a></span>
                             <span class="new-comment"><b>6</b></span>
                             <br>
-                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</span>
+                            <span class="new-txt"><a href="#">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</a></span>
                             <br>
                             <span class="new-name">닉네임</span>
                             <span class="new-date">03:35</span>
                         </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#none">
-                        <div>
-                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <div>
+                            <a href="#none">
+                                <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />
+                            </a>   
                         </div>
                         <div class="new-con-txt">
-                            <span class="new-title">게시글 제목</span>
+                            <span class="new-title"><a href="#">게시글 제목</a></span>
                             <span class="new-comment"><b>6</b></span>
                             <br>
-                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</span>
+                            <span class="new-txt"><a href="#">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</a></span>
                             <br>
                             <span class="new-name">닉네임</span>
                             <span class="new-date">03:35</span>
                         </div>
-                    </a>
-                </li>
-                <li class="new-content-nomargin">
-                    <a href="#none">
+                        </a>
+                    </li>
+                    <li class="new-content-nomargin">
                         <div>
-                            <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />   
+                            <a href="#none">
+                                <img src="<?php echo get_template_directory_uri();?>/img/ex_img.png" alt="" />
+                            </a>   
                         </div>
                         <div class="new-con-txt">
-                            <span class="new-title">게시글 제목</span>
+                            <span class="new-title"><a href="#">게시글 제목</a></span>
                             <span class="new-comment"><b>6</b></span>
                             <br>
-                            <span class="new-txt">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. </span>
+                            <span class="new-txt"><a href="#">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</a></span>
                             <br>
                             <span class="new-name">닉네임</span>
                             <span class="new-date">03:35</span>
                         </div>
-                    </a>
-                </li>
-                <a href="#" class="new-content-more">더보기</a>
-            </ul>    
-        </div>
+                    </li>
+                    <a href="#" class="new-content-more">더보기</a>
+                </ul>    
+            </div>
+    	</div>
 	</div>
 
 <?php get_sidebar(); ?>

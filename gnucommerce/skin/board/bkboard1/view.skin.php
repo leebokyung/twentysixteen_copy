@@ -81,7 +81,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             <?php if ($good_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $good_href ) ?>" id="good_button" class="btn_b03" target="_blank">
-                    <span class="icon-btn-like icon-text"><?php _e('추천', GC_NAME); //추천?></span><br>
+                    <span class="icon-btn-like icon-text"><?php _e('추천', GC_NAME); //추천?></span>
                     <strong><?php echo number_format($view['wr_good']) ?></strong></a>
                 <b id="bo_v_act_good"></b>
             </span>
@@ -89,7 +89,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             <?php if ($nogood_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $nogood_href ) ?>" id="nogood_button" class="btn_b03" target="_blank">
-                    <span class="icon-btn-hate icon-text"><?php _e('비추천', GC_NAME); //비추천?></span><br>
+                    <span class="icon-btn-hate icon-text"><?php _e('비추천', GC_NAME); //비추천?></span>
                     <strong><?php echo number_format($view['wr_nogood']) ?></strong></a>
                 <b id="bo_v_act_nogood"></b>
             </span>
@@ -99,92 +99,117 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             if($board['bo_use_good'] || $board['bo_use_nogood']) {
         ?>
         <div id="bo_v_act">
-            <?php if($board['bo_use_good']) { ?><span><?php _e('추천', GC_NAME); //추천?> <strong><?php echo number_format($view['wr_good']) ?></strong></span><?php } ?>
-            <?php if($board['bo_use_nogood']) { ?><span><?php _e('비추천', GC_NAME); //비추천?> <strong><?php echo number_format($view['wr_nogood']) ?></strong></span><?php } ?>
+            <p class="bo_v_act_view">
+                <?php if($board['bo_use_good']) { ?>
+                <span class="icon-btn-like icon-text"><?php _e('추천', GC_NAME); //추천?></span>
+                <?php } ?>
+                <strong><?php echo number_format($view['wr_good']) ?></strong>
+            </p>
+            <p class="bo_v_act_view">
+                <?php if($board['bo_use_nogood']) { ?>
+                <span class="icon-btn-hate icon-text"><?php _e('비추천', GC_NAME); //비추천?></span>
+                <?php } ?>
+                <strong><?php echo number_format($view['wr_nogood']) ?></strong>
+            </p>
         </div>
         <?php
             }
         }
         ?>
         <!-- } 스크랩 추천 비추천 끝 -->
-        
+
         <section id="bo_v_info">
-        <h2><?php _e('페이지정보', GC_NAME);?></h2>
-        <span class="icon-view-name icon-text">작성자</span><strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong> <!-- <?php _e('작성자', GC_NAME);?> -->
-        <span class="icon-view-date icon-text">날짜</span><strong><?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong> <!-- <span class="sound_only"><?php _e('날짜', GC_NAME);?></span> -->
-        <span class="icon-view-hits icon-text">조회수</span><strong>조회 <?php echo number_format($view['wr_hit']) ?></strong> <!-- <?php _e('조회수', GC_NAME);?> -->
-        <span class="icon-view-comment icon-text">댓글</span><strong>댓글 <?php echo number_format($view['wr_comment']) ?></strong> <!-- <?php _e('댓글', GC_NAME);?> -->
-    </section>
-
-    <?php
-    $cnt = 0;
-    if ($view['file']['count']) {
-        $cnt = 0;
-        for ($i=0; $i<count($view['file']); $i++) {
-            if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view'])
-                $cnt++;
-        }
-    }
-    ?>
-
-    <?php if($cnt) { ?>
-    <!-- 첨부파일 시작 { -->
-    <section id="bo_v_file">
-        <h2><?php _e('첨부파일', GC_NAME);?></h2>
-        <ul>
-        <?php
-        // 가변 파일
-        for ($i=0; $i<count($view['file']); $i++) {
-            if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view']) {
-         ?>
-            <li>
-                <a href="<?php echo esc_url( $view['file'][$i]['href'] ); ?>" class="view_file_download no-ajaxy">
-                    <span class="icon-view-file icon-text">첨부파일</span><!-- <img src="<?php echo $board_skin_url ?>/img/icon_file.gif" alt="첨부"> -->
-                    <strong><?php echo $view['file'][$i]['source'] ?></strong>
-                    <?php echo $view['file'][$i]['content'] ?> (<?php echo $view['file'][$i]['size'] ?>)
-                </a>
-                <span class="bo_v_file_cnt"><?php echo $view['file'][$i]['download'] ?><?php _e('회', GC_NAME);    //회 ?></span>
-                <span class="bo_v_file_date"><?php echo $view['file'][$i]['datetime'] ?></span>
-            </li>
-        <?php
-            }
-        }
-         ?>
-        </ul>
-    </section>
-    <!-- } 첨부파일 끝 -->
-    <?php } ?>
-
-    <?php
-    if (implode('', $view['link'])) {
-     ?>
-     <!-- 관련링크 시작 { -->
-    <section id="bo_v_link">
-        <h2><?php _e('관련링크', GC_NAME); //관련링크?></h2>
-        <ul>
-        <?php
-        // 링크
-        $cnt = 0;
-        for ($i=1; $i<=count($view['link']); $i++) {
-            if ($view['link'][$i]) {
-                $cnt++;
-                $link = gc_cut_str($view['link'][$i], 70);
-         ?>
-            <li>
-                <a href="<?php echo esc_url( $view['link_href'][$i] ); ?>" target="_blank">
-                    <span class="icon-view-link icon-text">관련링크</span>
-                    <!-- <img src="<?php echo $board_skin_url ?>/img/icon_link.gif" alt="<?php _e('관련링크', GC_NAME); //관련링크?>"> -->
-                    <strong><?php echo $link ?></strong>
-                </a>
-                <span class="bo_v_link_cnt"><?php echo $view['link_hit'][$i] ?><?php _e('회', GC_NAME); //회?></span>
-            </li>
-        <?php
-            }
-        }
-         ?>
-        </ul>
-    </section>
-    <!-- } 관련링크 끝 -->
+            <h2><?php _e('페이지정보', GC_NAME);?></h2>
+            <span class="icon-view-name icon-text">작성자</span><strong><?php echo $view['name'] ?></strong> <!-- <?php _e('작성자', GC_NAME);?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?> -->
+            <span class="icon-view-date icon-text">날짜</span><strong><?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong> <!-- <span class="sound_only"><?php _e('날짜', GC_NAME);?></span> -->
+            <span class="icon-view-hits icon-text">조회수</span><strong>조회 <?php echo number_format($view['wr_hit']) ?></strong> <!-- <?php _e('조회수', GC_NAME);?> -->
+            <span class="icon-view-comment icon-text">댓글</span><strong>댓글 <?php echo number_format($view['wr_comment']) ?></strong> <!-- <?php _e('댓글', GC_NAME);?> -->
+            <button type="button" class="bo_v_add">첨부파일+링크</button>
+            <!-- 첨부파일 시작 { -->
+            <div id="bo_v_file" class="pvji_open  pv_ji_close">
+                <h2><?php _e('첨부파일', GC_NAME);?></h2>
+                <ul>
+                    <?php
+                    // 가변 파일
+                    for ($i=0; $i<count($view['file']); $i++) {
+                        if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view']) {
+                     ?>
+                        <li>
+                            <a href="<?php echo esc_url( $view['file'][$i]['href'] ); ?>" class="view_file_download no-ajaxy">
+                                <span class="icon-view-file icon-text">첨부파일</span><!-- <img src="<?php echo $board_skin_url ?>/img/icon_file.gif" alt="첨부"> -->
+                                <strong><?php echo $view['file'][$i]['source'] ?></strong>
+                                <?php echo $view['file'][$i]['content'] ?> (<?php echo $view['file'][$i]['size'] ?>)
+                            </a>
+                            <span class="bo_v_file_cnt"><?php echo $view['file'][$i]['download'] ?><?php _e('회', GC_NAME);    //회 ?></span>
+                            <span class="bo_v_file_date"><?php echo $view['file'][$i]['datetime'] ?></span>
+                        </li>
+                    <?php
+                        }
+                    }
+                     ?>   
+                </ul>
+       
+                <?php
+                $cnt = 0;
+                if ($view['file']['count']) {
+                    $cnt = 0;
+                    for ($i=0; $i<count($view['file']); $i++) {
+                        if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view'])
+                            $cnt++;
+                    }
+                }
+                ?>    
+        
+                <?php if($cnt) { ?>
+                
+                <!-- } 첨부파일 끝 -->
+                <?php } ?>
+            
+                <?php
+                if (implode('', $view['link'])) {
+                 ?>
+                 <!-- 관련링크 시작 { -->
+                <div id="bo_v_link">
+                    <h2><?php _e('관련링크', GC_NAME); //관련링크?></h2>
+                    <ul>
+                    <?php
+                    // 링크
+                    $cnt = 0;
+                    for ($i=1; $i<=count($view['link']); $i++) {
+                        if ($view['link'][$i]) {
+                            $cnt++;
+                            $link = gc_cut_str($view['link'][$i], 70);
+                     ?>
+                        <li>
+                            <a href="<?php echo esc_url( $view['link_href'][$i] ); ?>" target="_blank">
+                                <span class="icon-view-link icon-text">관련링크</span>
+                                <!-- <img src="<?php echo $board_skin_url ?>/img/icon_link.gif" alt="<?php _e('관련링크', GC_NAME); //관련링크?>"> -->
+                                <strong><?php echo $link ?></strong>
+                            </a>
+                            <span class="bo_v_link_cnt"><?php echo $view['link_hit'][$i] ?><?php _e('회', GC_NAME); //회?></span>
+                        </li>
+                    <?php
+                        }
+                    }
+                     ?>
+                    </ul>
+                </div>
+                <!-- } 관련링크 끝 -->
+            </div>
+        </section>
+    
+    <script>
+    jQuery(document).ready(function($){
+        $('button', '#bo_v_info').toggle(function(){
+            $(this).addClass('pv_ji_cl');
+            $(this).next('div.pvji_open').removeClass('pv_ji_close');
+        },function(){
+            $(this).removeClass('pv_ji_cl');
+            $(this).next('div.pvji_open').addClass('pv_ji_close');
+        });
+    });
+    </script>
+    
     <?php } ?>
     </section>
 
