@@ -961,7 +961,7 @@ a:active {
 #idx-new-gallery li.new-content-nomargin{margin-right:0;}
 #idx-new-gallery li img{width:118px;height:118px;margin-bottom:10px;}
 #idx-new-gallery li span{text-align:center;}
-#idx-new-gallery li span.new-name{padding-right:5px;font-size:0.750em;color:#a1a1a1;}
+#idx-new-gallery li span.new-name{/*padding-right:5px;*/font-size:0.750em;color:#a1a1a1;}
 #idx-new-gallery li span.new-date{padding-left:7px;background:url('img/icon_sign.png') 0 -10px no-repeat;font-size:0.750em;color:#a1a1a1;}
 #idx-new-gallery li a{font-size:0.813em;color:#656565;}
 #idx-new-gallery li a:hover{color:#5b81d6}
@@ -2453,7 +2453,8 @@ p > video {
     .new-content li .new-cont-title{width:84%;}
     .new-content li .new-date{width:11%;}
     
-    #idx-new-gallery li{width:29%;}
+    #idx-new-gallery li{width:21%;/*width:29%;*/}
+    #idx-new-gallery li img{width:100%;height:auto}
     
     #idx-new-tip li{width:49%;margin-top:1%}
     #idx-new-tip li:nth-child(odd){margin-right:2%}
