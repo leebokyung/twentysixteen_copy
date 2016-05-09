@@ -38,11 +38,11 @@ get_header(); ?>
                 <li class="sc_g5"><a href="#"><span>그누보드5</span></a></li>
                 <li class="sc_yc5"><a href="#"><span>영카트5</span></a></li>
                 <li class="sc_data"><a href="#"><span>회원자료</span></a></li>
-            <ul>
-            </ul>    
+            </ul> 
+            <ul class="ul-margin">
                 <li class="sc_gallery"><a href="#"><span>갤러리</span></a></li>
                 <li class="sc_nquiryt"><a href="#"><span>1:1문의</span></a></li>
-                <li class="sc_contact"><a href="#"><span>찾아오시는 길</span></a></li>
+                <li class="sc_contact"><a href="#"><span>오시는 길</span></a></li>
                 <li class="sc_tip"><a href="#"><span>강좌/팁</span></a></li>
                 <li class="sc_customer"><a href="#"><span>고객센터</span></a></li>
             </ul>
@@ -54,42 +54,42 @@ get_header(); ?>
                 <ul>
                     <li>
                         <a href="http://www.naver.com/">
-                        <span class="new-cont-title"}> 게시글 1 입니다 </span>
+                        <span class="new-cont-title"> 게시글 1 입니다 </span>
                         <span class="new-comment"><b>3</b></span>
                         <span class="new-date">12:05</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://www.naver.com/">
-                        <span class="new-cont-title"}> 게시글 2 입니다 </span>
+                        <span class="new-cont-title"> 게시글 2 입니다 </span>
                         <span class="new-comment"><b>3</b></span>
                         <span class="new-date">12:05</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://www.naver.com/">
-                        <span class="new-cont-title"}> 게시글 3 입니다 </span>
+                        <span class="new-cont-title"> 게시글 3 입니다 </span>
                         <span class="new-comment"><b>3</b></span>
                         <span class="new-date">12:05</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://www.naver.com/">
-                        <span class="new-cont-title"}> 게시글 4 입니다 </span>
+                        <span class="new-cont-title"> 게시글 4 입니다 </span>
                         <span class="new-comment"><b>3</b></span>
                         <span class="new-date">12:05</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://www.naver.com/">
-                        <span class="new-cont-title"}> 게시글 5 입니다 </span>
+                        <span class="new-cont-title"> 게시글 5 입니다 </span>
                         <span class="new-comment"><b>3</b></span>
                         <span class="new-date">12:05</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://www.naver.com/">
-                        <span class="new-cont-title"}> 게시글 6 입니다 </span>
+                        <span class="new-cont-title"> 게시글 6 입니다 </span>
                         <span class="new-comment"><b>3</b></span>
                         <span class="new-date">12:05</span>
                         </a>
@@ -432,7 +432,6 @@ get_header(); ?>
                             <span class="new-comment"><b>6</b></span>
                             <br>
                             <span class="new-txt"><a href="#">반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다. 반갑습니다 sir입니다.</a></span>
-                            <br>
                             <span class="new-name">닉네임</span>
                             <span class="new-date">03:35</span>
                         </div>
