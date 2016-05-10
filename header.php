@@ -86,7 +86,7 @@
 				</div><!-- .site-branding -->
                 
                 <div class="hd_cate"><!-- site-inner -->
-                    <div id="name">
+                    <div id="hd_manu">
     				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
     					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
     
@@ -118,14 +118,16 @@
     					</div><!-- .site-header-menu -->
     				<?php endif; ?>
     				</div>
-    				<div id="hd_sch">
-                        <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
-                            <label>
-                            <input type="search" class="search-field" placeholder="검색" value="" id=""/>
-                            </label>
-                            <button type="submit" class="search-submit"><span class="screen-reader-text">검색</span></button>
-    				   </form>  
-    				</div>
+    				<div id="hd_sch_box">
+					    <div id="hd_sch">
+                            <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
+                                <label>
+                                <input type="search" class="search-field" placeholder="검색" value="" id=""/>
+                                </label>
+                                <button type="submit" class="search-submit"><span class="screen-reader-text">검색</span></button>
+                           </form>  
+                        </div>
+					</div>
 				</div>
 			</div><!-- .site-header-main -->
 		</header><!-- .site-header -->
