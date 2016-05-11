@@ -886,7 +886,9 @@ a:active {
 	padding: 0 0.538461538em;
 }
 
+/* 헤더 */
 
+.mhd-title-logo{display:none}
 
 /* 메인 - main */
 
@@ -2408,7 +2410,7 @@ p > video {
     
     .hd_cate{padding:0 10px;}
     
-    #primary{background:pink;width:100%} 
+    /*#primary{background:pink;width:100%} */
     #idx_shortcut,
     #idx-new-content{padding:0 7.6923%;}
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
@@ -2442,7 +2444,7 @@ p > video {
 
 /*985px*/
 @media screen and (max-width: 61.563em){    
-    #primary{background:aqua}
+    /*#primary{background:aqua}*/
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
     #idx-new-content .new-content-nomargin{margin-right:0;}
     
@@ -2460,7 +2462,7 @@ p > video {
     .hd_cate{padding:0;width:100%}
     #site-header-menu{width:100%}
     
-    #primary{background:yellow}
+    /*#primary{background:yellow}*/
     #idx-new-content{padding:0 7.6923%;}
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
     #idx-new-content .new-content-nomargin{margin-right:0;}
@@ -2474,7 +2476,7 @@ p > video {
 /*783px*/
 @media screen and (max-width: 48.938em){
     
-    #primary{background:tan}
+    /*#primary{background:tan}*/
     #idx-new-content .new-content{width:100%;}
     #idx_shortcut{height:auto;}
     #idx_shortcut ul{width:100%;margin-bottom:40px}
@@ -2488,12 +2490,19 @@ p > video {
 
 /*710px*/
 @media screen and (max-width: 44.375em){
-    
-    #hd_manu{border-top:1px solid #eaeaea}
+    .site-header-top, .header-image{display:none}
+    #hd_manu{/*border-top:1px solid #eaeaea;*/background:#555f7a}
+    #hd_sch_box{width:100%;border-top:1px solid #48516d;text-align:center;background:#555f7a}
     #hd_sch input{width:200px;height:30px;font-size:13px;padding:0 15px}
     #hd_sch button{background:transparent;color:#555f7a}
     
-    #primary{background:yellowgreen}
+    .mhd-title-logo{display:inline-block;position:absolute;top:63px;left:38%;}
+    .main-navigation li{background:#fff}
+    .menu-toggle{margin-left:20px;color:#fff;}
+    .menu-toggle:hover{background:#fff;}
+    .menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus{background-color:#555f7a;border-color:#fff;color:#fff}
+    
+    /*#primary{background:yellowgreen}*/
     #idx-new-content .new-content{width:100%;}
     
     .new-content li .new-cont-title{width:84%;}
@@ -2509,12 +2518,14 @@ p > video {
     #idx-new-tip li img{width:100%;height:auto;}
     
     #idx-new-tip li span.new-txt a{height:45px;}
+    
+    .widget{margin-bottom:20px;}
 }
 
 
 /*443px*/
 @media screen and (max-width: 27.688em){
-    #primary{background:tomato}
+    /*#primary{background:tomato}*/
     
     .new-content li .new-cont-title{width:82%;}
     .new-content li .new-date{width:13%;}
@@ -2533,7 +2544,7 @@ p > video {
 
 /*340px*/
 @media screen and (max-width: 21.250em){
-    #primary{background:gray}
+    /*#primary{background:gray}*/
     
     .new-content li .new-cont-title{width:80%;}
     .new-content li .new-date{width:15%;}

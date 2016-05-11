@@ -14,6 +14,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -88,7 +89,7 @@
                 <div class="hd_cate"><!-- site-inner -->
                     <div id="hd_manu">
     				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-    					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
+    					<button id="menu-toggle" class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
     
     					<div id="site-header-menu" class="site-header-menu">
     						<?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -118,6 +119,11 @@
     					</div><!-- .site-header-menu -->
     				<?php endif; ?>
     				</div>
+    				
+    				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mhd-title-logo">
+                        <img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                    </a>
+                                
     				<div id="hd_sch_box">
 					    <div id="hd_sch">
                             <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
@@ -128,6 +134,31 @@
                            </form>  
                         </div>
 					</div>
+					
+					<div id="m_hd_sch">
+					    <button type="button" class="bo_v_add">
+					        <i class="fa fa-search" aria-hidden="true"></i>
+					    </button>
+					    <div class="pvji_open  pv_ji_close">					       
+						    <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
+                                <label>
+                                <input type="search" class="search-field" placeholder="검색" value="" id=""/>
+                                </label>
+                                <button type="submit" class="search-submit"><span class="screen-reader-text">검색</span></button>
+                            </form>  
+						</div> 
+                    </div>
+                    <script>
+            $(function() {
+                $(".bo_v_add").on("click", function(){
+                    $(".pvji_open").hide();
+                });
+                $(".schclose_btn").on("click", function(){
+                    $("#frmsearch1").hide();
+                });
+            });
+            </script>
+
 				</div>
 			</div><!-- .site-header-main -->
 		</header><!-- .site-header -->
