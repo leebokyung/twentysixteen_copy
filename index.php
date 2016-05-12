@@ -47,8 +47,12 @@ get_header(); ?>
                 <li class="sc_customer"><a href="#"><span>고객센터</span></a></li>
             </ul>
         </div>
-            
+
 	    <div id="idx-new-content">
+            
+            <?php do_action('sir_community_main_latest'); ?>
+            <?php do_action('sir_community_main_content'); ?>
+
             <div class="new-content">
                 <h2><a href="#">커뮤니티</a></h2>
                 <ul>
@@ -241,7 +245,7 @@ get_header(); ?>
                 </ul>
                 <a href="#" class="new-content-more">더보기</a>
             </div>
-        
+
             <div id="idx-new-gallery">
                 <h2><a href="#">갤러리</a></h2>
                 <ul>
