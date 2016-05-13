@@ -1,5 +1,8 @@
 /* 그누커머스 최신글 위젯 */
 
+.bx-wrapper .transparent_img{width:100%;height:229px}
+
+.widget.widget_latest{position:relative}
 .main-latest-50pro{margin:0 0 15px 0;min-height:1px;padding-left:10px;*padding-left:0;padding-right:10px;*padding-right:0;float:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .main-latest-50pro .textwidget a{box-shadow:none;}
 
@@ -105,6 +108,8 @@ ul.latest_row .box_clear{clear:both}
     ul.latest_row li:nth-child(4n+1){clear:both!important}
     .sir_community_latest_tip ul.latest_row li:nth-child(2n+1){clear:both!important}
     ul.latest_row .box_clear{clear:none!important}
+
+    .bx-wrapper .transparent_img{width:100%;height:160px}
 }
  
 /*443px*/
@@ -125,4 +130,6 @@ ul.latest_row .box_clear{clear:both}
     {width:100%}
 
     ul.latest_row li:nth-child(2n+1){clear:both!important}
+
+    .bx-wrapper .transparent_img{width:100%;height:120px}
 }

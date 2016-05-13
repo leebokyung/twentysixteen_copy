@@ -1,6 +1,56 @@
 <?php
 if( ! defined( 'ABSPATH' ) ) exit;
 
+//https://hasin.me/2015/04/24/getting-rid-of-redux-framework-annoyances/
+//https://codex.wordpress.org/Theme_Frameworks
+
+require_once( get_template_directory() . '/lib/define.php' );
+
+// Add Redux Framework
+require_once( get_template_directory() . '/admin/main/framework.php' );
+require_once( get_template_directory() . '/admin/main/lib.php' );
+require_once( get_template_directory() . '/admin/main/options.php' );
+
+// Add custom theme options ( related Redux Framework )
+require_once( get_template_directory() . '/admin/main/options/variables.php' );
+require_once( get_template_directory() . '/admin/main/options/homepage.php' );
+
+// Add widget
+require_once( get_template_directory() . '/lib/widget_functions.php' );
+
+// Add styles
+add_action( 'wp_enqueue_scripts', 'sir_comm_add_enqueue_styles' );
+function sir_comm_add_enqueue_styles() {
+
+    wp_enqueue_style( 'sir-comm-add-style',
+        get_stylesheet_directory_uri() . '/css/add.css'
+    );
+    
+    // Add script
+    wp_enqueue_script( 'sir_comm_mainjs', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), 'true' );
+}
+
+
+// 메인 슬라이더 표시
+add_action( 'sir_community_main_area', 'thinkup_input_sliderhome', 12);
+
+// 메인 아이콘 표시
+add_action( 'sir_community_main_area', 'thinkup_input_homepagesection', 13);
+
+/*
+ function sir_comm_removeDemoModeLink() {   // Be sure to rename this function to something more unique
+
+       if   (   class_exists  (  'Redux'  ) ) { 
+           remove_filter(   'plugin_row_meta'  ,   array  ( ReduxFramework::get_instance(),   'plugin_metalinks'  ), null, 2 ); 
+       } 
+       if   (   class_exists  (  'Redux'  ) ) {
+           remove_action(  'admin_notices'  ,   array  ( ReduxFramework::get_instance(),   'admin_notices'   ) );     
+       } 
+
+ } 
+ add_action(  'init'  ,   'sir_comm_removeDemoModeLink'  ); 
+*/
+
 /**
  * This file represents an example of the code that themes would use to register
  * the required plugins.
@@ -31,8 +81,19 @@ Class SR_register_required_plugins {
     public function __construct() {
         add_action( 'tgmpa_register', array( $this, 'required_plugins') );
 
+        add_action( 'sir_community_main_area', array( $this, 'sir_community_main_area_widget' ), 13 );
         add_action( 'sir_community_main_content',	array( $this, 'sir_community_main_latest_widget' ) );
         add_action( 'sir_community_main_content',	array( $this, 'sir_community_main_gallery_widget' ) );
+    }
+
+    public function sir_community_main_area_widget(){
+        if ( is_active_sidebar( 'main-head-latest' ) ) {
+            ?>
+		    <div class="sir-comm-main_area_widget" role="complementary">
+				<?php dynamic_sidebar( 'main-head-latest' ); ?>
+		    </div>
+            <?php
+        }
     }
 
     public function sir_community_main_latest_widget(){

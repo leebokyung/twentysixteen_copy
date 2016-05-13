@@ -1,7 +1,4 @@
 <?php
-
-define('SIR_CMM_NAME', 'sir_community');
-
 require get_template_directory() . '/lib/hooks.php';
 require get_template_directory() . '/classes/gnucommerce_widget.php';
 
@@ -11,15 +8,28 @@ require get_template_directory() . '/classes/gnucommerce_widget.php';
  */
 function sir_community_widgets_init() {
 
-    register_widget( 'sir_latest_board_widget' );
+
+    if( defined('GC_BOARD_KEY') ){
+        register_widget( 'sir_latest_board_widget' );
+    }
 
     register_sidebar( array(
-        'name'          => __( '일반 최신글 50% 영역', SIR_CMM_NAME ),
+        'name'          => __( '메인 1 영역', SIR_CMM_NAME ),
+        'id'            => 'main-head-latest',
+        'description' 		=> __('사이트 메인에만 적용됩니다.', SIR_CMM_NAME ),
+        'before_widget' => '<div class="widget widget_latest">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="sir_comm_title widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar( array(
+        'name'          => __( '메인 2 영역', SIR_CMM_NAME ),
         'id'            => 'main-latest-50pro',
-        'description' 		=> __('일반 최신글 50% 영역', SIR_CMM_NAME ),
+        'description' 		=> __('사이트 메인에만 적용됩니다.', SIR_CMM_NAME ),
         'before_widget' => '<div class="main-latest-50pro"><div class="inner">',
         'after_widget'  => '</div></div>',
-        'before_title'  => '<h2 class="sir_comm_title">',
+        'before_title'  => '<h2 class="sir_comm_title widget-title">',
         'after_title'   => '</h2>',
     ));
 
@@ -39,12 +49,12 @@ function sir_community_widgets_init() {
     */
 
     register_sidebar( array(
-        'name'          => __( '일반 최신글 이미지 영역', SIR_CMM_NAME ),
+        'name'          => __( '메인 3 영역', SIR_CMM_NAME ),
         'id'            => 'main-gallery-latest',
-        'description' 		=> __('위젯 최신글 이미지 영역', SIR_CMM_NAME ),
+        'description' 		=> __('사이트 메인에만 적용됩니다.', SIR_CMM_NAME ),
         'before_widget' => '<div class="main-latest-area">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="sir_comm_title">',
+        'before_title'  => '<h2 class="sir_comm_title widget-title">',
         'after_title'   => '</h2>',
     ));
 }

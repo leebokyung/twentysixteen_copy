@@ -268,6 +268,9 @@ class sir_latest_board_widget extends SIR_COMM_Widget {
 	 */
 	public function __construct() {
         
+        //그누커머스 플러그인이 없다면
+        if( !defined('GC_BOARD_KEY') ) return;
+
         global $wpdb;
 
         $result_array = array();

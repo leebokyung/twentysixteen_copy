@@ -421,14 +421,3 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
 require get_template_directory() . '/classes/plugin_require.php';
-require get_template_directory() . '/lib/widget_functions.php';
-
-add_action( 'wp_enqueue_scripts', 'sir_comm_add_enqueue_styles' );
-
-function sir_comm_add_enqueue_styles() {
-
-    wp_enqueue_style( 'sir-comm-add-style',
-        get_stylesheet_directory_uri() . '/css/add.css'
-    );
-
-}

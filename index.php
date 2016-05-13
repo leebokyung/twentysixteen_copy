@@ -18,6 +18,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 	    
+        <?php
+        /*
 	    <div id="idx_banner">
             <h2>이벤트 및 광고 배너</h2>
             <ul class="bxslider">
@@ -30,7 +32,14 @@ get_header(); ?>
                 $('.bxslider').bxSlider();
             });
         </script>
-        
+        */
+        ?>
+        <?php
+        // admin/main/options/homepage.php thinkup_input_homepagesection
+
+        do_action('sir_community_main_area');
+
+        /*
         <div id="idx_shortcut">
             <ul>
                 <li class="sc_notice"><a href="#"><span>공지</span></a></li>
@@ -47,12 +56,16 @@ get_header(); ?>
                 <li class="sc_customer"><a href="#"><span>고객센터</span></a></li>
             </ul>
         </div>
+        */
+        ?>
 
 	    <div id="idx-new-content">
             
             <?php do_action('sir_community_main_latest'); ?>
             <?php do_action('sir_community_main_content'); ?>
-
+            
+            <?php
+            /*
             <div class="new-content">
                 <h2><a href="#">커뮤니티</a></h2>
                 <ul>
@@ -445,7 +458,9 @@ get_header(); ?>
                     <a href="#" class="new-content-more">더보기</a>
                 </ul>    
             </div>
-    	</div>
+            */
+            ?>
+    	</div> <?php // end html idx-new-content ?>
 	</div>
 
 <?php get_sidebar(); ?>
