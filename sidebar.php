@@ -13,7 +13,7 @@
 	    
 	    <div id="side-login">
             <fieldset>
-                <legend>로그인</legend>
+                <legend><i class="fa fa-sign-in" aria-hidden="true"></i> 로그인</legend>
                 <div id="side-login-input">
                     <label for="" class="screen-reader-text">아이디</label>
                     <input type="text" name="some_name" placeholder="아이디" id="s-id"/>
@@ -28,8 +28,9 @@
               </div>
               
               <p class="login-content-link">
-                  <a href="#">정보 찾기</a>
-                  <a href="#">회원가입</a>
+                  <a href="#"><i class="fa fa-search" aria-hidden="true"></i> 정보 찾기</a>
+                  <span style="color:#fff;">|</span>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 회원가입</a>
               </p>
             </fieldset>
         </div>

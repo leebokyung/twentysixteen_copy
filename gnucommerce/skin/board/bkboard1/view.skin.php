@@ -50,20 +50,20 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
              ?>
             <?php if ($prev_href || $next_href) { ?>
             <ul class="bo_v_nb">
-                <?php if ($prev_href) { ?><li><a href="<?php echo esc_url( $prev_href ); ?>" class="btn_b01"><span class="icon-btn-next icon-text">이전</span><?php _e('이전', GC_NAME); //이전?></a></li><?php } ?>
-                <?php if ($next_href) { ?><li><a href="<?php echo esc_url( $next_href ); ?>" class="btn_b01"><?php _e('다음', GC_NAME); //다음?><span class="icon-btn-prev icon-text">다음</span></a></li><?php } ?>
+                <?php if ($prev_href) { ?><li><a href="<?php echo esc_url( $prev_href ); ?>" class="btn_b01"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php _e('이전', GC_NAME); //이전?></a></li><?php } ?>
+                <?php if ($next_href) { ?><li><a href="<?php echo esc_url( $next_href ); ?>" class="btn_b01"><?php _e('다음', GC_NAME); //다음?> <i class="fa fa-chevron-right" aria-hidden="true"></i></a></li><?php } ?>
             </ul>
             <?php } ?>
     
             <ul class="bo_v_com">
-                <?php if ($update_href) { ?><li><a href="<?php echo esc_url( $update_href ); ?>" class="btn_b01"><span class="icon-btn-modify icon-text">수정</span><?php _e('수정', GC_NAME); //수정?></a></li><?php } ?>
-                <?php if ($delete_href) { ?><li><a href="<?php echo esc_url( $delete_href ); ?>" class="btn_b01" onclick="gcboard.del(this.href); return false;"><span class="icon-btn-delete icon-text">삭제</span><?php _e('삭제', GC_NAME); //삭제?></a></li><?php } ?>
-                <?php if ($copy_href) { ?><li><a href="<?php echo esc_url( $copy_href ); ?>" class="btn_admin no-ajaxy" onclick="board_move(this.href); return false;"><span class="icon-btn-copy icon-text">복사</span><?php _e('복사', GC_NAME); //복사?></a></li><?php } ?>
-                <?php if ($move_href) { ?><li><a href="<?php echo esc_url( $move_href ); ?>" class="btn_admin no-ajaxy" onclick="board_move(this.href); return false;"><span class="icon-btn-move icon-text">이동</span><?php _e('이동', GC_NAME); //이동?></a></li><?php } ?>
+                <?php if ($update_href) { ?><li><a href="<?php echo esc_url( $update_href ); ?>" class="btn_b01"><i class="fa fa-wrench" aria-hidden="true"></i> <?php _e('수정', GC_NAME); //수정?></a></li><?php } ?>
+                <?php if ($delete_href) { ?><li><a href="<?php echo esc_url( $delete_href ); ?>" class="btn_b01" onclick="gcboard.del(this.href); return false;"><i class="fa fa-trash" aria-hidden="true"></i> <?php _e('삭제', GC_NAME); //삭제?></a></li><?php } ?>
+                <?php if ($copy_href) { ?><li><a href="<?php echo esc_url( $copy_href ); ?>" class="btn_admin no-ajaxy" onclick="board_move(this.href); return false;"><i class="fa fa-files-o" aria-hidden="true"></i> <?php _e('복사', GC_NAME); //복사?></a></li><?php } ?>
+                <?php if ($move_href) { ?><li><a href="<?php echo esc_url( $move_href ); ?>" class="btn_admin no-ajaxy" onclick="board_move(this.href); return false;"><i class="fa fa-repeat" aria-hidden="true"></i> <?php _e('이동', GC_NAME); //이동?></a></li><?php } ?>
                 <?php if ($search_href) { ?><li><a href="<?php echo esc_url( $search_href ); ?>" class="btn_b01"><?php _e('검색', GC_NAME); //검색?></a></li><?php } ?>
-                <li><a href="<?php echo $list_href ?>" class="btn_b01"><span class="icon-btn-list icon-text">목록</span><?php _e('목록', GC_NAME); //목록?></a></li>
-                <?php if ($reply_href) { ?><li><a href="<?php echo esc_url( $reply_href ); ?>" class="btn_b01"><span class="icon-btn-comment icon-text">답변</span><?php _e('답변', GC_NAME); //답변?></a></li><?php } ?>
-                <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><span class="icon-btn-write icon-text">글쓰기</span><?php _e('글쓰기', GC_NAME); //글쓰기?></a></li><?php } ?>
+                <li><a href="<?php echo $list_href ?>" class="btn_b01"><i class="fa fa-list-ul" aria-hidden="true"></i> <?php _e('목록', GC_NAME); //목록?></a></li>
+                <?php if ($reply_href) { ?><li><a href="<?php echo esc_url( $reply_href ); ?>" class="btn_b01"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <?php _e('답변', GC_NAME); //답변?></a></li><?php } ?>
+                <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME); //글쓰기?></a></li><?php } ?>
             </ul>
             <?php
             $link_buttons = ob_get_contents();
@@ -77,7 +77,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
         <!-- 스크랩 추천 비추천 시작 { -->
         <?php if ($scrap_href || $good_href || $nogood_href) { ?>
         <div id="bo_v_act">
-            <?php if ($scrap_href) { ?><a href="<?php echo esc_url( $scrap_href ); ?>" target="_blank" class="btn_b01" onclick="gcboard.win_scrap(this.href); return false;"><span class="icon-btn-scrap icon-text">스크랩</span><?php _e('스크랩', GC_NAME); //스크랩?></a><?php } ?>
+            <?php if ($scrap_href) { ?><a href="<?php echo esc_url( $scrap_href ); ?>" target="_blank" class="btn_b01" onclick="gcboard.win_scrap(this.href); return false;"><i class="fa fa-heart" aria-hidden="true"></i> <?php _e('스크랩', GC_NAME); //스크랩?></a><?php } ?>
             <?php if ($good_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $good_href ) ?>" id="good_button" class="btn_b03" target="_blank">
@@ -120,13 +120,12 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
 
         <section id="bo_v_info">
             <h2><?php _e('페이지정보', GC_NAME);?></h2>
-            <span class="icon-view-name icon-text">작성자</span><strong><?php echo $view['name'] ?></strong> <!-- <?php _e('작성자', GC_NAME);?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?> -->
-            <span class="icon-view-date icon-text">날짜</span><strong><?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong> <!-- <span class="sound_only"><?php _e('날짜', GC_NAME);?></span> -->
-            <span class="icon-view-hits icon-text">조회수</span><strong>조회 <?php echo number_format($view['wr_hit']) ?></strong> <!-- <?php _e('조회수', GC_NAME);?> -->
-            <span class="icon-view-comment icon-text">댓글</span><strong>댓글 <?php echo number_format($view['wr_comment']) ?></strong> <!-- <?php _e('댓글', GC_NAME);?> -->
-            <button type="button" class="bo_v_add">첨부파일+링크</button>
+            <i class="fa fa-user" aria-hidden="true"></i> <strong><?php echo $view['name'] ?></strong> <!-- <?php _e('작성자', GC_NAME);?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?> -->
+            <i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong> <!-- <span class="sound_only"><?php _e('날짜', GC_NAME);?></span> -->
+            <i class="fa fa-eye" aria-hidden="true"></i> <strong>조회 <?php echo number_format($view['wr_hit']) ?></strong> <!-- <?php _e('조회수', GC_NAME);?> -->
+            <i class="fa fa-comments-o" aria-hidden="true"></i> <strong>댓글 <?php echo number_format($view['wr_comment']) ?></strong> <!-- <?php _e('댓글', GC_NAME);?> -->
             <!-- 첨부파일 시작 { -->
-            <div id="bo_v_file" class="pvji_open  pv_ji_close">
+            <div id="bo_v_file">
                 <h2><?php _e('첨부파일', GC_NAME);?></h2>
                 <ul>
                     <?php
@@ -136,7 +135,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
                      ?>
                         <li>
                             <a href="<?php echo esc_url( $view['file'][$i]['href'] ); ?>" class="view_file_download no-ajaxy">
-                                <span class="icon-view-file icon-text">첨부파일</span><!-- <img src="<?php echo $board_skin_url ?>/img/icon_file.gif" alt="첨부"> -->
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>
                                 <strong><?php echo $view['file'][$i]['source'] ?></strong>
                                 <?php echo $view['file'][$i]['content'] ?> (<?php echo $view['file'][$i]['size'] ?>)
                             </a>
@@ -162,7 +161,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
         
                 <?php if($cnt) { ?>
                 
-                <!-- } 첨부파일 끝 -->
+                <!-- 첨부파일 끝 } -->
                 <?php } ?>
             
                 <?php
@@ -182,7 +181,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
                      ?>
                         <li>
                             <a href="<?php echo esc_url( $view['link_href'][$i] ); ?>" target="_blank">
-                                <span class="icon-view-link icon-text">관련링크</span>
+                                <i class="fa fa-link" aria-hidden="true"></i> 관련링크
                                 <!-- <img src="<?php echo $board_skin_url ?>/img/icon_link.gif" alt="<?php _e('관련링크', GC_NAME); //관련링크?>"> -->
                                 <strong><?php echo $link ?></strong>
                             </a>
@@ -197,18 +196,6 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
                 <!-- } 관련링크 끝 -->
             </div>
         </section>
-    
-    <script>
-    jQuery(document).ready(function($){
-        $('button', '#bo_v_info').toggle(function(){
-            $(this).addClass('pv_ji_cl');
-            $(this).next('div.pvji_open').removeClass('pv_ji_close');
-        },function(){
-            $(this).removeClass('pv_ji_cl');
-            $(this).next('div.pvji_open').addClass('pv_ji_close');
-        });
-    });
-    </script>
     
     <?php } ?>
     </section>

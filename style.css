@@ -886,9 +886,35 @@ a:active {
 	padding: 0 0.538461538em;
 }
 
-/* 헤더 */
+/* 헤더 - header */
 
 .mhd-title-logo{display:none}
+
+
+/* 푸터 - footer */
+
+.foot-inner{width:1110px;margin:0 auto;}
+
+#footer-info{margin:20px 0 10px 0;padding-bottom:30px;border-bottom:1px solid #737373;}
+#footer-info a{color:#b1b1b1}
+#footer-info .site-title{margin:10px 0;font-size:1.875em;}
+#footer-info .site-title a:hover{color:#fff;text-decoration:none;}
+#footer-info address{font-style:normal}
+#footer-info .f-info{line-height:1.5em;margin:0;color:#b1b1b1;}
+
+.site-title{}
+.footer-sns{list-style:none;margin:0;padding:0;margin-top:20px;}
+.footer-sns li {float:left;margin-left:20px;}
+.footer-sns li a:hover{color:#fff;text-decoration:none;}
+.footer-sns li:first-child{margin-left:0}
+
+#footer-link{padding:5px 0 10px}
+#footer-link a{color:#b1b1b1}
+#footer-link ul{list-style:none;margin:0;padding:0;}
+#footer-link ul li{float:left;margin-left:10px;font-size:0.813em;font-weight: normal;}
+#footer-link ul li a:hover{color:#fff;text-decoration:none;}
+#footer-link ul li:first-child{margin-left:0}
+#footer-link ul li span.border-deco{display:inline-block;padding-right:10px;background:url('img/border-deco.gif') right center no-repeat;}
 
 /* 메인 - main */
 
@@ -896,6 +922,10 @@ a:active {
 #idx_banner h2{position:absolute;font-size:0;line-height:0;overflow:hidden}
 #idx_banner .bx-wrapper{margin:0 auto 15px;}
 #idx_banner ul{margin:0;padding:0;list-style:none}
+.bx-wrapper .bx-next{background:url('img/controls.png') no-repeat -43px -32px !important}
+.bx-wrapper .bx-prev{background:url('img/controls.png') no-repeat 0 -32px !important}
+.bx-wrapper .bx-controls-auto .bx-start{background:url('img/controls.png') -86px -11px no-repeat !important}
+.bx-wrapper .bx-controls-auto .bx-stop{background:url('img/controls.png') -86px -44px no-repeat !important}
 
 /* 바로가기 아이콘 버튼 */
 
@@ -958,8 +988,8 @@ a:active {
 #idx-new-gallery{position:relative;float:left;width:812px;margin:0 20px 15px 0;border:1px solid #e3e3e3;background:#fff}
 #idx-new-gallery h2{padding:15px;font-size:16px;border-bottom:1px solid #e3e3e3;}
 #idx-new-gallery h2 a{color:#656565;}
-#idx-new-gallery ul{display:inline-block;margin:0;padding:0;list-style:none;padding:15px}
-#idx-new-gallery li{float:left;margin-right:14px;margin-bottom:15px}
+#idx-new-gallery ul{margin:0;padding:0;list-style:none;padding:15px}
+#idx-new-gallery li{float:left;margin-right:14px;margin-bottom:15px;text-align:center}
 #idx-new-gallery li.new-content-nomargin{margin-right:0;}
 #idx-new-gallery li img{width:118px;height:118px;margin-bottom:10px;}
 #idx-new-gallery li span{text-align:center;}
@@ -1363,7 +1393,7 @@ blockquote:after,
  * 11.2 - Posts and pages
  */
 
-.site-main > article {margin-bottom:3.5em;position:relative;}
+.site-main > article {margin-bottom:1.250em;position:relative;background:#fff;padding:20px;border:1px solid #e3e3e3}
 
 .entry-header,
 .entry-summary,
@@ -1724,9 +1754,9 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .page-header {
-	border-top: 4px solid #1a1a1a;
+	/*border-top: 4px solid #1a1a1a;
 	margin: 0 7.6923% 3.5em;
-	padding-top: 1.75em;
+	padding-top: 1.75em;*/
 }
 
 body.error404 .page-header,
@@ -1737,9 +1767,12 @@ body.search-no-results .page-header {
 
 .page-title {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	font-size: 1.4375rem;
-	line-height: 1.2173913043;
+	font-size: 1.250em;
+    line-height: 1.225;
+	background:#fff;
+	border:1px solid #e3e3e3;
+	padding:10px;
+	margin-bottom:20px
 }
 
 .taxonomy-description {
@@ -2423,7 +2456,7 @@ p > video {
     #idx_shortcut ul li{float:left;width:20%;text-align:center}
     #idx_shortcut ul li a{width:100%;margin-left:0}
     
-    #idx-new-gallery li{width:16%;margin:1% 2%;text-align:center}
+    #idx-new-gallery li{width:16%;margin:1% 2%;}
     #idx-new-gallery li.new-content-nomargin{margin:1% 2%;}
     #idx-new-gallery li img{width:118px;height:118px;}
     
@@ -2440,11 +2473,13 @@ p > video {
     #tag_cloud-2{width:49%;min-height:160px;float:left}
     #recent-posts-2{clear:both;width:49%;margin-right:2%;float:left}
     #recent-comments-2{width:49%;float:left}
+    
+    .foot-inner{width:100%}
 }
 
 /*985px*/
 @media screen and (max-width: 61.563em){    
-    /*#primary{background:aqua}*/
+    #primary{background:aqua}
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
     #idx-new-content .new-content-nomargin{margin-right:0;}
     
@@ -2462,7 +2497,7 @@ p > video {
     .hd_cate{padding:0;width:100%}
     #site-header-menu{width:100%}
     
-    /*#primary{background:yellow}*/
+    #primary{background:yellow}
     #idx-new-content{padding:0 7.6923%;}
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
     #idx-new-content .new-content-nomargin{margin-right:0;}
@@ -2471,12 +2506,14 @@ p > video {
     .new-content li .new-date{width:14%;}
     
     #idx-new-gallery li{width:21%;}
+    
+    .site-footer{padding:10px 7.6923% 1.75em}
 }
 
 /*783px*/
 @media screen and (max-width: 48.938em){
     
-    /*#primary{background:tan}*/
+    #primary{background:tan}
     #idx-new-content .new-content{width:100%;}
     #idx_shortcut{height:auto;}
     #idx_shortcut ul{width:100%;margin-bottom:40px}
@@ -2491,18 +2528,18 @@ p > video {
 /*710px*/
 @media screen and (max-width: 44.375em){
     .site-header-top, .header-image{display:none}
-    #hd_manu{/*border-top:1px solid #eaeaea;*/background:#555f7a}
+    #hd_manu{position:relative; /*border-top:1px solid #eaeaea;*/background:#555f7a}
     #hd_sch_box{width:100%;border-top:1px solid #48516d;text-align:center;background:#555f7a}
     #hd_sch input{width:200px;height:30px;font-size:13px;padding:0 15px}
     #hd_sch button{background:transparent;color:#555f7a}
     
-    .mhd-title-logo{display:inline-block;position:absolute;top:63px;left:38%;}
-    .main-navigation li{background:#fff}
+    .mhd-title-logo{display:inline-block;position:absolute;top:20px;left:38%;}
+    .main-navigation li{padding:0 20px;background:#fff}
     .menu-toggle{margin-left:20px;color:#fff;}
     .menu-toggle:hover{background:#fff;}
     .menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus{background-color:#555f7a;border-color:#fff;color:#fff}
     
-    /*#primary{background:yellowgreen}*/
+    #primary{background:yellowgreen}
     #idx-new-content .new-content{width:100%;}
     
     .new-content li .new-cont-title{width:84%;}
@@ -2525,7 +2562,7 @@ p > video {
 
 /*443px*/
 @media screen and (max-width: 27.688em){
-    /*#primary{background:tomato}*/
+    #primary{background:tomato}
     
     .new-content li .new-cont-title{width:82%;}
     .new-content li .new-date{width:13%;}
@@ -2544,7 +2581,7 @@ p > video {
 
 /*340px*/
 @media screen and (max-width: 21.250em){
-    /*#primary{background:gray}*/
+    #primary{background:gray}
     
     .new-content li .new-cont-title{width:80%;}
     .new-content li .new-date{width:15%;}
@@ -3112,7 +3149,7 @@ p > video {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 0 4.5455% 3.5em;
+		/*padding: 0 4.5455% 3.5em;*/
 	}
 
 	.site-footer .social-navigation {
@@ -3123,7 +3160,7 @@ p > video {
 	}
 
 	.site-info {
-		margin: 0.538461538em auto 0.538461538em 0;
+		/*margin: 0.538461538em auto 0.538461538em 0;*/
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
@@ -3178,10 +3215,9 @@ p > video {
 	.post-navigation {margin-bottom: 7.0em;}
 	.pagination {margin-bottom: 5.894736842em;}
 	.widget {/*margin-bottom: 4.307692308em;*/}
-	.site-main > article {margin-bottom: 7.0em;}
+	.site-main > article {margin-bottom:1.250em /*7.0em*/;}
 	.entry-title {
-		font-size: 40px;
-		font-size: 2.5rem;
+		font-size:1.250em;
 		line-height: 1.225;
 		margin-bottom: 1.05em;
 	}
@@ -3287,10 +3323,8 @@ p > video {
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
-		/*float: right;*/
+		float: right;
 		width: 71.42857144%;
-		background: #fff;
-		border:1px solid #e3e3e3
 	}
 
     .gc_latest_lt ul{margin:0;padding:0}
@@ -3620,7 +3654,7 @@ p > video {
 	blockquote,
 	.page-header,
 	.comments-title {
-		border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
+		/*border-color: #1a1a1a !important;*/ /* Make sure color schemes don't affect to print */
 	}
 
 	blockquote,
@@ -3712,6 +3746,7 @@ p > video {
 	.post-thumbnail,
 	.site-main > article {
 		margin-bottom: 3.5em;
+		position: relative;
 	}
 
 	.entry-content blockquote.alignleft,
