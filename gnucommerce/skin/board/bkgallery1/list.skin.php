@@ -147,7 +147,7 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
                 </li>
                 
                 <li class="text-info text-id">
-                    <?php if($is_show_field['writer']){ // 게시판 설정 중 작성자 체크가 되어 있으면 ?>
+                    <?php if($is_show_field['writer']){ // 게시판 설정 중 작성자 체크가 되어 있으면  ?>
                     <span><i class="fa fa-user" aria-hidden="true"></i> <?php echo $v['name'] ?></span>
                     <?php } ?>
                 </li>
