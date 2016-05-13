@@ -110,8 +110,8 @@ if($board['bo_use_tag'])    //게시판 설정에서 태그 기능을 사용한�
         </tr>
 
         <tr>
+            <th><label for="wr_content" class="block_label"><strong><?php _e('내용', GC_NAME);?></strong><strong class="sound_only"><?php _e('필수', GC_NAME);?></strong></label></th>
             <td class="wr_content" colspan="2">
-                <label for="wr_content" class="block_label"><strong><?php _e('내용', GC_NAME);?></strong><strong class="sound_only"><?php _e('필수', GC_NAME);?></strong></label>
                 <?php if($write_min || $write_max) { ?>
                 <!-- 최소/최대 글자 수 사용 시 -->
                 <p id="char_count_desc"><?php echo sprintf(__('이 게시판은 최소 %s 글자 이상, 최대 %s 글자 이하까지 글을 쓸수 있습니다.', GC_NAME), '<strong>'.$write_min.'</strong>', '<strong>'.$write_max.'</strong>');?></p>
@@ -176,7 +176,7 @@ if($board['bo_use_tag'])    //게시판 설정에서 태그 기능을 사용한�
 
     <div class="btn_confirm">
         <input type="submit" value="<?php _e('확인', GC_NAME)?>" id="btn_submit" accesskey="s" class="btn_submit">
-        <a href="<?php echo esc_url( $default_href ); ?>" class="btn_cancel"><?php _e('취소', GC_NAME)?></a>
+        <a href="<?php echo esc_url( $default_href ); ?>" class="btn_cancel"><i class="fa fa-times" aria-hidden="true"></i> <?php _e('취소', GC_NAME)?></a>
     </div>
     </form>
 </section>

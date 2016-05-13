@@ -3,8 +3,6 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
 ?>
 <div class="gp_skin_list">
 
-<h2 id="container_title"><?php echo $board['bo_subject'] ?><span class="sound_only"> <?php _e('목록', GC_NAME); ?></span></h2>
-
 <!-- 게시판 목록 시작 { -->
 <div id="bo_gall" style="width:<?php echo $width; ?>">
 
@@ -147,15 +145,20 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
                     //if (isset($v['icon_secret'])) echo $v['icon_secret'];
                      ?>
                 </li>
-                <?php if($is_show_field['writer']){ // 게시판 설정 중 작성자 체크가 되어 있으면 ?>
-                <li class="text-info"><span class="gall_subject"><?php _e('글쓴이', GC_NAME);  //글쓴이?> </span><?php echo $v['name'] ?></li>
-                <?php } ?>
-                <?php if($is_show_field['wdate']){ // 게시판 설정 중 작성일 체크가 되어 있으면 ?>
-                <li class="text-info"><span class="gall_subject"><?php _e('날짜', GC_NAME);  //날짜?> </span><?php echo $v['datetime2'] ?></li>
-                <?php } ?>
-                <?php if($is_show_field['visit']){ // 게시판 설정 중 조회 체크가 되어 있으면 ?>
-                <li class="text-info"><span class="gall_subject"><?php _e('조회', GC_NAME);  //조회?> </span><?php echo $v['wr_hit'] ?></li>
-                <?php } ?>
+                
+                <li class="text-info text-id">
+                    <?php if($is_show_field['writer']){ // 게시판 설정 중 작성자 체크가 되어 있으면  ?>
+                    <span><i class="fa fa-user" aria-hidden="true"></i> <?php echo $v['name'] ?></span>
+                    <?php } ?>
+                </li>
+                <li class="text-info">
+                    <?php if($is_show_field['wdate']){ // 게시판 설정 중 작성일 체크가 되어 있으면 ?>
+                    <span class="text-date"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $v['datetime2'] ?></span>
+                    <?php } ?>
+                    <?php if($is_show_field['visit']){ // 게시판 설정 중 조회 체크가 되어 있으면 ?>
+                    <span class="text-hit"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $v['wr_hit'] ?></span>
+                    <?php } ?>
+                </li>
                 <?php if ($is_good) { ?><li class="text-info"><span class="gall_subject"><?php _e('추천', GC_NAME);  //추천?></span><strong><?php echo $v['wr_good'] ?></strong></li><?php } ?>
                 <?php if ($is_nogood) { ?><li class="text-info"><span class="gall_subject"><?php _e('비추천', GC_NAME);  //비추천?></span><strong><?php echo $v['wr_nogood'] ?></strong></li><?php } ?>
             </ul>

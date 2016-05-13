@@ -38,8 +38,8 @@ do_action('sir_comm_before_header');
 		    <div class="site-header-top">
 		        <div class="site-inner">
                     <ul class="site-header-top-link">
-                        <li class="site-link-login"><a href="#none">로그인</a></li>
-                        <li class="site-link-join"><a href="#none">회원가입</a></li>
+                        <li class="site-link-login"><a href="#none"><i class="fa fa-sign-in" aria-hidden="true"></i> 로그인</a></li>
+                        <li class="site-link-join"><a href="#none"><i class="fa fa-heart-o" aria-hidden="true"></i> 회원가입</a></li>
                     </ul> 
 			    </div>
 			</div>
@@ -50,7 +50,7 @@ do_action('sir_comm_before_header');
 
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title">
-						    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						    <!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> -->
                             <!-- <?php bloginfo( 'name' ); ?> -->
 						      
 						    <?php if ( get_header_image() ) : ?>
@@ -119,11 +119,11 @@ do_action('sir_comm_before_header');
     						<?php endif; ?>
     					</div><!-- .site-header-menu -->
     				<?php endif; ?>
-    				</div>
     				
     				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mhd-title-logo">
                         <img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                     </a>
+    				</div>
                                 
     				<div id="hd_sch_box">
 					    <div id="hd_sch">
@@ -136,7 +136,7 @@ do_action('sir_comm_before_header');
                         </div>
 					</div>
 					
-					<div id="m_hd_sch">
+					<!-- <div id="m_hd_sch">
 					    <button type="button" class="bo_v_add">
 					        <i class="fa fa-search" aria-hidden="true"></i>
 					    </button>
@@ -150,16 +150,16 @@ do_action('sir_comm_before_header');
 						</div> 
                     </div>
                     <script>
-            $(function() {
-                $(".bo_v_add").on("click", function(){
-                    $(".pvji_open").hide();
-                });
-                $(".schclose_btn").on("click", function(){
-                    $("#frmsearch1").hide();
-                });
-            });
-            </script>
-
+                    jQuery(document).ready(function($){
+                        $('button', '#m_hd_sch').toggle(function(){
+                            $(this).addClass('pv_ji_cl');
+                            $(this).next('div.pvji_open').removeClass('pv_ji_close');
+                        },function(){
+                            $(this).removeClass('pv_ji_cl');
+                            $(this).next('div.pvji_open').addClass('pv_ji_close');
+                        });
+                    });
+                    </script> -->
 				</div>
 			</div><!-- .site-header-main -->
 		</header><!-- .site-header -->

@@ -28,8 +28,9 @@ get_header(); ?>
             </ul>
         </div>
         <script>
-            jQuery(document).ready(function($){
-                $('.bxslider').bxSlider();
+            jQuery('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true
             });
         </script>
         */
@@ -67,7 +68,7 @@ get_header(); ?>
             <?php
             /*
             <div class="new-content">
-                <h2><a href="#">커뮤니티</a></h2>
+                <h2><a href="#"><i class="fa fa-comment" aria-hidden="true"></i> 커뮤니티</a></h2>
                 <ul>
                     <li>
                         <a href="http://www.naver.com/">
@@ -115,7 +116,7 @@ get_header(); ?>
                 <a href="#" class="new-content-more">더보기</a>
             </div>
             <div class="new-content new-content-nomargin">
-                <h2><a href="#">회원자료실</a></h2>
+                <h2><a href="#"><i class="fa fa-floppy-o" aria-hidden="true"></i> 회원자료실</a></h2>
                 <ul>
                     <li>
                         <a href="http://www.naver.com/">
@@ -163,7 +164,7 @@ get_header(); ?>
                 <a href="#" class="new-content-more">더보기</a>
             </div>
             <div class="new-content">
-                <h2><a href="#">그누보드 5</a></h2>
+                <h2><a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i> 그누보드 5</a></h2>
                 <ul>
                     <li>
                         <a href="http://www.naver.com/">
@@ -211,7 +212,7 @@ get_header(); ?>
                 <a href="#" class="new-content-more">더보기</a>
             </div>
             <div class="new-content new-content-nomargin">
-                <h2><a href="#">영카트 5</a></h2>
+                <h2><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 영카트 5</a></h2>
                 <ul>
                     <li>
                         <a href="http://www.naver.com/">
@@ -260,7 +261,7 @@ get_header(); ?>
             </div>
 
             <div id="idx-new-gallery">
-                <h2><a href="#">갤러리</a></h2>
+                <h2><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> 갤러리</a></h2>
                 <ul>
                     <li>
                         <a href="#none">
@@ -388,7 +389,7 @@ get_header(); ?>
             </div>
             
             <div id="idx-new-tip">
-                <h2><a href="#">강좌/팁</a></h2>
+                <h2><a href="#"><i class="fa fa-smile-o" aria-hidden="true"></i> 강좌/팁</a></h2>
                 <ul>
                     <li>
                         <div>

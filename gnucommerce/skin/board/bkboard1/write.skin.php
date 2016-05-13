@@ -178,7 +178,7 @@ if($board['bo_use_tag'])    //게시판 설정에서 태그 기능을 사용한�
 
     <div class="btn_confirm">
         <input type="submit" value="<?php _e('확인', GC_NAME)?>" id="btn_submit" accesskey="s" class="btn_submit">
-        <a href="<?php echo esc_url( $default_href ); ?>" class="btn_cancel"><?php _e('취소', GC_NAME)?></a>
+        <a href="<?php echo esc_url( $default_href ); ?>" class="btn_cancel"><i class="fa fa-times" aria-hidden="true"></i> <?php _e('취소', GC_NAME)?></a>
     </div>
     </form>
 </section>

@@ -15,8 +15,6 @@ if (!$is_show_field['wdate']) $colspan--;
 
 <div class="gp_skin_list">
 
-<h2 id="container_title"><?php echo $board['bo_subject'] ?><span class="sound_only"> <?php _e('목록', GC_NAME); ?></span></h2>
-
 <!-- 게시판 목록 시작 { -->
 <div id="bo_list" style="width:<?php echo $width; ?>">
 
