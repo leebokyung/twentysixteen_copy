@@ -9,6 +9,7 @@
  * @since Twenty Sixteen 1.0
  */
  
+do_action('sir_comm_before_header');
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
