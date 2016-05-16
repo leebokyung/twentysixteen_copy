@@ -184,6 +184,8 @@ a.btn02:focus, .btn02:hover {text-decoration:none}
 button.btn02 {display:inline-block;margin:0;padding:7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none}
 
 .btn_confirm {text-align:center} /* 서식단계 진행 */
+.btn_confirm input{padding:8px 7px;background:#545f79;border:none;color:#fff;font-weight:normal}
+.btn_confirm input:hover{background:#4c5771;}
 
 fieldset .btn_submit {padding:0 7px;height:24px;line-height:1em}
 
@@ -278,8 +280,8 @@ a.pg_page {border:0}
 #bo_v a.btn_b01:focus, #bo_v a.btn_b01:hover {background:darkgray;}
 #bo_v a.btn_b02 {background:#545f79;border:none;border-radius:2px;color:#fff;}
 #bo_v a.btn_b02:focus, #bo_v a.btn_b02:hover {background:#4c5771;}
-#bo_v a.btn_b03 {display:inline-block;width:50px;height:50px;border:none;border-radius:50px;color:#fff;text-align:center;line-height:50px}
-#bo_v a.btn_b03:focus, #bo_v a.btn_b03:hover {background:url('../../../img/icon_like.png') tan no-repeat}
+#bo_v a.btn_b03 {display:inline-block;width:50px;height:32px;border:1px solid #d1d1d1;line-height: 32px;border-radius:3px;color:#007acc}
+/*#bo_v a.btn_b03:focus, #bo_v a.btn_b03:hover {background:url('../../../img/icon_like.png') tan no-repeat}*/
 #bo_v a.btn_admin {border-radius:2px;} /* 관리자 전용 버튼 */
 #bo_v a.btn_admin:focus, #bo_v a.btn_admin:hover {background:#CA190F;}
 
@@ -349,7 +351,7 @@ a.pg_page {border:0}
 /* 게시판용 버튼 */
 a.btn_b01 {display:inline-block;padding:8px 7px;border:1px solid #d9ded9;background:#f2f5f9;color:#000;text-decoration:none;vertical-align:middle}
 a.btn_b01:focus, a.btn_b01:hover {text-decoration:none;border:1px solid #d9ded9;}
-a.btn_b02 {display:inline-block;padding:7px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
+a.btn_b02 {display:inline-block;padding:8px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
 a.btn_b02:focus, a.btn_b02:hover {text-decoration:none;border:1px solid #3b3c3f;}
 a.btn_admin {display:inline-block;padding:7px;border:1px solid #e8180c;background:#e8180c;color:#fff;text-decoration:none;vertical-align:middle} /* 관리자 전용 버튼 */
 a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e8180c;}
@@ -383,9 +385,7 @@ a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e81
 #bo_gall .gall_con .text-info{padding:5px 10px;color:#54607a;}
 #bo_gall .gall_con .text-id{border-top: 1px solid #dcdcdd;}
 #bo_gall .gall_con .text-hit{margin-left:5px}
-#bo_gall .gall_con .gall_subject {display:inline-block;width:50px;text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;white-space: nowrap}
-#bo_gall .gall_con .gall_subject {display:inline-block;width:50px;text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;white-space: nowrap}
-
+#bo_gall .gall_con .gall_subject {display:inline-block;/*width:50px;*/text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;white-space: nowrap}
 
 #bo_gall .gall_now .gall_text_href a {color:#ff3061}
 
@@ -432,7 +432,7 @@ a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e81
 #bo_sch select{margin:0;height:auto !important;vertical-align:middle;font-size:1em;width:auto;}
 #bo_sch select[name="sfl"]{display:inline-block;height:30px !important;width:auto;padding-top:2px;padding-bottom:2px;border:1px solid #e4e4e4}
 #bo_sch input[type="text"].frm_input{display:inline-block;margin:0;padding:2px !important;width:98px;height:30px;min-height:auto;outline:0;border:1px solid #e4eaec;vertical-align:middle;font-size:1em;line-height:1em;background:#fff}
-#bo_sch input[type="submit"].btn_submit{margin:0;vertical-align:middle;height:28px !important;min-width:auto;min-height:auto;padding:.5em .8em !important;font-size:1em;height:auto;line-height:1em;border-radius:2px;background:#4b545e}
+#bo_sch input[type="submit"].btn_submit{margin:0;vertical-align:middle;height:30px !important;min-width:auto;min-height:auto;padding:.5em .8em !important;font-size:1em;height:auto;line-height:1em;border-radius:2px;background:#4b545e}
 #bo_sch input[type="submit"].btn_submit:hover{background:#4b545e}
 
 /* 게시판 쓰기 */
@@ -510,7 +510,12 @@ a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e81
 
 #bo_v_act {margin-bottom:30px;text-align:center}
 #bo_v_act .bo_v_act_gng {position:relative}
-#bo_v_act a {margin-right:5px;vertical-align:middle}
+#bo_v_act a {margin-right:5px;vertical-align:middle;}
+#bo_v_act a.btn_b01{padding:7px 7px;border:1px solid #d1d1d1;background:#fff;color:#000}
+#bo_v_act a.btn_b01 i{color:#007acc}
+#bo_v_act a.btn_b01:hover{background:#fff;}
+#bo_v_act a.btn_b01:hover i{color:tomato}
+
 #bo_v_act strong {color:#ff3061}
 #bo_v_act_good, #bo_v_act_nogood {display:none;position:absolute;top:30px;left:0;padding:10px 0;width:165px;background:#ff3061;color:#fff;text-align:center}
 
@@ -518,36 +523,11 @@ a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e81
 #bo_v_sns:after {display:block;visibility:hidden;clear:both;content:""}
 #bo_v_sns li {float:left;margin:0 5px 0 0}
 
-/* 게시판 아이콘 */
-.icon-text{display:inline-block;width:20px;text-indent:-9999px}
-.icon-view-name{background:url('../../../img/icon-write.gif') no-repeat}
-.icon-view-date{background:url('../../../img/icon-write.gif') -27px 0 no-repeat}
-.icon-view-hits{width:24px;background:url('../../../img/icon-write.gif') -54px 0 no-repeat}
-.icon-view-comment{width:22px;background:url('../../../img/icon-write.gif') -88px 0 no-repeat}
-.icon-view-link{background:url('../../../img/icon-write.gif') -27px -47px no-repeat}
-.icon-view-file{background:url('../../../img/icon-write.gif') 2px -48px no-repeat}
-
-.icon-comment-name{background:url('../../../img/icon-write.gif') 0 -24px no-repeat}
-.icon-comment-date{background:url('../../../img/icon-write.gif') -27px -24px no-repeat}
-
-.icon-btn-next{width:15px;background:url('../../../img/icon-button.png') -110px -26px no-repeat}
-.icon-btn-prev{width:15px;background:url('../../../img/icon-button.png') -95px -26px no-repeat}
-.icon-btn-modify{background:url('../../../img/icon-button.png') 0 0 no-repeat}
-.icon-btn-delete{background:url('../../../img/icon-button.png') -24px 1px no-repeat}
-.icon-btn-copy{background:url('../../../img/icon-button.png') -25px -26px no-repeat}
-.icon-btn-move{background:url('../../../img/icon-button.png') -51px 0px no-repeat}
-.icon-btn-list{background:url('../../../img/icon-button.png') -102px 1px no-repeat}
-.icon-btn-comment{background:url('../../../img/icon-button.png') -76px -26px no-repeat}
-.icon-btn-write{background:url('../../../img/icon-button.png') -75px 0px no-repeat}
-.icon-btn-scrap{background:url('../../../img/icon-button.png') -51px -28px no-repeat}
-
-.icon-btn-like{width:20px;height:36px;background:url('../../../img/icon_like.png') -1px 12px no-repeat;}
-.icon-btn-hate{width:22px;height:36px;background:url('../../../img/icon_hate.png') 1px 12px no-repeat;}
 
 /* 게시판 댓글 */
 #bo_vc {margin:0 0 20px;border-top: 1px solid #efefef;}
 #bo_v{background:#fff;border:1px solid #efefef}
-#bo_v #bo_vc h2 {margin:0;font-size:1em;text-align:center;border:none;border-bottom:1px solid #efefef;background:#f9f9f9}
+#bo_v #bo_vc h2 {margin:0;font-size:1em;text-align:center;border:none;border-bottom:1px solid #efefef;background:#f9f9f9;padding:20px 0;}
 #bo_vc article {padding:10px 20px;border-bottom:1px dotted #ccc}
 #bo_vc header {position:relative;padding:15px 0 5px}
 #bo_vc header .icon_reply {position:absolute;top:15px;left:-20px}

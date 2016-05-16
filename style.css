@@ -1044,6 +1044,21 @@ a:active {
 
 #recent-posts-2,#meta-2{clear:both;}
 
+/* 게시물 복사 */
+.gc_new_shortcode{}
+#copymove{padding:10px}
+#copymove h1{font-size: 1.250em;line-height: 1.225;margin-bottom: 1.05em;}
+#copymove .tbl_head01{background:#fff;font-size:0.813em}
+#copymove th{padding: 12px 0;border-top: 2px solid #525f78;border-bottom: 1px solid #efefef;background: #fff;color: #383838;font-size: 0.95em;text-align: center;letter-spacing: -0.1em;}
+
+#copymove th:first-child{width:20%}
+#copymove th:last-child{width:80%}
+#copymove td.td_chk{text-align:center;}
+
+.win_btn{text-align:center}
+.win_btn .btn_submit{background: #545f79;border: none;border-radius: 2px;color: #fff;}
+.win_btn .btn_cancel{font-weight:normal}
+
 /**
  * 7.0 - Accessibility
  */
@@ -1305,7 +1320,7 @@ blockquote:after,
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {outline: 0;}
-.site-main {margin-bottom: 3.5em;}
+.site-main {/*margin-bottom: 3.5em;*/}
 .site-main > :last-child {margin-bottom: 0;}
 
 
@@ -1345,7 +1360,7 @@ blockquote:after,
 	text-align:center
 }
 
-.custom-logo-link {display: block;}
+.custom-logo-link {display: block;padding:30px 0}
 .custom-logo {max-width: 180px;}
 .site-title {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
@@ -1845,17 +1860,9 @@ body.search-no-results .page-header {
 	padding-top: 1.0769230769em;
 }
 
-.entry-caption > :last-child {
-	margin-bottom: 0;
-}
-
-.content-bottom-widgets {
-	margin: 0 7.6923%;
-}
-
-.content-bottom-widgets .widget-area {
-	margin-bottom: 3.5em;
-}
+.entry-caption > :last-child {margin-bottom: 0;}
+.content-bottom-widgets {display:none}
+.content-bottom-widgets .widget-area {margin-bottom: 3.5em;}
 
 
 /**
@@ -2443,7 +2450,6 @@ p > video {
     
     .hd_cate{padding:0 10px;}
     
-    /*#primary{background:pink;width:100%} */
     #idx_shortcut,
     #idx-new-content{padding:0 7.6923%;}
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
@@ -2479,7 +2485,7 @@ p > video {
 
 /*985px*/
 @media screen and (max-width: 61.563em){    
-    #primary{background:aqua}
+    /*#primary{background:aqua}*/
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
     #idx-new-content .new-content-nomargin{margin-right:0;}
     
@@ -2497,7 +2503,7 @@ p > video {
     .hd_cate{padding:0;width:100%}
     #site-header-menu{width:100%}
     
-    #primary{background:yellow}
+    /*#primary{background:yellow}*/
     #idx-new-content{padding:0 7.6923%;}
     #idx-new-content .new-content{width:49%;float:left;margin:0 2% 15px 0}
     #idx-new-content .new-content-nomargin{margin-right:0;}
@@ -2513,7 +2519,7 @@ p > video {
 /*783px*/
 @media screen and (max-width: 48.938em){
     
-    #primary{background:tan}
+    /*#primary{background:tan}*/
     #idx-new-content .new-content{width:100%;}
     #idx_shortcut{height:auto;}
     #idx_shortcut ul{width:100%;margin-bottom:40px}
@@ -2539,7 +2545,7 @@ p > video {
     .menu-toggle:hover{background:#fff;}
     .menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus{background-color:#555f7a;border-color:#fff;color:#fff}
     
-    #primary{background:yellowgreen}
+    /*#primary{background:yellowgreen}*/
     #idx-new-content .new-content{width:100%;}
     
     .new-content li .new-cont-title{width:84%;}
@@ -2562,7 +2568,7 @@ p > video {
 
 /*443px*/
 @media screen and (max-width: 27.688em){
-    #primary{background:tomato}
+    /*#primary{background:tomato}*/
     
     .new-content li .new-cont-title{width:82%;}
     .new-content li .new-date{width:13%;}
@@ -2581,7 +2587,7 @@ p > video {
 
 /*340px*/
 @media screen and (max-width: 21.250em){
-    #primary{background:gray}
+    #/*primary{background:gray}*/
     
     .new-content li .new-cont-title{width:80%;}
     .new-content li .new-date{width:15%;}
@@ -2591,8 +2597,6 @@ p > video {
     #idx-new-gallery li img{width:100%;height:auto;}
     
 }
-
-
 
 
 /**
@@ -2617,7 +2621,7 @@ p > video {
 	body:not(.custom-background-image):after {bottom: 0;}
 
 	.site {margin: 21px;}
-	.site-main {margin-bottom: 5.25em;}
+	.site-main {/*margin-bottom: 5.25em;*/}
 	.site-header {/*padding: 3.9375em 7.6923%;*/}
 	.site-branding {/*margin-top: 1.3125em;	margin-bottom: 1.3125em;*/border-bottom:1px solid #eaeaea;text-align:center}
 	.custom-logo {max-width: 210px;}
@@ -3199,7 +3203,7 @@ p > video {
  */
 
 @media screen and (min-width: 61.5625em) {
-	.site-main {margin-bottom: 7.0em;}
+	.site-main {margin-bottom: 1.250em;}
 	.site-header {/*padding: 5.25em 4.5455%;*/}
 
 	.site-branding,
@@ -3311,7 +3315,7 @@ p > video {
 	.sidebar,
 	.content-bottom-widgets .widget-area,
 	.widecolumn {
-		margin-bottom: 7.0em;
+		/*margin-bottom: 7.0em;*/
 	}
 
 	body:not(.search-results) .entry-summary {
@@ -3728,7 +3732,7 @@ p > video {
 	}
 
 	.site-main {
-		margin-bottom: 3.5em;
+		/*margin-bottom: 3.5em;*/
 	}
 
 	.entry-header,

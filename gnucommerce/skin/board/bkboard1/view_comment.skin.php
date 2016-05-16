@@ -27,12 +27,12 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
     <article id="c_<?php echo $comment_id ?>" <?php if ($cmt_depth) { ?>style="margin-left:<?php echo $cmt_depth ?>px;border-top-color:#e0e0e0"<?php } ?>>
         <header style="z-index:<?php echo $cmt_sv; ?>">
             <h1><?php echo gc_get_text($list[$i]['user_display_name']); ?><?php _e('님의 댓글', GC_NAME);   //님의 댓글?></h1>
-            <span class="icon-comment-name icon-text">작성자</span><?php echo $list[$i]['name'] ?>
+            <i class="fa fa-user" aria-hidden="true"></i> <?php echo $list[$i]['name'] ?>
             <?php if ($cmt_depth) { ?><img src="<?php echo $board_skin_url ?>/img/icon_reply.gif" class="icon_reply" alt="댓글의 댓글"><?php } ?>
-            <?php if ($is_ip_view) { ?>
+            <!-- <?php if ($is_ip_view) { ?>
             아이피
             <span class="bo_vc_hdinfo"><?php echo $list[$i]['ip']; ?></span>
-            <span class="icon-comment-date icon-text">작성자</span><?php } ?><span class="bo_vc_hdinfo"><time datetime="<?php echo date('Y-m-d\TH:i:s+09:00', strtotime($list[$i]['datetime'])) ?>"><?php echo $list[$i]['datetime'] ?></time></span>
+            <span class="icon-comment-date icon-text">작성자</span><?php } ?><span class="bo_vc_hdinfo"><time datetime="<?php echo date('Y-m-d\TH:i:s+09:00', strtotime($list[$i]['datetime'])) ?>"><?php echo $list[$i]['datetime'] ?></time></span> -->
         </header>
 
         <!-- 댓글 출력 -->
