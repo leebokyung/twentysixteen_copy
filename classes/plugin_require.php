@@ -18,6 +18,9 @@ require_once( get_template_directory() . '/admin/main/options/homepage.php' );
 // Add widget
 require_once( get_template_directory() . '/lib/widget_functions.php' );
 
+// Add login widget
+require_once( get_template_directory() . '/classes/short_login_widget.php' );
+
 // Add styles
 add_action( 'wp_enqueue_scripts', 'sir_comm_add_enqueue_styles' );
 function sir_comm_add_enqueue_styles() {
@@ -80,7 +83,7 @@ if ( !class_exists( 'SR_register_required_plugins' ) ) :
 Class SR_register_required_plugins {
     public function __construct() {
         add_action( 'tgmpa_register', array( $this, 'required_plugins') );
-
+   
         add_action( 'sir_community_main_area', array( $this, 'sir_community_main_area_widget' ), 13 );
         add_action( 'sir_community_main_content',	array( $this, 'sir_community_main_latest_widget' ) );
         add_action( 'sir_community_main_content',	array( $this, 'sir_community_main_gallery_widget' ) );

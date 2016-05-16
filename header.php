@@ -8,7 +8,6 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
- 
 do_action('sir_comm_before_header');
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -38,8 +37,13 @@ do_action('sir_comm_before_header');
 		    <div class="site-header-top">
 		        <div class="site-inner">
                     <ul class="site-header-top-link">
-                        <li class="site-link-login"><a href="#none"><i class="fa fa-sign-in" aria-hidden="true"></i> 로그인</a></li>
-                        <li class="site-link-join"><a href="#none"><i class="fa fa-heart-o" aria-hidden="true"></i> 회원가입</a></li>
+                        <?php if( is_user_logged_in () ){   //로그인 했으면 ?>
+                        <li class="site-link-logout"><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('로그아웃', SIR_CMM_NAME); ?></a></li>
+                        <li class="site-link-mymember"><a href="<?php echo get_edit_user_link(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('회원정보', SIR_CMM_NAME); ?></a></li>
+                        <?php } else {  //로그인 하지 않았다면 ?>
+                        <li class="site-link-login"><a href="<?php echo wp_login_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('로그인', SIR_CMM_NAME); ?></a></li>
+                        <li class="site-link-join"><a href="<?php echo wp_registration_url(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('회원가입', SIR_CMM_NAME); ?></a></li>
+                        <?php } ?>
                     </ul> 
 			    </div>
 			</div>
@@ -119,7 +123,10 @@ do_action('sir_comm_before_header');
     						<?php endif; ?>
     					</div><!-- .site-header-menu -->
     				<?php endif; ?>
-    				
+    				<?php
+                    $custom_header_sizes = isset($custom_header_sizes) ? $custom_header_sizes : apply_filters( 'sir_comm_custom_header_sizes', '' );
+                    ?>
+
     				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mhd-title-logo">
                         <img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                     </a>
