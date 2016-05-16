@@ -299,7 +299,7 @@ class sir_latest_board_widget extends SIR_COMM_Widget {
 
         $board_array = apply_filters('sir_comm_get_bo_table_list', array_combine($board_array, $board_array) );
 
-		$this->widget_cssclass    = 'sir_comm widget_latest';
+		$this->widget_cssclass    = 'sir_comm_widget_latest';
 		$this->widget_description = __( '그누커머스 최신글 위젯입니다.', SIR_CMM_NAME );
 		$this->widget_id          = 'sir_comm_latest';
 		$this->widget_name        = __( '그누커머스 최신글 위젯', SIR_CMM_NAME );

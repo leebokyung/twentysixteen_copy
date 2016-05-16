@@ -2,6 +2,8 @@
 require get_template_directory() . '/lib/hooks.php';
 require get_template_directory() . '/classes/gnucommerce_widget.php';
 
+add_action( 'widgets_init', 'sir_community_widgets_init' );
+
 /**
  * Register our sidebars and widgetized areas.
  *
@@ -10,7 +12,8 @@ function sir_community_widgets_init() {
 
 
     if( defined('GC_BOARD_KEY') ){
-        register_widget( 'sir_latest_board_widget' );
+        register_widget( 'sir_latest_board_widget' );   // 그누커머스 최신글 위젯
+        register_widget( 'sir_comm_login_widget' ); // 로그인 위젯
     }
 
     register_sidebar( array(
@@ -58,7 +61,4 @@ function sir_community_widgets_init() {
         'after_title'   => '</h2>',
     ));
 }
-
-add_action( 'widgets_init', 'sir_community_widgets_init' );
-
 ?>
