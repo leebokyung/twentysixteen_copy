@@ -1044,6 +1044,21 @@ a:active {
 
 #recent-posts-2,#meta-2{clear:both;}
 
+/* 게시물 복사 */
+.gc_new_shortcode{}
+#copymove{padding:10px}
+#copymove h1{font-size: 1.250em;line-height: 1.225;margin-bottom: 1.05em;}
+#copymove .tbl_head01{background:#fff;font-size:0.813em}
+#copymove th{padding: 12px 0;border-top: 2px solid #525f78;border-bottom: 1px solid #efefef;background: #fff;color: #383838;font-size: 0.95em;text-align: center;letter-spacing: -0.1em;}
+
+#copymove th:first-child{width:20%}
+#copymove th:last-child{width:80%}
+#copymove td.td_chk{text-align:center;}
+
+.win_btn{text-align:center}
+.win_btn .btn_submit{background: #545f79;border: none;border-radius: 2px;color: #fff;}
+.win_btn .btn_cancel{font-weight:normal}
+
 /**
  * 7.0 - Accessibility
  */
@@ -1846,7 +1861,7 @@ body.search-no-results .page-header {
 }
 
 .entry-caption > :last-child {margin-bottom: 0;}
-.content-bottom-widgets {/*margin: 0 7.6923%;*/}
+.content-bottom-widgets {display:none}
 .content-bottom-widgets .widget-area {margin-bottom: 3.5em;}
 
 
@@ -2994,7 +3009,6 @@ p > video {
 	}
 
 	.widget .widget-title {
-	    display:none;
 	    padding:15px 10px;
 		/*margin-bottom: 1.3125em;*/
 	}
@@ -3189,7 +3203,7 @@ p > video {
  */
 
 @media screen and (min-width: 61.5625em) {
-	.site-main {/*margin-bottom: 7.0em;*/}
+	.site-main {margin-bottom: 1.250em;}
 	.site-header {/*padding: 5.25em 4.5455%;*/}
 
 	.site-branding,
@@ -3301,7 +3315,7 @@ p > video {
 	.sidebar,
 	.content-bottom-widgets .widget-area,
 	.widecolumn {
-		margin-bottom: 7.0em;
+		/*margin-bottom: 7.0em;*/
 	}
 
 	body:not(.search-results) .entry-summary {

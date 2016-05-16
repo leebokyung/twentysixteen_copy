@@ -158,9 +158,27 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
                     <?php if($is_show_field['visit']){ // 게시판 설정 중 조회 체크가 되어 있으면 ?>
                     <span class="text-hit"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $v['wr_hit'] ?></span>
                     <?php } ?>
+                    <?php if ($is_good) { ?>
+                    <span class="gall_subject"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php _e('', GC_NAME);  //추천?></span>
+                    <strong><?php echo $v['wr_good'] ?></strong>
+                    <?php } ?>
+                    <?php if ($is_nogood) { ?>
+                    <span class="gall_subject"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php _e('', GC_NAME);  //비추천?></span>
+                    <strong><?php echo $v['wr_nogood'] ?></strong>
+                <?php } ?>
                 </li>
-                <?php if ($is_good) { ?><li class="text-info"><span class="gall_subject"><?php _e('추천', GC_NAME);  //추천?></span><strong><?php echo $v['wr_good'] ?></strong></li><?php } ?>
-                <?php if ($is_nogood) { ?><li class="text-info"><span class="gall_subject"><?php _e('비추천', GC_NAME);  //비추천?></span><strong><?php echo $v['wr_nogood'] ?></strong></li><?php } ?>
+                <!-- <?php if ($is_good) { ?>
+                <li class="text-info">
+                    <span class="gall_subject"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php _e('', GC_NAME);  //추천?></span>
+                    <strong><?php echo $v['wr_good'] ?></strong>
+                </li>
+                <?php } ?>
+                <?php if ($is_nogood) { ?>
+                <li class="text-info">
+                    <span class="gall_subject"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php _e('', GC_NAME);  //비추천?></span>
+                    <strong><?php echo $v['wr_nogood'] ?></strong>
+                </li>
+                <?php } ?> -->
             </ul>
         </div>
         <?php } ?>

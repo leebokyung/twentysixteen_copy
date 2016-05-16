@@ -77,7 +77,7 @@ a.btn02:focus, .btn02:hover {text-decoration:none}
 button.btn02 {display:inline-block;margin:0;padding:7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none}
 
 .btn_confirm {text-align:center} /* 서식단계 진행 */
-.btn_confirm input{background:#545f79;border:none;color:#fff;font-size:0.813em;font-weight:normal}
+.btn_confirm input{padding:8px 7px;background:#545f79;border:none;color:#fff;font-weight:normal}
 .btn_confirm input:hover{background:#4c5771;}
 
 fieldset .btn_submit {padding:0 7px;height:24px;line-height:1em}
@@ -257,7 +257,7 @@ a.pg_page {border:0}
 /* 게시판용 버튼 */
 a.btn_b01 {display:inline-block;padding:8px 7px;border:1px solid #d9ded9;background:#f2f5f9;color:#000;text-decoration:none;vertical-align:middle}
 a.btn_b01:focus, a.btn_b01:hover {text-decoration:none;border:1px solid #d9ded9;}
-a.btn_b02 {display:inline-block;padding:7px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
+a.btn_b02 {display:inline-block;padding:8px 7px;border:1px solid #3b3c3f;background:#4b545e;color:#fff;text-decoration:none;vertical-align:middle}
 a.btn_b02:focus, a.btn_b02:hover {text-decoration:none;border:1px solid #3b3c3f;}
 a.btn_admin {display:inline-block;padding:7px;border:1px solid #e8180c;background:#e8180c;color:#fff;text-decoration:none;vertical-align:middle} /* 관리자 전용 버튼 */
 a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e8180c;}
@@ -334,11 +334,12 @@ a.btn_admin:focus, a.btn_admin:hover {text-decoration:none;border:1px solid #e81
 #bo_sch {margin-bottom:10px;padding-top:5px;text-align:center}
 fieldset#bo_sch{border:0;width: 243px;padding: 0;margin: 0;}
 #bo_sch legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden;border:0;}
+
 /* 리스트 검색 폼 */
 #bo_sch select{margin:0;height:auto !important;vertical-align:middle;font-size:1em;width:auto;}
 #bo_sch select[name="sfl"]{display:inline-block;height:30px !important;width:auto;padding-top:2px;padding-bottom:2px;border:1px solid #e4e4e4}
 #bo_sch input[type="text"].frm_input{display:inline-block;margin:0;padding:2px !important;width:98px;height:30px;min-height:auto;outline:0;border:1px solid #e4e4e4;vertical-align:middle;font-size:1em;line-height:1em;background:#fff}
-#bo_sch input[type="submit"].btn_submit{margin:0;vertical-align:middle;height:28px !important;min-width:auto;min-height:auto;padding:.5em .8em !important;font-size:1em;height:auto;line-height:1em;background:#4b545e}
+#bo_sch input[type="submit"].btn_submit{margin:0;vertical-align:middle;height:30px !important;min-width:auto;min-height:auto;padding:.5em .8em !important;font-size:1em;height:auto;line-height:1em;background:#4b545e}
 #bo_sch input[type="submit"].btn_submit:hover{background:#4b545e}
 
 /* 게시판 쓰기 */
@@ -350,14 +351,10 @@ fieldset#bo_sch{border:0;width: 243px;padding: 0;margin: 0;}
 #bo_v {}
 #bo_v .sv_wrap a {border:0}
 #bo_v .bo-tags {margin: 0 0 20px}
-
 #bo_v .bo-tags-view a {border:0}
 #bo_v .bo-tags-view a:after {display: inline-block;margin: 0 5px 0 8px;content: "";}
-
 #bo_v_table {display:none;position:absolute;top:0;right:16px;margin:0;padding:0 5px;height:25px;background:#ff3061;color:#fff;font-weight:bold;line-height:2.2em}
-
 #bo_v_title {padding:20px;font-size:1.2em;border-top:2px solid #545f79;margin-bottom:0}
-
 #bo_v_info {padding:20px;border-top:1px solid #efefef;line-height:20px}
 #bo_v #bo_v_info h2 {position:absolute;font-size:0;line-height:0;overflow:hidden;display:none}
 #bo_v #bo_v_info strong {display:inline-block;margin:0 15px 0 5px;font-weight:normal;line-height:20px;}
@@ -415,7 +412,12 @@ fieldset#bo_sch{border:0;width: 243px;padding: 0;margin: 0;}
 
 #bo_v_act {margin-bottom:30px;text-align:center}
 #bo_v_act .bo_v_act_gng {position:relative}
-#bo_v_act a {margin-right:5px;vertical-align:middle}
+#bo_v_act a {margin-right:5px;vertical-align:middle;}
+#bo_v_act a.btn_b01{padding:7px 7px;border:1px solid #d1d1d1;background:#fff;color:#000}
+#bo_v_act a.btn_b01 i{color:#007acc}
+#bo_v_act a.btn_b01:hover{background:#fff;}
+#bo_v_act a.btn_b01:hover i{color:tomato}
+
 #bo_v_act strong {color:#ff3061}
 #bo_v_act_good, #bo_v_act_nogood {display:none;position:absolute;top:30px;left:0;padding:10px 0;width:165px;background:#ff3061;color:#fff;text-align:center}
 
