@@ -57,7 +57,7 @@ if (!$is_show_field['wdate']) $colspan--;
         <ul class="btn_bo_user">
             <?php if ($rss_href) { ?><li><a href="<?php echo esc_url( $rss_href ); ?>" class="btn_b01" target="_blank">RSS</a></li><?php } ?>
             <?php if ($admin_href) { ?><li><a href="<?php echo esc_url( $admin_href ); ?>" class="btn_admin" target="_blank"><?php _e('관리', GC_NAME);?></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><?php _e('글쓰기', GC_NAME);?></a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME);?></a></li><?php } ?>
         </ul>
         <?php } ?>
     </div>
@@ -196,7 +196,7 @@ if (!$is_show_field['wdate']) $colspan--;
         <?php if ($list_href || $write_href) { ?>
         <ul class="btn_bo_user">
             <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01"><?php _e('목록', GC_NAME); //목록 ?></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02"><?php _e('글쓰기', GC_NAME); //글쓰기 ?></a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME); //글쓰기 ?></a></li><?php } ?>
         </ul>
         <?php } ?>
     </div>

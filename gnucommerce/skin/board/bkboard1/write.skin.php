@@ -6,8 +6,6 @@ if($board['bo_use_tag'])    //게시판 설정에서 태그 기능을 사용한�
 ?>
 
 <section id="bo_w">
-    <h2 id="container_title"><?php echo $gcboard->title ?></h2>
-
     <!-- 게시물 작성/수정 시작 { -->
     <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" method="post" enctype="multipart/form-data" autocomplete="off" style="width:<?php echo $width; ?>" onsubmit="return gcboard.fwrite_submit(this);">
     <?php wp_nonce_field( 'gc_write', 'gc_nonce_field' ); ?>

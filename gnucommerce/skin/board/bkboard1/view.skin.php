@@ -101,13 +101,13 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
         <div id="bo_v_act">
             <p class="bo_v_act_view">
                 <?php if($board['bo_use_good']) { ?>
-                <span class="icon-btn-like icon-text"><?php _e('추천', GC_NAME); //추천?></span>
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php _e('', GC_NAME); //추천?>
                 <?php } ?>
                 <strong><?php echo number_format($view['wr_good']) ?></strong>
             </p>
             <p class="bo_v_act_view">
                 <?php if($board['bo_use_nogood']) { ?>
-                <span class="icon-btn-hate icon-text"><?php _e('비추천', GC_NAME); //비추천?></span>
+                <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php _e('', GC_NAME); //비추천?>
                 <?php } ?>
                 <strong><?php echo number_format($view['wr_nogood']) ?></strong>
             </p>
