@@ -81,7 +81,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             <?php if ($good_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $good_href ) ?>" id="good_button" class="btn_b03" target="_blank">
-                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php _e('', GC_NAME); //추천?>
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                     <strong><?php echo number_format($view['wr_good']) ?></strong></a>
                 <b id="bo_v_act_good"></b>
             </span>
@@ -89,7 +89,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             <?php if ($nogood_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $nogood_href ) ?>" id="nogood_button" class="btn_b03" target="_blank">
-                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php _e('', GC_NAME); //비추천?>
+                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
                     <strong><?php echo number_format($view['wr_nogood']) ?></strong>
                 </a>
                 <b id="bo_v_act_nogood"></b>
@@ -102,13 +102,13 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
         <div id="bo_v_act">
             <p class="bo_v_act_view">
                 <?php if($board['bo_use_good']) { ?>
-                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php _e('', GC_NAME); //추천?>
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                 <?php } ?>
                 <strong><?php echo number_format($view['wr_good']) ?></strong>
             </p>
             <p class="bo_v_act_view">
                 <?php if($board['bo_use_nogood']) { ?>
-                <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php _e('', GC_NAME); //비추천?>
+                <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
                 <?php } ?>
                 <strong><?php echo number_format($view['wr_nogood']) ?></strong>
             </p>

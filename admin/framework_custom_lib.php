@@ -54,16 +54,16 @@ function sir_comm_get_var_by($key='icon_class'){
                 );
     } else if( $key == 'icon_text' ){
         return array(
-            0=>__('공지', SIR_CMM_NAME),
-            1=>__('최근글', SIR_CMM_NAME),
-            2=>__('그누보드5', SIR_CMM_NAME),
-            3=>__('영카트5', SIR_CMM_NAME),
-            4=>__('회원자료', SIR_CMM_NAME),
-            5=>__('갤러리', SIR_CMM_NAME),
-            6=>__('1:1문의', SIR_CMM_NAME),
-            7=>__('오시는 길', SIR_CMM_NAME),
-            8=>__('강좌/팁', SIR_CMM_NAME),
-            9=>__('고객센터', SIR_CMM_NAME),
+            0=> __('공지', SIR_CMM_NAME),
+            1=> __('최근글', SIR_CMM_NAME),
+            2=> __('그누보드5', SIR_CMM_NAME),
+            3=> __('영카트5', SIR_CMM_NAME),
+            4=> __('회원자료', SIR_CMM_NAME),
+            5=> __('갤러리', SIR_CMM_NAME),
+            6=> __('1:1문의', SIR_CMM_NAME),
+            7=> __('오시는 길', SIR_CMM_NAME),
+            8=> __('강좌/팁', SIR_CMM_NAME),
+            9=> __('고객센터', SIR_CMM_NAME),
             );
     }
 }

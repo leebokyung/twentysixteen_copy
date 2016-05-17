@@ -4,12 +4,20 @@ if( ! defined( 'ABSPATH' ) ) exit;
 //https://hasin.me/2015/04/24/getting-rid-of-redux-framework-annoyances/
 //https://codex.wordpress.org/Theme_Frameworks
 
+/*
+add_action('load_textdomain', 'load_sir_comm_language', 10, 2);
+
+function load_sir_comm_language( $domain, $mofile ){
+}
+*/
+
+
 require_once( get_template_directory() . '/lib/define.php' );
 
 // Add Redux Framework
 require_once( get_template_directory() . '/admin/main/framework.php' );
-require_once( get_template_directory() . '/admin/main/lib.php' );
-require_once( get_template_directory() . '/admin/main/options.php' );
+require_once( get_template_directory() . '/admin/framework_custom_lib.php' );
+require_once( get_template_directory() . '/admin/options.php' );
 
 // Add custom theme options ( related Redux Framework )
 require_once( get_template_directory() . '/admin/main/options/variables.php' );
@@ -76,7 +84,7 @@ add_action( 'sir_community_main_area', 'sircomm_input_homepagesection', 13);
  * Include the TGM_Plugin_Activation class.
  */
 
-require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
+require_once dirname( __FILE__ ) . '/tgm/class-tgm-plugin-activation.php';
 
 if ( !class_exists( 'SR_register_required_plugins' ) ) :
 

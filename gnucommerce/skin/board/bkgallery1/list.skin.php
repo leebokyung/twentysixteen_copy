@@ -156,11 +156,11 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
                 </li>
                 <li class="text-info">
                     <?php if ($is_good) { ?>
-                    <span class="gall_subject text-good"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php _e('', GC_NAME);  //추천?></span>
+                    <span class="gall_subject text-good"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php //추천?></span>
                     <strong><?php echo $v['wr_good'] ?></strong>
                     <?php } ?>
                     <?php if ($is_nogood) { ?>
-                    <span class="gall_subject text-nogood"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php _e('', GC_NAME);  //비추천?></span>
+                    <span class="gall_subject text-nogood"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php //비추천?></span>
                     <strong><?php echo $v['wr_nogood'] ?></strong>
                     <?php } ?>
                 </li>
