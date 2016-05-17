@@ -81,7 +81,7 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             <?php if ($good_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $good_href ) ?>" id="good_button" class="btn_b03" target="_blank">
-                    <span class="icon-btn-like icon-text"><?php _e('추천', GC_NAME); //추천?></span>
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php _e('', GC_NAME); //추천?>
                     <strong><?php echo number_format($view['wr_good']) ?></strong></a>
                 <b id="bo_v_act_good"></b>
             </span>
@@ -89,8 +89,9 @@ wp_enqueue_script( $bo_table.'-view-skin-js', $board_skin_url.'/js/view.skin.js'
             <?php if ($nogood_href) { ?>
             <span class="bo_v_act_gng">
                 <a href="<?php echo esc_url( $nogood_href ) ?>" id="nogood_button" class="btn_b03" target="_blank">
-                    <span class="icon-btn-hate icon-text"><?php _e('비추천', GC_NAME); //비추천?></span>
-                    <strong><?php echo number_format($view['wr_nogood']) ?></strong></a>
+                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php _e('', GC_NAME); //비추천?>
+                    <strong><?php echo number_format($view['wr_nogood']) ?></strong>
+                </a>
                 <b id="bo_v_act_nogood"></b>
             </span>
             <?php } ?>

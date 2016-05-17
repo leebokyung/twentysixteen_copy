@@ -48,15 +48,10 @@ if (!$is_show_field['wdate']) $colspan--;
 
     <!-- 게시판 페이지 정보 및 버튼 시작 { -->
     <div class="bo_fx">
-        <!-- <div id="bo_list_total">
-            <span>Total <?php echo number_format($total_count) ?> /</span>
-            <?php echo $page ?> <?php _e('페이지', GC_NAME); ?>
-        </div> -->
-
         <?php if ($rss_href || $write_href) { ?>
         <ul class="btn_bo_user">
-            <?php if ($rss_href) { ?><li><a href="<?php echo esc_url( $rss_href ); ?>" class="btn_b01" target="_blank">RSS</a></li><?php } ?>
-            <?php if ($admin_href) { ?><li><a href="<?php echo esc_url( $admin_href ); ?>" class="btn_admin" target="_blank"><?php _e('관리', GC_NAME);?></a></li><?php } ?>
+            <?php if ($rss_href) { ?><li><a href="<?php echo esc_url( $rss_href ); ?>" class="btn_b01" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i> RSS</a></li><?php } ?>
+            <?php if ($admin_href) { ?><li><a href="<?php echo esc_url( $admin_href ); ?>" class="btn_admin" target="_blank"><i class="fa fa-cog" aria-hidden="true"></i> <?php _e('관리', GC_NAME);?></a></li><?php } ?>
             <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME);?></a></li><?php } ?>
         </ul>
         <?php } ?>
@@ -187,15 +182,15 @@ if (!$is_show_field['wdate']) $colspan--;
     <div class="bo_fx">
         <?php if ($is_checkbox) { ?>
         <ul class="btn_bo_adm">
-            <li><button type="submit" name="btn_submit" value="<?php _e('선택삭제', GC_NAME); //선택삭제 ?>" onclick="document.pressed=this.value"><?php _e('선택삭제', GC_NAME); //선택삭제 ?></button></li>
-            <li><button type="submit" name="btn_submit" value="<?php _e('선택복사', GC_NAME); //선택복사 ?>" onclick="document.pressed=this.value"><?php _e('선택복사', GC_NAME); //선택복사 ?></button></li>
-            <li><button type="submit" name="btn_submit" value="<?php _e('선택이동', GC_NAME); //선택이동 ?>" onclick="document.pressed=this.value"><?php _e('선택이동', GC_NAME); //선택이동 ?></button></li>
+            <li><button type="submit" name="btn_submit" value="<?php _e('선택삭제', GC_NAME); //선택삭제 ?>" onclick="document.pressed=this.value"><i class="fa fa-eraser" aria-hidden="true"></i> <?php _e('선택삭제', GC_NAME); //선택삭제 ?></button></li>
+            <li><button type="submit" name="btn_submit" value="<?php _e('선택복사', GC_NAME); //선택복사 ?>" onclick="document.pressed=this.value"><i class="fa fa-clipboard" aria-hidden="true"></i> <?php _e('선택복사', GC_NAME); //선택복사 ?></button></li>
+            <li><button type="submit" name="btn_submit" value="<?php _e('선택이동', GC_NAME); //선택이동 ?>" onclick="document.pressed=this.value"><i class="fa fa-repeat" aria-hidden="true"></i> <?php _e('선택이동', GC_NAME); //선택이동 ?></button></li>
         </ul>
         <?php } ?>
 
         <?php if ($list_href || $write_href) { ?>
         <ul class="btn_bo_user">
-            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01"><?php _e('목록', GC_NAME); //목록 ?></a></li><?php } ?>
+            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01"><i class="fa fa-list-ul" aria-hidden="true"></i> <?php _e('목록', GC_NAME); //목록 ?></a></li><?php } ?>
             <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME); //글쓰기 ?></a></li><?php } ?>
         </ul>
         <?php } ?>
