@@ -124,42 +124,7 @@ do_action('sir_comm_before_header');
     				<?php endif; ?>
 
     				</div>
-                                
-    				<div id="hd_sch_box">
-					    <div id="hd_sch">
-                            <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
-                                <label>
-                                <input type="search" class="search-field" placeholder="검색" value="" id=""/>
-                                </label>
-                                <button type="submit" class="search-submit"><span class="screen-reader-text">검색</span></button>
-                           </form>  
-                        </div>
-					</div>
-					
-					<!-- <div id="m_hd_sch">
-					    <button type="button" class="bo_v_add">
-					        <i class="fa fa-search" aria-hidden="true"></i>
-					    </button>
-					    <div class="pvji_open  pv_ji_close">					       
-						    <form role="search" action="" method="get" class="search-form" accept-charset="utf-8">
-                                <label>
-                                <input type="search" class="search-field" placeholder="검색" value="" id=""/>
-                                </label>
-                                <button type="submit" class="search-submit"><span class="screen-reader-text">검색</span></button>
-                            </form>  
-						</div> 
-                    </div>
-                    <script>
-                    jQuery(document).ready(function($){
-                        $('button', '#m_hd_sch').toggle(function(){
-                            $(this).addClass('pv_ji_cl');
-                            $(this).next('div.pvji_open').removeClass('pv_ji_close');
-                        },function(){
-                            $(this).removeClass('pv_ji_cl');
-                            $(this).next('div.pvji_open').addClass('pv_ji_close');
-                        });
-                    });
-                    </script> -->
+
 				</div>
 			</div><!-- .site-header-main -->
 		</header><!-- .site-header -->
