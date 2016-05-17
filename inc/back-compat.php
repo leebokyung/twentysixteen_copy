@@ -7,8 +7,6 @@
  * relies on many newer functions and markup changes introduced in 4.4.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since sir community 1.0
  */
 
 /**
@@ -18,14 +16,14 @@
  *
  * @since sir community 1.0
  */
-function twentysixteen_switch_theme() {
+function sircomm_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 
 	unset( $_GET['activated'] );
 
-	add_action( 'admin_notices', 'twentysixteen_upgrade_notice' );
+	add_action( 'admin_notices', 'sircomm_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'twentysixteen_switch_theme' );
+add_action( 'after_switch_theme', 'sircomm_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
@@ -37,8 +35,8 @@ add_action( 'after_switch_theme', 'twentysixteen_switch_theme' );
  *
  * @global string $wp_version WordPress version.
  */
-function twentysixteen_upgrade_notice() {
-	$message = sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'twentysixteen' ), $GLOBALS['wp_version'] );
+function sircomm_upgrade_notice() {
+	$message = sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', SIR_CMM_NAME ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -49,12 +47,12 @@ function twentysixteen_upgrade_notice() {
  *
  * @global string $wp_version WordPress version.
  */
-function twentysixteen_customize() {
-	wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'twentysixteen' ), $GLOBALS['wp_version'] ), '', array(
+function sircomm_customize() {
+	wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', SIR_CMM_NAME ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
-add_action( 'load-customize.php', 'twentysixteen_customize' );
+add_action( 'load-customize.php', 'sircomm_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.4.
@@ -63,9 +61,9 @@ add_action( 'load-customize.php', 'twentysixteen_customize' );
  *
  * @global string $wp_version WordPress version.
  */
-function twentysixteen_preview() {
+function sircomm_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'twentysixteen' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', SIR_CMM_NAME ), $GLOBALS['wp_version'] ) );
 	}
 }
-add_action( 'template_redirect', 'twentysixteen_preview' );
+add_action( 'template_redirect', 'sircomm_preview' );

@@ -10,8 +10,6 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since sir community 1.0
  */
 
 get_header(); ?>

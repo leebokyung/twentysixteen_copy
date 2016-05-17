@@ -3,7 +3,7 @@
  */
 
 ( function( $ ) {
-	$( document ).on( 'keydown.twentysixteen', function( e ) {
+	$( document ).on( 'keydown.sircomm', function( e ) {
 		var url = false;
 
 		// Left arrow key code.

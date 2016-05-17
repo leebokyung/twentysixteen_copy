@@ -5,8 +5,6 @@
  * Contains the closing of the #content div and all content after
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since sir community 1.0
  */
 ?>
 
@@ -15,7 +13,7 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 		    <div class="foot-inner"><!-- site-inner -->
     			<?php if ( has_nav_menu( 'social' ) ) : ?>
-    				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentysixteen' ); ?>">
+    				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', SIR_CMM_NAME ); ?>">
     					<?php
     						wp_nav_menu( array(
     							'theme_location' => 'social',
@@ -52,11 +50,10 @@
     				</div>
     				<?php
     					/**
-    					 * Fires before the twentysixteen footer text for footer customization.
     					 *
     					 * @since sir community 1.0
     					 */
-    					do_action( 'twentysixteen_credits' );
+    					do_action( 'sircomm_credits' );
     				?>   				
     			</div><!-- .site-info -->
 			</div>
