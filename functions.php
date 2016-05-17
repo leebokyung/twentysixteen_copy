@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Sixteen functions and definitions
+ * sir community functions and definitions
  *
  * Set up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
@@ -22,11 +22,11 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 
 /**
- * Twenty Sixteen only works in WordPress 4.4 or later.
+ * sir community only works in WordPress 4.4 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -42,13 +42,13 @@ if ( ! function_exists( 'twentysixteen_setup' ) ) :
  *
  * Create your own twentysixteen_setup() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 function twentysixteen_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Twenty Sixteen, use a find and replace
+	 * If you're building a theme based on sir community, use a find and replace
 	 * to change 'twentysixteen' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'twentysixteen', get_template_directory() . '/languages' );
@@ -67,7 +67,7 @@ function twentysixteen_setup() {
 	/*
 	 * Enable support for custom logo.
 	 *
-	 *  @since Twenty Sixteen 1.2
+	 *  @since sir community 1.2
 	 */
 	add_theme_support( 'custom-logo', array(
 		'height'      => 240,
@@ -137,7 +137,7 @@ add_action( 'after_setup_theme', 'twentysixteen_setup' );
  *
  * @global int $content_width
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 function twentysixteen_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'twentysixteen_content_width', 840 );
@@ -149,7 +149,7 @@ add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 function twentysixteen_widgets_init() {
 	register_sidebar( array(
@@ -186,11 +186,11 @@ add_action( 'widgets_init', 'twentysixteen_widgets_init' );
 
 if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
 /**
- * Register Google fonts for Twenty Sixteen.
+ * Register Google fonts for sir community.
  *
  * Create your own twentysixteen_fonts_url() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @return string Google fonts URL for the theme.
  */
@@ -230,7 +230,7 @@ endif;
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 function twentysixteen_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
@@ -240,7 +240,7 @@ add_action( 'wp_head', 'twentysixteen_javascript_detection', 0 );
 /**
  * Enqueues scripts and styles.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 function twentysixteen_scripts() {
 	// Add custom fonts, used in the main stylesheet.
@@ -290,7 +290,7 @@ add_action( 'wp_enqueue_scripts', 'twentysixteen_scripts' );
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @param array $classes Classes for the body element.
  * @return array (Maybe) filtered body classes.
@@ -323,7 +323,7 @@ add_filter( 'body_class', 'twentysixteen_body_classes' );
 /**
  * Converts a HEX value to RGB.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @param string $color The original color, in 3- or 6-digit hexadecimal form.
  * @return array Array containing RGB (red, green, and blue) values for the given
@@ -361,7 +361,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @param string $sizes A source size value for use in a 'sizes' attribute.
  * @param array  $size  Image size. Accepts an array of width and height
@@ -388,7 +388,7 @@ add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr'
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @param array $attr Attributes for the image markup.
  * @param int   $attachment Image attachment ID.
@@ -407,7 +407,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'twentysixteen_post_thumbnail_
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.
  *
- * @since Twenty Sixteen 1.1
+ * @since sir community 1.1
  *
  * @param array $args Arguments for tag cloud widget.
  * @return array A new modified arguments.

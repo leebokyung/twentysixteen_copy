@@ -1,16 +1,16 @@
 <?php
 /**
- * Twenty Sixteen Customizer functionality
+ * sir community Customizer functionality
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 
 /**
  * Sets up the WordPress core custom header and custom background features.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @see twentysixteen_header_style()
  */
@@ -20,9 +20,9 @@ function twentysixteen_custom_header_and_background() {
 	$default_text_color       = trim( $color_scheme[3], '#' );
 
 	/**
-	 * Filter the arguments used when adding 'custom-background' support in Twenty Sixteen.
+	 * Filter the arguments used when adding 'custom-background' support in sir community.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since sir community 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-background support arguments.
@@ -35,9 +35,9 @@ function twentysixteen_custom_header_and_background() {
 	) ) );
 
 	/**
-	 * Filter the arguments used when adding 'custom-header' support in Twenty Sixteen.
+	 * Filter the arguments used when adding 'custom-header' support in sir community.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since sir community 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -66,7 +66,7 @@ if ( ! function_exists( 'twentysixteen_header_style' ) ) :
  *
  * Create your own twentysixteen_header_style() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @see twentysixteen_custom_header_and_background().
  */
@@ -96,7 +96,7 @@ endif; // twentysixteen_header_style
 /**
  * Adds postMessage support for site title and description for the Customizer.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @param WP_Customize_Manager $wp_customize The Customizer object.
  */
@@ -190,7 +190,7 @@ add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since Twenty Sixteen 1.2
+ * @since sir community 1.2
  * @see twentysixteen_customize_register()
  *
  * @return void
@@ -202,7 +202,7 @@ function twentysixteen_customize_partial_blogname() {
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since Twenty Sixteen 1.2
+ * @since sir community 1.2
  * @see twentysixteen_customize_register()
  *
  * @return void
@@ -212,7 +212,7 @@ function twentysixteen_customize_partial_blogdescription() {
 }
 
 /**
- * Registers color schemes for Twenty Sixteen.
+ * Registers color schemes for sir community.
  *
  * Can be filtered with {@see 'twentysixteen_color_schemes'}.
  *
@@ -223,17 +223,17 @@ function twentysixteen_customize_partial_blogdescription() {
  * 4. Main Text Color.
  * 5. Secondary Text Color.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @return array An associative array of color scheme options.
  */
 function twentysixteen_get_color_schemes() {
 	/**
-	 * Filter the color schemes registered for use with Twenty Sixteen.
+	 * Filter the color schemes registered for use with sir community.
 	 *
 	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since sir community 1.0
 	 *
 	 * @param array $schemes {
 	 *     Associative array of color schemes data.
@@ -304,11 +304,11 @@ function twentysixteen_get_color_schemes() {
 
 if ( ! function_exists( 'twentysixteen_get_color_scheme' ) ) :
 /**
- * Retrieves the current Twenty Sixteen color scheme.
+ * Retrieves the current sir community color scheme.
  *
  * Create your own twentysixteen_get_color_scheme() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  *
  * @return array An associative array of either the current or default color scheme HEX values.
  */
@@ -326,12 +326,11 @@ endif; // twentysixteen_get_color_scheme
 
 if ( ! function_exists( 'twentysixteen_get_color_scheme_choices' ) ) :
 /**
- * Retrieves an array of color scheme choices registered for Twenty Sixteen.
+ * Retrieves an array of color scheme choices registered for sir community.
  *
  * Create your own twentysixteen_get_color_scheme_choices() function to override
  * in a child theme.
  *
- * @since Twenty Sixteen 1.0
  *
  * @return array Array of color schemes.
  */
@@ -350,14 +349,11 @@ endif; // twentysixteen_get_color_scheme_choices
 
 if ( ! function_exists( 'twentysixteen_sanitize_color_scheme' ) ) :
 /**
- * Handles sanitization for Twenty Sixteen color schemes.
  *
  * Create your own twentysixteen_sanitize_color_scheme() function to override
  * in a child theme.
  *
- * @since Twenty Sixteen 1.0
  *
- * @param string $value Color scheme name value.
  * @return string Color scheme name.
  */
 function twentysixteen_sanitize_color_scheme( $value ) {
@@ -374,7 +370,6 @@ endif; // twentysixteen_sanitize_color_scheme
 /**
  * Enqueues front-end CSS for color scheme.
  *
- * @since Twenty Sixteen 1.0
  *
  * @see wp_add_inline_style()
  */
@@ -418,7 +413,6 @@ add_action( 'wp_enqueue_scripts', 'twentysixteen_color_scheme_css' );
  *
  * Passes color scheme data as colorScheme global.
  *
- * @since Twenty Sixteen 1.0
  */
 function twentysixteen_customize_control_js() {
 	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160412', true );
