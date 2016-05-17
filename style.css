@@ -1,15 +1,15 @@
 /*
 Theme Name: SIR Community
-Author: the WordPress team
+Theme URI: https://wordpress.org/themes/SIR_Community/
+Author: SIR SOFT
 Author URI: sir.kr
-Description: sir community is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
+Description: 에스아이알 커뮤니티 테마입니다.
 Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
-Text Domain: sir_community
+Text Domain: SIR Community
+Tags: Sir-Community, sir, community, black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
@@ -2426,9 +2426,9 @@ p > video {
     #secondary .widget-title{padding:15px}
     
     #side-login{width:49%;margin-right:2%;float:left;}
-    #side-login-input{float:left;width:80%;}
-    #side-login-input input{font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;margin-top:-1px;background:#fff;color:#656565}
-    #s-login{width:20%;height:63px;margin:-1px 0 0 -1px;font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;background:#fff;color:#656565;}
+    #side-login-input{float:left;width:75%;}
+    #side-login-input input{font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;margin-top:-1px;background:#fff;color:#656565;}
+    #s-login{width:25%;height:62px;margin:-1px 0 0 -1px;font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;background:#fff;color:#656565;}
     
     #tag_cloud-2{width:49%;min-height:160px;float:left}
     #recent-posts-2{clear:both;width:49%;margin-right:2%;float:left}
