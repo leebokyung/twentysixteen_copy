@@ -35,10 +35,10 @@ function sir_comm_add_enqueue_styles() {
 
 
 // 메인 슬라이더 표시
-add_action( 'sir_community_main_area', 'thinkup_input_sliderhome', 12);
+add_action( 'sir_community_main_area', 'sircomm_input_sliderhome', 12);
 
 // 메인 아이콘 표시
-add_action( 'sir_community_main_area', 'thinkup_input_homepagesection', 13);
+add_action( 'sir_community_main_area', 'sircomm_input_homepagesection', 13);
 
 /*
  function sir_comm_removeDemoModeLink() {   // Be sure to rename this function to something more unique

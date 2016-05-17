@@ -1449,6 +1449,7 @@
     };
     $( document ).ready(
         function() {
+        return;
             if ( redux.rAds ) {
                 setTimeout(
                     function() {

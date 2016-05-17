@@ -23,7 +23,7 @@
 if( !defined( 'ABSPATH' ) ) exit;
 
 // Don't duplicate me!
-if( !class_exists( 'ReduxFramework_extension_thinkup_custom_code' ) ) {
+if( !class_exists( 'ReduxFramework_extension_sircomm_custom_code' ) ) {
 
 
     /**
@@ -31,7 +31,7 @@ if( !class_exists( 'ReduxFramework_extension_thinkup_custom_code' ) ) {
      *
      * @since       3.1.6
      */
-    class ReduxFramework_extension_thinkup_custom_code extends ReduxFramework {
+    class ReduxFramework_extension_sircomm_custom_code extends ReduxFramework {
 
         // Protected vars
         protected $parent;
@@ -55,7 +55,7 @@ if( !class_exists( 'ReduxFramework_extension_thinkup_custom_code' ) ) {
             if ( empty( $this->extension_dir ) ) {
                 $this->extension_dir = trailingslashit( str_replace( '\\', '/', dirname( __FILE__ ) ) );
             }
-            $this->field_name = 'thinkup_custom_code';
+            $this->field_name = 'sircomm_custom_code';
 
             self::$theInstance = $this;
 

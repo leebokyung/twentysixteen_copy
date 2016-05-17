@@ -4,52 +4,52 @@
 ---------------------------------------------------------------------------------- */
 
 // Content for slider layout - Standard
-function thinkup_input_sliderhomepage() {
+function sircomm_input_sliderhomepage() {
 
     global $sir_comm_global;
 
-    $thinkup_homepage_sliderpage1 = $sir_comm_global['main_sliderpage1'];
-    $thinkup_homepage_sliderpage2 = $sir_comm_global['main_sliderpage2'];
-    $thinkup_homepage_sliderpage3 = $sir_comm_global['main_sliderpage3'];
+    $sircomm_homepage_sliderpage1 = $sir_comm_global['main_sliderpage1'];
+    $sircomm_homepage_sliderpage2 = $sir_comm_global['main_sliderpage2'];
+    $sircomm_homepage_sliderpage3 = $sir_comm_global['main_sliderpage3'];
 
 	// Get url of featured images in slider pages
-	$slide1_image_url = wp_get_attachment_url( get_post_thumbnail_id( $thinkup_homepage_sliderpage1 ) );
-	$slide2_image_url = wp_get_attachment_url( get_post_thumbnail_id( $thinkup_homepage_sliderpage2 ) );
-	$slide3_image_url = wp_get_attachment_url( get_post_thumbnail_id( $thinkup_homepage_sliderpage3 ) );
+	$slide1_image_url = wp_get_attachment_url( get_post_thumbnail_id( $sircomm_homepage_sliderpage1 ) );
+	$slide2_image_url = wp_get_attachment_url( get_post_thumbnail_id( $sircomm_homepage_sliderpage2 ) );
+	$slide3_image_url = wp_get_attachment_url( get_post_thumbnail_id( $sircomm_homepage_sliderpage3 ) );
 
 	// Get titles of slider pages
-	$slide1_title = get_the_title( $thinkup_homepage_sliderpage1 );
-	$slide2_title = get_the_title( $thinkup_homepage_sliderpage2 );
-	$slide3_title = get_the_title( $thinkup_homepage_sliderpage3 );
+	$slide1_title = get_the_title( $sircomm_homepage_sliderpage1 );
+	$slide2_title = get_the_title( $sircomm_homepage_sliderpage2 );
+	$slide3_title = get_the_title( $sircomm_homepage_sliderpage3 );
 	
 	// Get descriptions (excerpt) of slider pages
-	$slide1_description = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $thinkup_homepage_sliderpage1 ) );
-	$slide2_description = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $thinkup_homepage_sliderpage2 ) );
-	$slide3_description = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $thinkup_homepage_sliderpage3 ) );
+	$slide1_description = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $sircomm_homepage_sliderpage1 ) );
+	$slide2_description = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $sircomm_homepage_sliderpage2 ) );
+	$slide3_description = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $sircomm_homepage_sliderpage3 ) );
 
 	// Get url of slider pages
-	$slide1_url = get_permalink( $thinkup_homepage_sliderpage1 );
-	$slide2_url = get_permalink( $thinkup_homepage_sliderpage2 );
-	$slide3_url = get_permalink( $thinkup_homepage_sliderpage3 );
+	$slide1_url = get_permalink( $sircomm_homepage_sliderpage1 );
+	$slide2_url = get_permalink( $sircomm_homepage_sliderpage2 );
+	$slide3_url = get_permalink( $sircomm_homepage_sliderpage3 );
 
 	// Create array for slider content
-	$thinkup_homepage_sliderpage = array( 
+	$sircomm_homepage_sliderpage = array( 
 		array(
-			'slide_id'          => $thinkup_homepage_sliderpage1,
+			'slide_id'          => $sircomm_homepage_sliderpage1,
 			'slide_image_url'   => $slide1_image_url,
 			'slide_title'       => $slide1_title,
 			'slide_description' => $slide1_description,
 			'slide_url'         => $slide1_url 
 		),
 		array( 
-			'slide_id'          => $thinkup_homepage_sliderpage2, 
+			'slide_id'          => $sircomm_homepage_sliderpage2, 
 			'slide_image_url'   => $slide2_image_url, 
 			'slide_title'       => $slide2_title, 
 			'slide_description' => $slide2_description, 
 			'slide_url'         => $slide2_url 
 		),
 		array( 
-			'slide_id'          => $thinkup_homepage_sliderpage3, 
+			'slide_id'          => $sircomm_homepage_sliderpage3, 
 			'slide_image_url'   => $slide3_image_url, 
 			'slide_title'       => $slide3_title, 
 			'slide_description' => $slide3_description, 
@@ -57,7 +57,7 @@ function thinkup_input_sliderhomepage() {
 		),
 	);
 
-	foreach ($thinkup_homepage_sliderpage as $slide) {
+	foreach ($sircomm_homepage_sliderpage as $slide) {
 
 		if ( is_numeric( $slide['slide_id'] ) ) {
 
@@ -79,7 +79,7 @@ function thinkup_input_sliderhomepage() {
 }
 
 // Add Slider - Homepage
-function thinkup_input_sliderhome() {
+function sircomm_input_sliderhome() {
     global $sir_comm_global;
     
     /*
@@ -92,19 +92,19 @@ function thinkup_input_sliderhome() {
 
     $main_sliderswitch = isset( $sir_comm_global['main_slider_switch'] ) ? $sir_comm_global['main_slider_switch'] : '';
 
-    $thinkup_homepage_sliderpage1 = $sir_comm_global['main_sliderpage1'];
-    $thinkup_homepage_sliderpage2 = $sir_comm_global['main_sliderpage2'];
-    $thinkup_homepage_sliderpage3 = $sir_comm_global['main_sliderpage3'];
-    $thinkup_homepage_slidername = $sir_comm_global['main_slider_name'];
+    $sircomm_homepage_sliderpage1 = $sir_comm_global['main_sliderpage1'];
+    $sircomm_homepage_sliderpage2 = $sir_comm_global['main_sliderpage2'];
+    $sircomm_homepage_sliderpage3 = $sir_comm_global['main_sliderpage3'];
+    $sircomm_homepage_slidername = $sir_comm_global['main_slider_name'];
 
-global $thinkup_homepage_sliderswitch;
+global $sircomm_homepage_sliderswitch;
 /*
-global $thinkup_homepage_sliderpage1;
-global $thinkup_homepage_sliderpage2;
-global $thinkup_homepage_sliderpage3;
+global $sircomm_homepage_sliderpage1;
+global $sircomm_homepage_sliderpage2;
+global $sircomm_homepage_sliderpage3;
 */
 
-$thinkup_class_fullwidth = NULL;
+$sircomm_class_fullwidth = NULL;
 $slide_image             = NULL;
 $slider_default          = NULL;
 
@@ -125,7 +125,7 @@ $slider_default          = NULL;
 		} else if ( $main_sliderswitch == 'option2' ) {
 
 			echo '<div id="idx_banner"><h2>이벤트 및 광고 배너</h2>';
-			echo do_shortcode( esc_html( $thinkup_homepage_slidername ) );
+			echo do_shortcode( esc_html( $sircomm_homepage_slidername ) );
 			echo '</div>';
 
 		} else if ( $main_sliderswitch == 'option3' ) {
@@ -135,7 +135,7 @@ $slider_default          = NULL;
 		} else if ( $main_sliderswitch == 'option4' ) {
 
 			// Check if page slider has been set
-			if( ! is_numeric( $thinkup_homepage_sliderpage1 ) and ! is_numeric( $thinkup_homepage_sliderpage2 ) and ! is_numeric( $thinkup_homepage_sliderpage3 ) ) {
+			if( ! is_numeric( $sircomm_homepage_sliderpage1 ) and ! is_numeric( $sircomm_homepage_sliderpage2 ) and ! is_numeric( $sircomm_homepage_sliderpage3 ) ) {
 
                 echo '<div id="idx_banner"><h2>이벤트 및 광고 배너</h2>';
                 echo '<ul class="bxslider">';
@@ -146,7 +146,7 @@ $slider_default          = NULL;
 
                 echo '<div id="idx_banner"><h2>이벤트 및 광고 배너</h2>';
                 echo '<ul class="bxslider">';
-					thinkup_input_sliderhomepage();
+					sircomm_input_sliderhomepage();
                 echo '</ul>';
                 echo '</div>';
 				
@@ -159,7 +159,7 @@ $slider_default          = NULL;
 //	ENABLE HOMEPAGE CONTENT
 //----------------------------------------------------------------------------------
 
-function thinkup_input_homepagesection() {
+function sircomm_input_homepagesection() {
     global $sir_comm_global;
 
     $main_sectionswitch = isset( $sir_comm_global['main_sectionswitch'] ) ? (int) $sir_comm_global['main_sectionswitch'] : 0;

@@ -81,15 +81,15 @@ function sir_comm_set_option_redux($key='icon'){
         
 		$icon_options[] = array(
 				'title'                      => __('메인 화면에 아이콘을 표시합니다.', SIR_CMM_NAME), 
-				//$thinkup_subtitle_panel      => '',
-				//$thinkup_subtitle_customizer => '',
-				'id'                         => 'thinkup_homepage_sectionswitch',
+				//$sircomm_subtitle_panel      => '',
+				//$sircomm_subtitle_customizer => '',
+				'id'                         => 'sircomm_homepage_sectionswitch',
 				'type'                       => 'switch',
-				'default'                    => '',
+				'default'                    => '1',
 			);
 
 		$icon_options[] = array(
-				'id'       => 'thinkup_homepage_section1_icon',
+				'id'       => 'sircomm_homepage_section1_icon',
 				'title'    => __('메인 아이콘 1', SIR_CMM_NAME),
 				'desc'     => __('배경 아이콘을 선택합니다.', SIR_CMM_NAME),
 				'type'     => 'select',
@@ -97,7 +97,7 @@ function sir_comm_set_option_redux($key='icon'){
                 'options'   =>  sir_comm_get_var_by(),
                 'default'   =>  'sc_notice',
 				'required' => array(
-					array( 'thinkup_homepage_sectionswitch', '=', 
+					array( 'sircomm_homepage_sectionswitch', '=', 
 						array( '1' ),
 					), 
 				)
@@ -108,52 +108,52 @@ function sir_comm_set_option_redux($key='icon'){
             $j = $i + 1;
 
             $icon_options[] = array(
-                    'id'       => 'thinkup_homepage_section'.$j.'_icon',
+                    'id'       => 'sircomm_homepage_section'.$j.'_icon',
                     'title' => sprintf( _n( '메인 아이콘 %s', '메인 아이콘 %s', $j, SIR_CMM_NAME ), $j ),
                     'desc'     => __('배경 아이콘을 선택합니다.', SIR_CMM_NAME),
                     'type'     => 'select',
                     'options'   =>  $tmp_array,
                     'default'   =>  $tmp_keys_array[$i],
                     'required' => array(
-                        array( 'thinkup_homepage_sectionswitch', '=', 
+                        array( 'sircomm_homepage_sectionswitch', '=', 
                             array( '1' ),
                         ), 
                     )
                 );
 
             $icon_options[] = array(
-                    'id'       => 'thinkup_homepage_section'.$j.'_title',
+                    'id'       => 'sircomm_homepage_section'.$j.'_title',
                     'desc'     => __('텍스트를 지정합니다.', SIR_CMM_NAME),
                     'type'     => 'text',
                     'validate' => 'html',
                     'default'                    => $tmp_texts[$i],
                     'required' => array( 
-                        array( 'thinkup_homepage_sectionswitch', '=', 
+                        array( 'sircomm_homepage_sectionswitch', '=', 
                             array( '1' ),
                         ), 
                     )
                 );
 
             $icon_options[] = 			array(
-				'id'       => 'thinkup_homepage_section'.$j.'_link',
+				'id'       => 'sircomm_homepage_section'.$j.'_link',
 				'desc'     => __('링크 할 주소( url )', SIR_CMM_NAME), 
 				'type'     => 'text',
 				'validate' => 'html',
 				'required' => array( 
-					array( 'thinkup_homepage_sectionswitch', '=', 
+					array( 'sircomm_homepage_sectionswitch', '=', 
 						array( '1' ),
 					), 
 				)
 			);
 
             $icon_options[] =			array(
-				'id'       => 'thinkup_homepage_section'.$j.'_link_target',
+				'id'       => 'sircomm_homepage_section'.$j.'_link_target',
 				'desc'     => __('링크 타겟', SIR_CMM_NAME),
 				'type'     => 'select',
                 'options'   =>  $link_targets,
                 'default'   =>  '_self',
 				'required' => array( 
-					array( 'thinkup_homepage_sectionswitch', '=', 
+					array( 'sircomm_homepage_sectionswitch', '=', 
 						array( '1' ),
 					), 
 				)

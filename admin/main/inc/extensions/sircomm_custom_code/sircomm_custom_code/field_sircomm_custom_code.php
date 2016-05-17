@@ -13,7 +13,7 @@
  * along with Redux Framework. If not, see <http://www.gnu.org/licenses/>.
  *
  * @package     ReduxFramework
- * @subpackage  Field_thinkup_custom_code
+ * @subpackage  Field_sircomm_custom_code
  * @author      Luciano "WebCaos" Ubertini
  * @author      Daniel J Griffiths (Ghost1227)
  * @author      Dovy Paukstys
@@ -26,14 +26,14 @@ if ( !defined ( 'ABSPATH' ) ) {
 }
 
 // Don't duplicate me!
-if ( !class_exists ( 'ReduxFramework_thinkup_custom_code' ) ) {
+if ( !class_exists ( 'ReduxFramework_sircomm_custom_code' ) ) {
 
     /**
-     * Main ReduxFramework_thinkup_custom_code class
+     * Main ReduxFramework_sircomm_custom_code class
      *
      * @since       1.0.0
      */
-    class ReduxFramework_thinkup_custom_code {
+    class ReduxFramework_sircomm_custom_code {
 
         /**
          * Field Constructor.
@@ -77,16 +77,16 @@ if ( !class_exists ( 'ReduxFramework_thinkup_custom_code' ) ) {
         public function enqueue () {
 
             wp_enqueue_style (
-                'thinkup-field-thinkup_custom_code-css', 
-                $this->_extension_url . 'field_thinkup_custom_code.css', 
+                'sircomm-field-sircomm_custom_code-css', 
+                $this->_extension_url . 'field_sircomm_custom_code.css', 
                 array(),
                 time (), 
                 'all'
             );
 
             wp_enqueue_script (
-                'thinkup-field-thinkup_custom_code-js',
-				$this->_extension_url . 'field_thinkup_custom_code.js',
+                'sircomm-field-sircomm_custom_code-js',
+				$this->_extension_url . 'field_sircomm_custom_code.js',
                 array(),
                 time (), 
                 true

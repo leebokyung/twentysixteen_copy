@@ -19,7 +19,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 	    
         <?php
-        // admin/main/options/homepage.php thinkup_input_homepagesection
+        // admin/main/options/homepage.php sircomm_input_homepagesection
 
         do_action('sir_community_main_area');
 
