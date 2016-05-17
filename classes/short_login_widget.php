@@ -60,17 +60,13 @@ class sir_comm_login_widget extends SIR_COMM_Widget {
             ?>
             <div class="avatar">
                 <?php echo $avatar; ?>
-            </div>
-            <div>
                 <?php
                 /* 회원 별명 출력 */
                 echo esc_attr($current_user->display_name);
                 ?>
             </div>
-            <div>
-                <a href="<?php echo $profile_url; ?>"><?php echo _e('내 프로필 편집', SIR_CMM_NAME); ?></a>
-            </div>
-            <div>
+            <div class="avatar-info">
+                <a href="<?php echo $profile_url; ?>" class="my-profile"><?php echo _e('내 프로필 편집', SIR_CMM_NAME); ?></a>
                 <a href="<?php echo wp_logout_url(); ?>">로그아웃</a>
             </div>
 

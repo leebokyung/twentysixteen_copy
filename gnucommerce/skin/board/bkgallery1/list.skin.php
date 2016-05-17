@@ -5,52 +5,47 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
 
 <!-- 게시판 목록 시작 { -->
 <div id="bo_gall" style="width:<?php echo $width; ?>">
-
-    <!-- 게시판 카테고리 시작 { -->
-    <?php if ($is_category) { ?>
-    <nav id="bo_cate">
-        <h2><?php echo $board['bo_subject'] ?> <?php _e('분류', GC_NAME); ?></h2>
-        <ul id="bo_cate_ul">
-            <?php echo $category_option ?>
-        </ul>
-    </nav>
-    <?php } ?>
-    <!-- } 게시판 카테고리 끝 -->
-
-	<!-- 게시판 태그 시작 -->
-    <?php if( $is_use_tag ){ //태그 설정이 활성화 되어 있으면 ?>
-    <ul class="list_head_tags">
-    <?php
-        foreach( $board_tag_lists as $s ){
-            if( empty( $s ) ) continue;
-            //카운트 숫자0인 경우 제외
-            if( ! $s['count'] ) continue;
-
-            $span_text = '<span class="tags-cnt"> '.$s['count'].'</span>'; //카운트 숫자
-        ?>
-        <li><?php echo gc_tag_class_link($s, $search_tag, 'tags-on', 'tags-txt', $span_text);?></li>
-    <?php } // foreach end?>
-    </ul>
-    <?php } //end if ?>
-	<!-- 게시판 태그 끝 -->
-
-    <!-- 게시판 페이지 정보 및 버튼 시작 { -->
-    <div class="bo_fx">
-        <!-- <div id="bo_list_total">
-            <span>Total <?php echo number_format($total_count) ?> /</span>
-            <?php echo $page ?> <?php _e('페이지', GC_NAME); ?>
-        </div> -->
-
-        <?php if ($rss_href || $write_href) { ?>
-        <ul class="btn_bo_user">
-            <?php if ($rss_href) { ?><li><a href="<?php echo esc_url( $rss_href ); ?>" class="btn_b01 rss_open" target="_blank">RSS</a></li><?php } ?>
-            <?php if ($admin_href) { ?><li><a href="<?php echo esc_url( $admin_href ); ?>" class="btn_admin" target="_blank"><?php _e('관리', GC_NAME);?></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><?php _e('글쓰기', GC_NAME);?></a></li><?php } ?>
-        </ul>
+    <div class="bo_gall_top">
+        <!-- 게시판 카테고리 시작 { -->
+        <?php if ($is_category) { ?>
+        <nav id="bo_cate">
+            <h2><?php echo $board['bo_subject'] ?> <?php _e('분류', GC_NAME); ?></h2>
+            <ul id="bo_cate_ul">
+                <?php echo $category_option ?>
+            </ul>
+        </nav>
         <?php } ?>
-    </div>
-    <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+        <!-- } 게시판 카테고리 끝 -->
     
+    	<!-- 게시판 태그 시작 -->
+        <?php if( $is_use_tag ){ //태그 설정이 활성화 되어 있으면 ?>
+        <ul class="list_head_tags">
+        <?php
+            foreach( $board_tag_lists as $s ){
+                if( empty( $s ) ) continue;
+                //카운트 숫자0인 경우 제외
+                if( ! $s['count'] ) continue;
+    
+                $span_text = '<span class="tags-cnt"> '.$s['count'].'</span>'; //카운트 숫자
+            ?>
+            <li><?php echo gc_tag_class_link($s, $search_tag, 'tags-on', 'tags-txt', $span_text);?></li>
+        <?php } // foreach end?>
+        </ul>
+        <?php } //end if ?>
+    	<!-- 게시판 태그 끝 -->
+    
+        <!-- 게시판 페이지 정보 및 버튼 시작 { -->
+        <div class="bo_fx">
+            <?php if ($rss_href || $write_href) { ?>
+            <ul class="btn_bo_user">
+                <?php if ($rss_href) { ?><li><a href="<?php echo esc_url( $rss_href ); ?>" class="btn_b01 rss_open" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i> RSS</a></li><?php } ?>
+                <?php if ($admin_href) { ?><li><a href="<?php echo esc_url( $admin_href ); ?>" class="btn_admin" target="_blank"><i class="fa fa-cog" aria-hidden="true"></i> <?php _e('관리', GC_NAME);?></a></li><?php } ?>
+                <?php if ($write_href) { ?><li><a href="<?php echo esc_url( $write_href ); ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME);?></a></li><?php } ?>
+            </ul>
+            <?php } ?>
+        </div>
+        <!-- } 게시판 페이지 정보 및 버튼 끝 -->
+    </div>
     <form name="fboardlist" id="fboardlist" action="<?php echo $fboardlist_action_url; ?>" onsubmit="return fboardlist_submit(this);" method="post">
     <?php wp_nonce_field( 'gc_list', 'gc_nonce_field' ); ?>
     <input type="hidden" name="action" value="">
@@ -158,27 +153,17 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
                     <?php if($is_show_field['visit']){ // 게시판 설정 중 조회 체크가 되어 있으면 ?>
                     <span class="text-hit"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $v['wr_hit'] ?></span>
                     <?php } ?>
+                </li>
+                <li class="text-info">
                     <?php if ($is_good) { ?>
-                    <span class="gall_subject"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php _e('', GC_NAME);  //추천?></span>
+                    <span class="gall_subject text-good"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php _e('', GC_NAME);  //추천?></span>
                     <strong><?php echo $v['wr_good'] ?></strong>
                     <?php } ?>
                     <?php if ($is_nogood) { ?>
-                    <span class="gall_subject"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php _e('', GC_NAME);  //비추천?></span>
+                    <span class="gall_subject text-nogood"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php _e('', GC_NAME);  //비추천?></span>
                     <strong><?php echo $v['wr_nogood'] ?></strong>
-                <?php } ?>
+                    <?php } ?>
                 </li>
-                <!-- <?php if ($is_good) { ?>
-                <li class="text-info">
-                    <span class="gall_subject"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><?php _e('', GC_NAME);  //추천?></span>
-                    <strong><?php echo $v['wr_good'] ?></strong>
-                </li>
-                <?php } ?>
-                <?php if ($is_nogood) { ?>
-                <li class="text-info">
-                    <span class="gall_subject"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><?php _e('', GC_NAME);  //비추천?></span>
-                    <strong><?php echo $v['wr_nogood'] ?></strong>
-                </li>
-                <?php } ?> -->
             </ul>
         </div>
         <?php } ?>
@@ -189,16 +174,16 @@ if (!defined('ABSPATH')) exit; // 개별 페이지 접근 불가
     <div class="bo_fx">
         <?php if ($is_checkbox) { ?>
         <ul class="btn_bo_adm">
-            <li><button type="submit" name="btn_submit" value="<?php _e('선택삭제', GC_NAME); //선택삭제 ?>" onclick="document.pressed=this.value"><?php _e('선택삭제', GC_NAME); //선택삭제 ?></button></li>
-            <li><button type="submit" name="btn_submit" value="<?php _e('선택복사', GC_NAME); //선택복사 ?>" onclick="document.pressed=this.value"><?php _e('선택복사', GC_NAME); //선택복사 ?></button></li>
-            <li><button type="submit" name="btn_submit" value="<?php _e('선택이동', GC_NAME); //선택이동 ?>" onclick="document.pressed=this.value"><?php _e('선택이동', GC_NAME); //선택이동 ?></button></li>
+            <li><button type="submit" name="btn_submit" value="<?php _e('선택삭제', GC_NAME); //선택삭제 ?>" onclick="document.pressed=this.value"><i class="fa fa-eraser" aria-hidden="true"></i> <?php _e('선택삭제', GC_NAME); //선택삭제 ?></button></li>
+            <li><button type="submit" name="btn_submit" value="<?php _e('선택복사', GC_NAME); //선택복사 ?>" onclick="document.pressed=this.value"><i class="fa fa-clipboard" aria-hidden="true"></i> <?php _e('선택복사', GC_NAME); //선택복사 ?></button></li>
+            <li><button type="submit" name="btn_submit" value="<?php _e('선택이동', GC_NAME); //선택이동 ?>" onclick="document.pressed=this.value"><i class="fa fa-repeat" aria-hidden="true"></i> <?php _e('선택이동', GC_NAME); //선택이동 ?></button></li>
         </ul>
         <?php } ?>
 
         <?php if ($list_href || $write_href) { ?>
         <ul class="btn_bo_user">
-            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01"><?php _e('목록', GC_NAME); //목록 ?></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02"><?php _e('글쓰기', GC_NAME); //글쓰기 ?></a></li><?php } ?>
+            <?php if ($list_href) { ?><li><a href="<?php echo $list_href ?>" class="btn_b01"><i class="fa fa-list-ul" aria-hidden="true"></i> <?php _e('목록', GC_NAME); //목록 ?></a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b02"><i class="fa fa-pencil" aria-hidden="true"></i> <?php _e('글쓰기', GC_NAME); //글쓰기 ?></a></li><?php } ?>
         </ul>
         <?php } ?>
     </div>
