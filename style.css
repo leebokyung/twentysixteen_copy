@@ -2427,9 +2427,9 @@ p > video {
     #secondary .widget-title{padding:15px}
     
     #side-login{width:49%;margin-right:2%;float:left;}
-    #side-login-input{float:left;width:80%;}
-    #side-login-input input{font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;margin-top:-1px;background:#fff;color:#656565}
-    #s-login{width:20%;height:63px;margin:-1px 0 0 -1px;font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;background:#fff;color:#656565;}
+    #side-login-input{float:left;width:75%;}
+    #side-login-input input{font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;margin-top:-1px;background:#fff;color:#656565;}
+    #s-login{width:25%;height:62px;margin:-1px 0 0 -1px;font-size:0.750em;border-radius:0;border:1px solid #e4e4e4;background:#fff;color:#656565;}
     
     #tag_cloud-2{width:49%;min-height:160px;float:left}
     #recent-posts-2{clear:both;width:49%;margin-right:2%;float:left}
