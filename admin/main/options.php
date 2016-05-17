@@ -72,7 +72,7 @@
         // Version that appears at the top of your panel
         'menu_type'            => 'menu',
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
-        'allow_sub_menu'       => true,
+        'allow_sub_menu'       => false,
         // Show the sections below the admin menu item or not
         'menu_title'           => __( 'Sample Options', 'redux-framework-demo' ),
         'page_title'           => __( 'Sample Options', 'redux-framework-demo' ),
@@ -82,7 +82,7 @@
         // Set it you want google fonts to update weekly. A google_api_key value is required.
         'google_update_weekly' => false,
         // Must be defined to add google fonts to the typography module
-        'async_typography'     => true,
+        'async_typography'     => false,
         // Use a asynchronous font on the front end or font string
         //'disable_google_fonts_link' => true,                    // Disable this in case you want to create your own google fonts loader
         'admin_bar'            => true,
@@ -93,10 +93,11 @@
         // Choose an priority for the admin bar menu
         'global_variable'      => '',
         // Set a different name for your global variable other than the opt_name
-        'dev_mode'             => true,
+        'dev_mode'             => false,
         // Show the time the page took to load, etc
-        'update_notice'        => true,
+        'update_notice'        => false,
         // If dev_mode is enabled, will notify developer of updated versions available in the GitHub Repo
+        'customizer_only'      => true,
         'customizer'           => true,
         // Enable basic customizer support
         //'open_expanded'     => true,                    // Allow you to start the panel in an expanded way initially.
@@ -137,7 +138,7 @@
         // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
         'database'             => '',
         // possible: options, theme_mods, theme_mods_expanded, transient. Not fully functional, warning!
-        'use_cdn'              => true,
+        'use_cdn'              => false,
         // If you prefer not to use the CDN for Select2, Ace Editor, and others, you may download the Redux Vendor Support plugin yourself and run locally or embed it in your code.
 
         // HINTS

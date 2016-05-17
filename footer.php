@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 ?>
 
@@ -54,7 +54,7 @@
     					/**
     					 * Fires before the twentysixteen footer text for footer customization.
     					 *
-    					 * @since Twenty Sixteen 1.0
+    					 * @since sir community 1.0
     					 */
     					do_action( 'twentysixteen_credits' );
     				?>   				

@@ -1,3 +1,7 @@
+/* gnucommerce shop override */
+#sct_sort h2{display:none}
+.gnucommerce .gc_container a{box-shadow:none}
+
 /* 그누커머스 최신글 위젯 */
 
 .bx-wrapper .transparent_img{width:100%;height:229px}
@@ -79,6 +83,15 @@ ul.latest_row .box_clear{clear:both}
 .latest_row .col-gn-8{width:12.5%}
 .latest_row .col-gn-9{width:11.11111111%}
 .latest_row .col-gn-10{width:10%}
+
+/**
+ * 14.4 - >= 985px
+ */
+
+@media screen and (min-width: 61.5625em) {
+/* gnucommerce shop layout */
+body:not(.search-results) article.gnucommerce .entry-content{width:100%;float:none}
+}
 
 /*710px*/
 @media screen and (max-width: 44.375em){

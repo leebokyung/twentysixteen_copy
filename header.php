@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 do_action('sir_comm_before_header');
 ?><!DOCTYPE html>
@@ -61,7 +61,7 @@ do_action('sir_comm_before_header');
                                 /**
                                  * Filter the default twentysixteen custom header sizes attribute.
                                  *
-                                 * @since Twenty Sixteen 1.0
+                                 * @since sir community 1.0
                                  *
                                  * @param string $custom_header_sizes sizes attribute
                                  * for Custom Header. Default '(max-width: 709px) 85vw,

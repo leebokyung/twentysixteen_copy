@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since sir community 1.0
  */
 
 get_header(); ?>
@@ -37,7 +37,7 @@ get_header(); ?>
 								/**
 								 * Filter the default twentysixteen image attachment size.
 								 *
-								 * @since Twenty Sixteen 1.0
+								 * @since sir community 1.0
 								 *
 								 * @param string $image_size Image size. Default 'large'.
 								 */
