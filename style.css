@@ -385,10 +385,10 @@ textarea:focus {
 }
 
 input[type="search"].search-field {
-	border-radius: 15px;
 	width: -webkit-calc(100% - 42px);
 	width: calc(100% - 42px);
-	background:#fff
+	background:#fff;-moz-binding:
+	border:1px solid #e3e3e3;
 }
 
 .search-submit:before {
@@ -2454,8 +2454,6 @@ p > video {
 
 /*910px*/
 @media screen and (max-width: 56.875em){
-    #hd_sch_box{width:100%;border-top:1px solid #eaeaea;text-align:center}
-    #hd_sch{margin:10px 0;display:inline-block}
     .hd_cate{padding:0;width:100%}
     #site-header-menu{width:100%}
     
@@ -2487,14 +2485,11 @@ p > video {
 /*710px*/
 @media screen and (max-width: 44.375em){
     .site-header-top, .header-image{display:none}
-    #hd_manu{}
-    #hd_sch_box{width:100%;border-top:1px solid #48516d;text-align:center;background:#555f7a}
-    #hd_sch input{width:200px;height:30px;font-size:13px;padding:0 15px}
-    #hd_sch button{background:transparent;color:#555f7a}
+    #hd_manu{position:relative}
     
     .mhd-title-logo{display:inline-block;position:absolute;top:20px;left:38%;}
     .main-navigation li{padding:0 20px;background:#fff}
-    .menu-toggle{position:absolute;top:58px;left:20px;}
+    .menu-toggle{position:absolute;top:-76px;left:20px;}
     .menu-toggle:hover{background:#fff;}
     .menu-toggle.toggled-on, .menu-toggle.toggled-on:hover, .menu-toggle.toggled-on:focus{background-color:#555f7a;border-color:#fff;color:#fff}
 
@@ -2720,7 +2715,7 @@ p > video {
 		margin-left: 1.473684211em;
 	}
 	
-	.hd_cate{margin:0 auto;width:1100px;float:left}
+	.hd_cate{margin:0 auto;width:1100px;}
     
     /* 검색창 */
     
@@ -2744,7 +2739,7 @@ p > video {
  */
 
 @media screen and (min-width: 56.875em) {
-    .hd_cate{float:left;width:1100px;margin:0 auto;padding:0}
+    .hd_cate{width:1100px;margin:0 auto;padding:0}
 	.site-header-main {
 		-webkit-align-items: flex-start;
 		-ms-flex-align: start;
@@ -3415,16 +3410,6 @@ p > video {
 	body:not(.search-results) .entry-summary .aligncenter {margin-bottom: 1.5217391304em;}
 	
 	.content-area {float:left;width:813px;margin-top:20px;margin-right: -100%;}
-
-	.hd_cate{margin:0 auto;width:1100px;float:left}
-    .hd_cate #hd_manu{float:left}
-    
-    /* 검색창 */
-    
-    #hd_sch{float:right}
-    #hd_sch input{width:200px;height:30px;font-size:13px;padding:0 15px}
-    #hd_sch button{background:transparent;color:#555f7a}
-
 }
 
 
