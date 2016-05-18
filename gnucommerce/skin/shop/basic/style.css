@@ -460,9 +460,9 @@ li.gnucommerce{margin-bottom:4em}
 
 /* 상품 상세보기 - 간략정보 및 구매기능 */
 #sit_ov_wrap #sit_ov {position:relative;}
-#sit_ov h3 {margin:0 0 5px;font-size:1em}
+#sit_ov h3 {margin:0 0 5px;font-size:1em;background: red}
 
-#sit_title {margin:0 0 5px;font-size:1.2em}
+#sit_title {margin:0 0 5px;font-size:1.2em;background:#f7f7f7 !important}
 #sit_desc {margin:0 0 5px;padding:0;color:#999;font-size:12px;line-height:1.5em}
 #sit_opt_info {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 

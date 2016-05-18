@@ -66,8 +66,8 @@ class sir_comm_login_widget extends SIR_COMM_Widget {
                 ?>
             </div>
             <div class="avatar-info">
-                <a href="<?php echo $profile_url; ?>" class="my-profile"><?php echo _e('내 프로필 편집', SIR_CMM_NAME); ?></a>
-                <a href="<?php echo wp_logout_url(); ?>">로그아웃</a>
+                <a href="<?php echo $profile_url; ?>" class="my-profile"><?php _e('내 프로필 편집', SIR_CMM_NAME); ?></a>
+                <a href="<?php echo wp_logout_url(); ?>"><?php _e('로그아웃', SIR_CMM_NAME); ?></a>
             </div>
 
             <?php } else {  //로그인 하지 않았다면 ?>
