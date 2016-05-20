@@ -3704,7 +3704,7 @@ button.btn01{border-radius:2px}
 .gc_new_shortcode{background:#fff;}
 .comments-title, .comment-reply-title{border-top:0;padding-top:0;}
 #commentform .form-submit #submit{width:100px;padding:7px;border-radius:2px;background:#545f79}
-#commentform .form-submit #submit:hover{background:#545f79}
+#commentform .form-submit #submit:hover, #commentform .form-submit #submit:focus{background:#545f79}
 
 /* 사용후기 */
 #sps .sps_section h2{padding:0;border:none}

@@ -5,9 +5,10 @@ Tested up to: WordPress 4.5
 Version: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: Sir-Community, sir, community, black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: gnucommerce-2016-summer-ipha, Sir-Community, sir, community, black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 == Description ==
+gnucommerce-2016-summer-ipha
 에스아이알 커뮤니티 테마입니다.
 
 * Mobile-first, Responsive Layout
