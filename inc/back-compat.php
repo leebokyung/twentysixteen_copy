@@ -36,7 +36,7 @@ add_action( 'after_switch_theme', 'sircomm_switch_theme' );
  * @global string $wp_version WordPress version.
  */
 function sircomm_upgrade_notice() {
-	$message = sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', SIR_CMM_NAME ), $GLOBALS['wp_version'] );
+	$message = sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gnucommerce-2016-summer-ipha' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -48,7 +48,7 @@ function sircomm_upgrade_notice() {
  * @global string $wp_version WordPress version.
  */
 function sircomm_customize() {
-	wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', SIR_CMM_NAME ), $GLOBALS['wp_version'] ), '', array(
+	wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gnucommerce-2016-summer-ipha' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
@@ -63,7 +63,7 @@ add_action( 'load-customize.php', 'sircomm_customize' );
  */
 function sircomm_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', SIR_CMM_NAME ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'sir community requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again.', 'gnucommerce-2016-summer-ipha' ), $GLOBALS['wp_version'] ) );
 	}
 }
 add_action( 'template_redirect', 'sircomm_preview' );

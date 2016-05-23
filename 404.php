@@ -12,11 +12,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', SIR_CMM_NAME ); ?></h1>
+					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'gnucommerce-2016-summer-ipha' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', SIR_CMM_NAME ); ?></p>
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'gnucommerce-2016-summer-ipha' ); ?></p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->

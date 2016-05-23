@@ -13,7 +13,7 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 		    <div class="foot-inner"><!-- site-inner -->
     			<?php if ( has_nav_menu( 'social' ) ) : ?>
-    				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', SIR_CMM_NAME ); ?>">
+    				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( __('Footer Social Links Menu', 'gnucommerce-2016-summer-ipha') ); ?>">
     					<?php
     						wp_nav_menu( array(
     							'theme_location' => 'social',
@@ -29,22 +29,22 @@
     			<div class="site-info">
     			    <div id="footer-info">
     			        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>   
-    			        <address class="f-info footer-address">서울특별시 강남구 강남대로 123, 역삼동 1004호</address>
+    			        <address class="f-info footer-address">310, Gangnam-daero, Gangnam-gu, Seoul, Korea</address>
     			        <span class="f-info footer-phone">T.02-1234-5678</span>
     			        <span class="f-info footer-fax">F.02-1234-5678</span>
     			        <ul class="footer-sns">
-    			            <li><a href="#"><i class="fa fa-lg fa-facebook" aria-hidden="true"></i><span class="screen-reader-text">페이스북</span></a></li>
-    			            <li><a href="#"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i><span class="screen-reader-text">트위터</span></a></li>
-    			            <li><a href="#"><i class="fa fa-lg fa-instagram" aria-hidden="true"></i><span class="screen-reader-text">인스타그램</span></a></li>
-    			            <li><a href="#"><i class="fa fa-lg fa-youtube" aria-hidden="true"></i><span class="screen-reader-text">유튜브</span></a></li>
+    			            <li><a href="#"><i class="fa fa-lg fa-facebook" aria-hidden="true"></i><span class="screen-reader-text">facebook</span></a></li>
+    			            <li><a href="#"><i class="fa fa-lg fa-twitter" aria-hidden="true"></i><span class="screen-reader-text">twitter</span></a></li>
+    			            <li><a href="#"><i class="fa fa-lg fa-instagram" aria-hidden="true"></i><span class="screen-reader-text">instagram</span></a></li>
+    			            <li><a href="#"><i class="fa fa-lg fa-youtube" aria-hidden="true"></i><span class="screen-reader-text">youtube</span></a></li>
     			        </ul>
     			    </div>
     			    <div id="footer-link">
     				    <ul>
-    				        <li><a href="#"><b><span class="border-deco">개인정보 처리방침</span></b></a></li>
-    				        <li><a href="#"><span class="border-deco">이용약관</span></a></li>
-    				        <li><a href="#"><span class="border-deco">회사소개</span></a></li>
-    				        <li><a href="#"><span class="border-deco">개인정보취급</span></a></li>
+    				        <li><a href="#"><b><span class="border-deco">Privacy Policy</span></b></a></li>
+    				        <li><a href="#"><span class="border-deco">Terms of Use</span></a></li>
+    				        <li><a href="#"><span class="border-deco">About Us</span></a></li>
+    				        <li><a href="#"><span class="border-deco">Privacy</span></a></li>
     				        <li><a href="#">Contact Us</a></li>
                         </ul>
     				</div>

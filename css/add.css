@@ -44,7 +44,7 @@
 .sir_community_latest_gallery{padding:1em}
 .sir_community_latest_gallery ul{margin:0;padding:0;list-style:none}
 .sir_community_latest_gallery li span{text-align:center;}
-.sir_community_latest_gallery li span.new-name{font-size:0.813em;color:#a1a1a1}
+.sir_community_latest_gallery li span.new-name{/*padding-right:5px;*/font-size:0.750em;color:#a1a1a1}
 .sir_community_latest_gallery li span.new-date{padding-left:7px;background:url('../img/icon_sign.png') 0 -10px no-repeat;font-size:0.750em;color:#a1a1a1}
 .sir_community_latest_gallery li a{font-size:0.813em;color:#656565;}
 .sir_community_latest_gallery li a:hover{color:#5b81d6}

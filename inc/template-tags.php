@@ -20,7 +20,7 @@ function sircomm_entry_meta() {
 		$author_avatar_size = apply_filters( 'sircomm_author_avatar_size', 49 );
 		printf( '<span class="byline"><span class="author vcard">%1$s<span class="screen-reader-text">%2$s </span> <a class="url fn n" href="%3$s">%4$s</a></span></span>',
 			get_avatar( get_the_author_meta( 'user_email' ), $author_avatar_size ),
-			_x( 'Author', 'Used before post author name.', SIR_CMM_NAME ),
+			_x( 'Author', 'Used before post author name.', 'gnucommerce-2016-summer-ipha' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			get_the_author()
 		);
@@ -33,7 +33,7 @@ function sircomm_entry_meta() {
 	$format = get_post_format();
 	if ( current_theme_supports( 'post-formats', $format ) ) {
 		printf( '<span class="entry-format">%1$s<a href="%2$s">%3$s</a></span>',
-			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', SIR_CMM_NAME ) ),
+			sprintf( '<span class="screen-reader-text">%s </span>', _x( 'Format', 'Used before post format.', 'gnucommerce-2016-summer-ipha' ) ),
 			esc_url( get_post_format_link( $format ) ),
 			get_post_format_string( $format )
 		);
@@ -45,7 +45,7 @@ function sircomm_entry_meta() {
 
 	if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', SIR_CMM_NAME ), get_the_title() ) );
+		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'gnucommerce-2016-summer-ipha' ), get_the_title() ) );
 		echo '</span>';
 	}
 }
@@ -74,7 +74,7 @@ function sircomm_entry_date() {
 	);
 
 	printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
-		_x( 'Posted on', 'Used before publish date.', SIR_CMM_NAME ),
+		_x( 'Posted on', 'Used before publish date.', 'gnucommerce-2016-summer-ipha' ),
 		esc_url( get_permalink() ),
 		$time_string
 	);
@@ -90,18 +90,18 @@ if ( ! function_exists( 'sircomm_entry_taxonomies' ) ) :
  * @since Twenty Sixteen 1.0
  */
 function sircomm_entry_taxonomies() {
-	$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', SIR_CMM_NAME ) );
+	$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'gnucommerce-2016-summer-ipha' ) );
 	if ( $categories_list && sircomm_categorized_blog() ) {
 		printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-			_x( 'Categories', 'Used before category names.', SIR_CMM_NAME ),
+			_x( 'Categories', 'Used before category names.', 'gnucommerce-2016-summer-ipha' ),
 			$categories_list
 		);
 	}
 
-	$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', SIR_CMM_NAME ) );
+	$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'gnucommerce-2016-summer-ipha' ) );
 	if ( $tags_list ) {
 		printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-			_x( 'Tags', 'Used before tag names.', SIR_CMM_NAME ),
+			_x( 'Tags', 'Used before tag names.', 'gnucommerce-2016-summer-ipha' ),
 			$tags_list
 		);
 	}
@@ -179,7 +179,7 @@ function sircomm_excerpt_more() {
 	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', SIR_CMM_NAME ), get_the_title( get_the_ID() ) )
+		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'gnucommerce-2016-summer-ipha' ), get_the_title( get_the_ID() ) )
 	);
 	return ' &hellip; ' . $link;
 }

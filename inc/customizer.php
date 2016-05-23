@@ -1,14 +1,16 @@
 <?php
 /**
- * sir community Customizer functionality
+ * gnucommerce-2016-summer-ipha Customizer functionality
  *
  * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
  */
 
 /**
  * Sets up the WordPress core custom header and custom background features.
  *
- * @since sir community 1.0
+ * @since Twenty Sixteen 1.0
  *
  * @see sircomm_header_style()
  */
@@ -18,9 +20,9 @@ function sircomm_custom_header_and_background() {
 	$default_text_color       = trim( $color_scheme[3], '#' );
 
 	/**
-	 * Filter the arguments used when adding 'custom-background' support in sir community.
+	 * Filter the arguments used when adding 'custom-background' support in Twenty Sixteen.
 	 *
-	 * @since sir community 1.0
+	 * @since Twenty Sixteen 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-background support arguments.
@@ -33,9 +35,9 @@ function sircomm_custom_header_and_background() {
 	) ) );
 
 	/**
-	 * Filter the arguments used when adding 'custom-header' support in sir community.
+	 * Filter the arguments used when adding 'custom-header' support in Twenty Sixteen.
 	 *
-	 * @since sir community 1.0
+	 * @since Twenty Sixteen 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -64,7 +66,7 @@ if ( ! function_exists( 'sircomm_header_style' ) ) :
  *
  * Create your own sircomm_header_style() function to override in a child theme.
  *
- * @since sir community 1.0
+ * @since Twenty Sixteen 1.0
  *
  * @see sircomm_custom_header_and_background().
  */
@@ -76,7 +78,7 @@ function sircomm_header_style() {
 
 	// If the header text has been hidden.
 	?>
-	<style type="text/css" id="sircomm-header-css">
+	<style type="text/css" id="gnucommerce-2016-summer-ipha-header-css">
 		.site-branding {
 			margin: 0 auto 0 0;
 		}
@@ -94,7 +96,7 @@ endif; // sircomm_header_style
 /**
  * Adds postMessage support for site title and description for the Customizer.
  *
- * @since sir community 1.0
+ * @since Twenty Sixteen 1.0
  *
  * @param WP_Customize_Manager $wp_customize The Customizer object.
  */
@@ -125,7 +127,7 @@ function sircomm_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'color_scheme', array(
-		'label'    => __( 'Base Color Scheme', SIR_CMM_NAME ),
+		'label'    => __( 'Base Color Scheme', 'gnucommerce-2016-summer-ipha' ),
 		'section'  => 'colors',
 		'type'     => 'select',
 		'choices'  => sircomm_get_color_scheme_choices(),
@@ -140,7 +142,7 @@ function sircomm_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'page_background_color', array(
-		'label'       => __( 'Page Background Color', SIR_CMM_NAME ),
+		'label'       => __( 'Page Background Color', 'gnucommerce-2016-summer-ipha' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -155,7 +157,7 @@ function sircomm_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label'       => __( 'Link Color', SIR_CMM_NAME ),
+		'label'       => __( 'Link Color', 'gnucommerce-2016-summer-ipha' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -167,7 +169,7 @@ function sircomm_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_text_color', array(
-		'label'       => __( 'Main Text Color', SIR_CMM_NAME ),
+		'label'       => __( 'Main Text Color', 'gnucommerce-2016-summer-ipha' ),
 		'section'     => 'colors',
 	) ) );
 
@@ -179,7 +181,7 @@ function sircomm_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_text_color', array(
-		'label'       => __( 'Secondary Text Color', SIR_CMM_NAME ),
+		'label'       => __( 'Secondary Text Color', 'gnucommerce-2016-summer-ipha' ),
 		'section'     => 'colors',
 	) ) );
 }
@@ -188,7 +190,7 @@ add_action( 'customize_register', 'sircomm_customize_register', 11 );
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since sir community 1.2
+ * @since Twenty Sixteen 1.2
  * @see sircomm_customize_register()
  *
  * @return void
@@ -200,7 +202,7 @@ function sircomm_customize_partial_blogname() {
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since sir community 1.2
+ * @since Twenty Sixteen 1.2
  * @see sircomm_customize_register()
  *
  * @return void
@@ -210,7 +212,7 @@ function sircomm_customize_partial_blogdescription() {
 }
 
 /**
- * Registers color schemes for sir community.
+ * Registers color schemes for Twenty Sixteen.
  *
  * Can be filtered with {@see 'sircomm_color_schemes'}.
  *
@@ -221,17 +223,17 @@ function sircomm_customize_partial_blogdescription() {
  * 4. Main Text Color.
  * 5. Secondary Text Color.
  *
- * @since sir community 1.0
+ * @since Twenty Sixteen 1.0
  *
  * @return array An associative array of color scheme options.
  */
 function sircomm_get_color_schemes() {
 	/**
-	 * Filter the color schemes registered for use with sir community.
+	 * Filter the color schemes registered for use with Twenty Sixteen.
 	 *
 	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
 	 *
-	 * @since sir community 1.0
+	 * @since Twenty Sixteen 1.0
 	 *
 	 * @param array $schemes {
 	 *     Associative array of color schemes data.
@@ -248,7 +250,7 @@ function sircomm_get_color_schemes() {
 	 */
 	return apply_filters( 'sircomm_color_schemes', array(
 		'default' => array(
-			'label'  => __( 'Default', SIR_CMM_NAME ),
+			'label'  => __( 'Default', 'gnucommerce-2016-summer-ipha' ),
 			'colors' => array(
 				'#1a1a1a',
 				'#ffffff',
@@ -258,7 +260,7 @@ function sircomm_get_color_schemes() {
 			),
 		),
 		'dark' => array(
-			'label'  => __( 'Dark', SIR_CMM_NAME ),
+			'label'  => __( 'Dark', 'gnucommerce-2016-summer-ipha' ),
 			'colors' => array(
 				'#262626',
 				'#1a1a1a',
@@ -268,7 +270,7 @@ function sircomm_get_color_schemes() {
 			),
 		),
 		'gray' => array(
-			'label'  => __( 'Gray', SIR_CMM_NAME ),
+			'label'  => __( 'Gray', 'gnucommerce-2016-summer-ipha' ),
 			'colors' => array(
 				'#616a73',
 				'#4d545c',
@@ -278,7 +280,7 @@ function sircomm_get_color_schemes() {
 			),
 		),
 		'red' => array(
-			'label'  => __( 'Red', SIR_CMM_NAME ),
+			'label'  => __( 'Red', 'gnucommerce-2016-summer-ipha' ),
 			'colors' => array(
 				'#ffffff',
 				'#ff675f',
@@ -288,7 +290,7 @@ function sircomm_get_color_schemes() {
 			),
 		),
 		'yellow' => array(
-			'label'  => __( 'Yellow', SIR_CMM_NAME ),
+			'label'  => __( 'Yellow', 'gnucommerce-2016-summer-ipha' ),
 			'colors' => array(
 				'#3b3721',
 				'#ffef8e',
@@ -302,11 +304,11 @@ function sircomm_get_color_schemes() {
 
 if ( ! function_exists( 'sircomm_get_color_scheme' ) ) :
 /**
- * Retrieves the current sir community color scheme.
+ * Retrieves the current Twenty Sixteen color scheme.
  *
  * Create your own sircomm_get_color_scheme() function to override in a child theme.
  *
- * @since sir community 1.0
+ * @since Twenty Sixteen 1.0
  *
  * @return array An associative array of either the current or default color scheme HEX values.
  */
@@ -324,11 +326,12 @@ endif; // sircomm_get_color_scheme
 
 if ( ! function_exists( 'sircomm_get_color_scheme_choices' ) ) :
 /**
- * Retrieves an array of color scheme choices registered for sir community.
+ * Retrieves an array of color scheme choices registered for Twenty Sixteen.
  *
  * Create your own sircomm_get_color_scheme_choices() function to override
  * in a child theme.
  *
+ * @since Twenty Sixteen 1.0
  *
  * @return array Array of color schemes.
  */
@@ -347,11 +350,14 @@ endif; // sircomm_get_color_scheme_choices
 
 if ( ! function_exists( 'sircomm_sanitize_color_scheme' ) ) :
 /**
+ * Handles sanitization for Twenty Sixteen color schemes.
  *
  * Create your own sircomm_sanitize_color_scheme() function to override
  * in a child theme.
  *
+ * @since Twenty Sixteen 1.0
  *
+ * @param string $value Color scheme name value.
  * @return string Color scheme name.
  */
 function sircomm_sanitize_color_scheme( $value ) {
@@ -368,6 +374,7 @@ endif; // sircomm_sanitize_color_scheme
 /**
  * Enqueues front-end CSS for color scheme.
  *
+ * @since Twenty Sixteen 1.0
  *
  * @see wp_add_inline_style()
  */
@@ -402,7 +409,7 @@ function sircomm_color_scheme_css() {
 
 	$color_scheme_css = sircomm_get_color_scheme_css( $colors );
 
-	wp_add_inline_style( 'sircomm-style', $color_scheme_css );
+	wp_add_inline_style( 'gnucommerce-2016-summer-ipha-style', $color_scheme_css );
 }
 add_action( 'wp_enqueue_scripts', 'sircomm_color_scheme_css' );
 
@@ -411,6 +418,7 @@ add_action( 'wp_enqueue_scripts', 'sircomm_color_scheme_css' );
  *
  * Passes color scheme data as colorScheme global.
  *
+ * @since Twenty Sixteen 1.0
  */
 function sircomm_customize_control_js() {
 	wp_enqueue_script( 'color-scheme-control', get_template_directory_uri() . '/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160412', true );
@@ -424,7 +432,7 @@ add_action( 'customize_controls_enqueue_scripts', 'sircomm_customize_control_js'
  * @since Twenty Sixteen 1.0
  */
 function sircomm_customize_preview_js() {
-	wp_enqueue_script( 'sircomm-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20160412', true );
+	wp_enqueue_script( 'gnucommerce-2016-summer-ipha-customize-preview', get_template_directory_uri() . '/js/customize-preview.js', array( 'customize-preview' ), '20160412', true );
 }
 add_action( 'customize_preview_init', 'sircomm_customize_preview_js' );
 
@@ -759,7 +767,7 @@ function sircomm_color_scheme_css_template() {
 		'border_color'          => '{{ data.border_color }}',
 	);
 	?>
-	<script type="text/html" id="tmpl-sircomm-color-scheme">
+	<script type="text/html" id="tmpl-gnucommerce-2016-summer-ipha-color-scheme">
 		<?php echo sircomm_get_color_scheme_css( $colors ); ?>
 	</script>
 	<?php
@@ -835,7 +843,7 @@ function sircomm_page_background_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'sircomm-style', sprintf( $css, $page_background_color ) );
+	wp_add_inline_style( 'gnucommerce-2016-summer-ipha-style', sprintf( $css, $page_background_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'sircomm_page_background_color_css', 11 );
 
@@ -931,7 +939,7 @@ function sircomm_link_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'sircomm-style', sprintf( $css, $link_color ) );
+	wp_add_inline_style( 'gnucommerce-2016-summer-ipha-style', sprintf( $css, $link_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'sircomm_link_color_css', 11 );
 
@@ -1078,7 +1086,7 @@ function sircomm_main_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'sircomm-style', sprintf( $css, $main_text_color, $border_color ) );
+	wp_add_inline_style( 'gnucommerce-2016-summer-ipha-style', sprintf( $css, $main_text_color, $border_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'sircomm_main_text_color_css', 11 );
 
@@ -1152,6 +1160,6 @@ function sircomm_secondary_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'sircomm-style', sprintf( $css, $secondary_text_color ) );
+	wp_add_inline_style( 'gnucommerce-2016-summer-ipha-style', sprintf( $css, $secondary_text_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'sircomm_secondary_text_color_css', 11 );

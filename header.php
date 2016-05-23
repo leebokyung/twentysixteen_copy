@@ -12,7 +12,7 @@ do_action('sir_comm_before_header');
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css" rel="stylesheet" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -20,27 +20,27 @@ do_action('sir_comm_before_header');
 	<?php wp_head(); ?>
 	
 	<!-- bxSlider Javascript file -->
-    <script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
     <!-- bxSlider CSS file -->
-    <link href="<?php bloginfo('template_url'); ?>/jquery.bxslider.css" rel="stylesheet" />
+    <link href="<?php echo get_template_directory_uri(); ?>/jquery.bxslider.css" rel="stylesheet" />
 	
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page"><!-- class="site" -->
 	<!--<div> class="site-inner" -->
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', SIR_CMM_NAME ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'gnucommerce-2016-summer-ipha' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
 		    <div class="site-header-top">
 		        <div class="site-inner">
                     <ul class="site-header-top-link">
-                        <?php if( is_user_logged_in () ){   //로그인 했으면 ?>
-                        <li class="site-link-logout"><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('로그아웃', SIR_CMM_NAME); ?></a></li>
-                        <li class="site-link-mymember"><a href="<?php echo get_edit_user_link(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('회원정보', SIR_CMM_NAME); ?></a></li>
-                        <?php } else {  //로그인 하지 않았다면 ?>
-                        <li class="site-link-login"><a href="<?php echo wp_login_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('로그인', SIR_CMM_NAME); ?></a></li>
-                        <li class="site-link-join"><a href="<?php echo wp_registration_url(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('회원가입', SIR_CMM_NAME); ?></a></li>
+                        <?php if( is_user_logged_in () ){ ?>
+                        <li class="site-link-logout"><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('logout', 'gnucommerce-2016-summer-ipha'); ?></a></li>
+                        <li class="site-link-mymember"><a href="<?php echo get_edit_user_link(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('mypage', 'gnucommerce-2016-summer-ipha'); ?></a></li>
+                        <?php } else { ?>
+                        <li class="site-link-login"><a href="<?php echo wp_login_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('lgoin', 'gnucommerce-2016-summer-ipha'); ?></a></li>
+                        <li class="site-link-join"><a href="<?php echo wp_registration_url(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('register', 'gnucommerce-2016-summer-ipha'); ?></a></li>
                         <?php } ?>
                     </ul> 
 			    </div>
@@ -95,7 +95,7 @@ do_action('sir_comm_before_header');
     
     					<div id="site-header-menu" class="site-header-menu">
     						<?php if ( has_nav_menu( 'primary' ) ) : ?>
-    							<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', SIR_CMM_NAME ); ?>">
+    							<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'gnucommerce-2016-summer-ipha' ); ?>">
     								<?php
     									wp_nav_menu( array(
     										'theme_location' => 'primary',
@@ -106,7 +106,7 @@ do_action('sir_comm_before_header');
     						<?php endif; ?>
     
     						<?php if ( has_nav_menu( 'social' ) ) : ?>
-    							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', SIR_CMM_NAME ); ?>">
+    							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'gnucommerce-2016-summer-ipha' ); ?>">
     								<?php
     									wp_nav_menu( array(
     										'theme_location' => 'social',

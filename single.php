@@ -23,16 +23,16 @@ get_header(); ?>
 			if ( is_singular( 'attachment' ) ) {
 				// Parent post navigation.
 				the_post_navigation( array(
-					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', SIR_CMM_NAME ),
+					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'gnucommerce-2016-summer-ipha' ),
 				) );
 			} elseif ( is_singular( 'post' ) ) {
 				// Previous/next post navigation.
 				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', SIR_CMM_NAME ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Next post:', SIR_CMM_NAME ) . '</span> ' .
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'gnucommerce-2016-summer-ipha' ) . '</span> ' .
+						'<span class="screen-reader-text">' . __( 'Next post:', 'gnucommerce-2016-summer-ipha' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', SIR_CMM_NAME ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Previous post:', SIR_CMM_NAME ) . '</span> ' .
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'gnucommerce-2016-summer-ipha' ) . '</span> ' .
+						'<span class="screen-reader-text">' . __( 'Previous post:', 'gnucommerce-2016-summer-ipha' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
 				) );
 			}
