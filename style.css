@@ -1,14 +1,13 @@
 /*
-Theme Name: SIR Community
-Theme URI: https://wordpress.org/themes/SIR_Community/
+Theme Name: GNUCommerce 2016 Summer Ipha
 Author: SIR SOFT
-Author URI: sir.kr
+Author URI: http://sir.kr
 Description: 에스아이알 커뮤니티 테마입니다.
 Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: SIR Community
-Tags: Sir-Community, sir, community, black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: Sir-Community, sir, community, gnucommerce, board, bbs
 
 Use it to make something cool, have fun, and share what you've learned with others.
 */
@@ -3670,7 +3669,7 @@ button.btn01{border-radius:2px}
 
 /* 주문하기 */
 #sod_frm_orderer, #sod_frm_taker{margin-bottom:10px;}
-.gc_order_form .sod_title, #sod_frm_taker h2, #sod_frm_pay h2{padding:8px 10px;background:#f3f3f3}
+.gc_order_form .sod_title, #sod_frm_taker h2, #sod_frm_pay h2{padding:8px 10px;background:#f3f3f3;border-top:2px solid #54607a}
 #sod_frm_pay h2{border-bottom:0}
 .gc_order_form .orderer_box{background:#fff;border:1px solid #e4e4e4;border-top:none}
 .gc_order_form .orderer_box li .btn_frmline{background:#54607a}
