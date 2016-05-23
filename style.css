@@ -7,7 +7,6 @@ Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: SIR Community
-Tags: board, bbs
 
 Use it to make something cool, have fun, and share what you've learned with others.
 */
@@ -1226,7 +1225,7 @@ blockquote:after,
 
 
 .widget ul{list-style:none;padding:0;margin:0}
-.widget li{padding:3px 10px;border-bottom:1px solid #e3e3e3;}
+.widget li{padding:3px 10px;}
 .widget li:hover{background:#f9f9f9}
 .widget li:last-child{border:none}
 .widget li a{font-family: Montserrat, "Helvetica Neue", sans-serif;color:#656565}
