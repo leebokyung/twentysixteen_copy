@@ -1,6 +1,5 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">
