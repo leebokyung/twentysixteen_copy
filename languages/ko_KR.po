@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucommerce-2016-summer-ipha\n"
-"POT-Creation-Date: 2016-05-23 17:03+0900\n"
-"PO-Revision-Date: 2016-05-23 17:03+0900\n"
+"POT-Creation-Date: 2016-05-24 09:51+0900\n"
+"PO-Revision-Date: 2016-05-24 09:51+0900\n"
 "Last-Translator: \n"
 "Language-Team: SIR SOFT\n"
 "Language: ko_KR\n"
@@ -109,19 +109,19 @@ msgstr "콘텐츠로 바로가기"
 
 #: header.php:39
 msgid "logout"
-msgstr ""
+msgstr "로그아웃"
 
 #: header.php:40
 msgid "mypage"
-msgstr ""
+msgstr "회원정보"
 
 #: header.php:42
-msgid "lgoin"
-msgstr ""
+msgid "login"
+msgstr "로그인"
 
 #: header.php:43
 msgid "register"
-msgstr ""
+msgstr "회원가입"
 
 #: image.php:22
 msgid "Previous Image"
@@ -157,43 +157,43 @@ msgid ""
 "version %s. Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:130
 msgid "Base Color Scheme"
 msgstr "기본 색상 구조"
 
-#: inc/customizer.php:143
+#: inc/customizer.php:145
 msgid "Page Background Color"
 msgstr "페이지 배경 색상"
 
-#: inc/customizer.php:158
+#: inc/customizer.php:160
 msgid "Link Color"
 msgstr "링크 색상"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:172
 msgid "Main Text Color"
 msgstr "메인 텍스트 색상"
 
-#: inc/customizer.php:182
+#: inc/customizer.php:184
 msgid "Secondary Text Color"
 msgstr "보조 텍스트 색상"
 
-#: inc/customizer.php:251
+#: inc/customizer.php:253
 msgid "Default"
 msgstr "기본"
 
-#: inc/customizer.php:261
+#: inc/customizer.php:263
 msgid "Dark"
 msgstr "어두움"
 
-#: inc/customizer.php:271
+#: inc/customizer.php:273
 msgid "Gray"
 msgstr "회색"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:283
 msgid "Red"
 msgstr "빨강"
 
-#: inc/customizer.php:291
+#: inc/customizer.php:293
 msgid "Yellow"
 msgstr "노랑"
 

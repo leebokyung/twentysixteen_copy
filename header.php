@@ -39,7 +39,7 @@ do_action('sir_comm_before_header');
                         <li class="site-link-logout"><a href="<?php echo wp_logout_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('logout', 'gnucommerce-2016-summer-ipha'); ?></a></li>
                         <li class="site-link-mymember"><a href="<?php echo get_edit_user_link(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('mypage', 'gnucommerce-2016-summer-ipha'); ?></a></li>
                         <?php } else { ?>
-                        <li class="site-link-login"><a href="<?php echo wp_login_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('lgoin', 'gnucommerce-2016-summer-ipha'); ?></a></li>
+                        <li class="site-link-login"><a href="<?php echo wp_login_url(); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php _e('login', 'gnucommerce-2016-summer-ipha'); ?></a></li>
                         <li class="site-link-join"><a href="<?php echo wp_registration_url(); ?>"><i class="fa fa-heart-o" aria-hidden="true"></i> <?php _e('register', 'gnucommerce-2016-summer-ipha'); ?></a></li>
                         <?php } ?>
                     </ul> 
