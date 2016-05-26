@@ -6,7 +6,7 @@ Description: 에스아이알 커뮤니티 테마입니다.
 Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: SIR Community
+Text Domain: gnucommerce-2016-summer-ipha
 
 Use it to make something cool, have fun, and share what you've learned with others.
 */
@@ -1231,9 +1231,8 @@ blockquote:after,
 .widget li a{font-family: Montserrat, "Helvetica Neue", sans-serif;color:#656565}
 
 /* Calendar widget */
-.widget.widget_calendar table {
-	margin: 0;
-}
+.widget.widget_calendar{padding:0 10px 10px 10px;}
+.widget.widget_calendar table {margin:0;}
 
 .widget_calendar td,
 .widget_calendar th {
@@ -1244,7 +1243,10 @@ blockquote:after,
 
 .widget_calendar caption {
 	font-weight: 900;
-	margin-bottom: 1.75em;
+	font-size:14px;
+	padding:15px 0;
+	color:#525f78;
+	font-weight:normal;
 }
 
 .widget_calendar tbody a {
@@ -1259,6 +1261,10 @@ blockquote:after,
 	background-color: #686868;
 	color: #fff;
 }
+
+.textwidget{font-size:0.813em;padding:10px}
+.widget_archive li, .widget_meta li, .widget_pages li{font-size:0.813em;border-bottom:1px solid #e3e3e3}
+.widget_archive li:hover a, .widget_meta li:hover a, .widget_pages li:hover a{color:#007acc}
 
 /* Recent Posts widget */
 .widget_recent_entries .post-date {
@@ -2902,12 +2908,6 @@ p > video {
 		width: 277px;
 	}
 
-	.widget {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		line-height: 1.6153846154;
-	}
-
 	.widget .widget-title {
 	    padding:15px 10px;
 	}
@@ -2998,7 +2998,8 @@ p > video {
 	.widget button.search-submit {
 		padding: 0;
 	}
-
+    
+    .tagcloud {font-size:0.813em}
 	.tagcloud a {
 		margin: 0 0.2307692308em 0.5384615385em 0;
 		padding: 0.5384615385em 0.4615384615em 0.4615384615em;
