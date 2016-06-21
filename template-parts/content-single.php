@@ -2,7 +2,6 @@
 /**
  * The template part for displaying single posts
  *
- * @package WordPress
  */
 ?>
 
@@ -20,11 +19,11 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', SIR_CMM_NAME ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'gnucommerce-2016-summer-ipha' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', SIR_CMM_NAME ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'gnucommerce-2016-summer-ipha' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 
@@ -40,7 +39,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', SIR_CMM_NAME ),
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'gnucommerce-2016-summer-ipha' ),
 					get_the_title()
 				),
 				'<span class="edit-link">',

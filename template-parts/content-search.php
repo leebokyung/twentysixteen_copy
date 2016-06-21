@@ -2,7 +2,6 @@
 /**
  * The template part for displaying results in search pages
  *
- * @package WordPress
  */
 ?>
 
@@ -23,7 +22,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						__( 'Edit<span class="screen-reader-text"> "%s"</span>', SIR_CMM_NAME ),
+						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'gnucommerce-2016-summer-ipha' ),
 						get_the_title()
 					),
 					'<span class="edit-link">',
@@ -38,7 +37,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', SIR_CMM_NAME ),
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'gnucommerce-2016-summer-ipha' ),
 					get_the_title()
 				),
 				'<footer class="entry-footer"><span class="edit-link">',

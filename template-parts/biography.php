@@ -2,7 +2,6 @@
 /**
  * The template part for displaying an Author biography
  *
- * @package WordPress
  */
 ?>
 
@@ -10,9 +9,7 @@
 	<div class="author-avatar">
 		<?php
 		/**
-		 * Filter the Twenty Sixteen author bio avatar size.
 		 *
-		 * @since Twenty Sixteen 1.0
 		 *
 		 * @param int $size The avatar height and width size in pixels.
 		 */
@@ -23,12 +20,12 @@
 	</div><!-- .author-avatar -->
 
 	<div class="author-description">
-		<h2 class="author-title"><span class="author-heading"><?php _e( 'Author:', SIR_CMM_NAME ); ?></span> <?php echo get_the_author(); ?></h2>
+		<h2 class="author-title"><span class="author-heading"><?php _e( 'Author:', 'gnucommerce-2016-summer-ipha' ); ?></span> <?php echo get_the_author(); ?></h2>
 
 		<p class="author-bio">
 			<?php the_author_meta( 'description' ); ?>
 			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( __( 'View all posts by %s', SIR_CMM_NAME ), get_the_author() ); ?>
+				<?php printf( __( 'View all posts by %s', 'gnucommerce-2016-summer-ipha' ), get_the_author() ); ?>
 			</a>
 		</p><!-- .author-bio -->
 	</div><!-- .author-description -->

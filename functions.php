@@ -1,34 +1,19 @@
 <?php
 /**
- * sir community functions and definitions
+ * List of files inclusion and functions
  *
- * Set up the theme and provides some helper functions, which are used in the
- * theme as custom template tags. Others are attached to action and filter
- * hooks in WordPress to change core functionality.
- *
- * When using a child theme you can override certain functions (those wrapped
- * in a function_exists() call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before
- * the parent theme's file, so the child theme functions would be used.
- *
- * @link https://codex.wordpress.org/Theme_Development
- * @link https://codex.wordpress.org/Child_Themes
- *
- * Functions that are not pluggable (not wrapped in function_exists()) are
- * instead attached to a filter or action hook.
- *
- * For more information on hooks, actions, and filters,
- * {@link https://codex.wordpress.org/Plugin_API}
- *
+ * Define global variables:
+ * $themename : theme name information
+ * $shortname : short name information
+ * 
  * @package WordPress
+ * @subpackage gnucommerce-2016-summer-ipha
+ * @since gnucommerce-2016-summer-ipha 1.0.0
  */
 
-/**
- * sir community only works in WordPress 4.4 or later.
- */
-if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
-}
+$theme_text_domain = 'gnucommerce-2016-summer-ipha';
+//$theme 					= wp_get_theme( 'gnucommerce-2016-summer-ipha' );
+//$theme_version 	= $theme['Version'];
 
 if ( ! function_exists( 'sircomm_setup' ) ) :
 /**
@@ -44,12 +29,14 @@ if ( ! function_exists( 'sircomm_setup' ) ) :
  */
 function sircomm_setup() {
 
-	// wp-content/languages/theme-name/de_DE.mo
-	load_theme_textdomain( SIR_CMM_NAME, trailingslashit( WP_LANG_DIR ) . SIR_CMM_NAME );
-	// wp-content/themes/child-theme-name/languages/de_DE.mo
-	load_theme_textdomain( SIR_CMM_NAME, get_stylesheet_directory() . '/languages' );
-	// wp-content/themes/theme-name/languages/de_DE.mo
-	load_theme_textdomain( SIR_CMM_NAME, get_template_directory() . '/languages' );
+    // wp-content/languages/themes/storefront-it_IT.mo
+    load_theme_textdomain( 'gnucommerce-2016-summer-ipha', trailingslashit( WP_LANG_DIR ) . 'themes/' );
+
+    // wp-content/themes/child-theme-name/languages/it_IT.mo
+    load_theme_textdomain( 'gnucommerce-2016-summer-ipha', get_stylesheet_directory() . '/languages' );
+
+    // wp-content/themes/storefront/languages/it_IT.mo
+    load_theme_textdomain( 'gnucommerce-2016-summer-ipha', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -83,8 +70,8 @@ function sircomm_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', SIR_CMM_NAME ),
-		'social'  => __( 'Social Links Menu', SIR_CMM_NAME ),
+		'primary' => __( 'Primary Menu', 'gnucommerce-2016-summer-ipha' ),
+		'social'  => __( 'Social Links Menu', 'gnucommerce-2016-summer-ipha' ),
 	) );
 
 	/*
@@ -151,9 +138,9 @@ add_action( 'after_setup_theme', 'sircomm_content_width', 0 );
  */
 function sircomm_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', SIR_CMM_NAME ),
+		'name'          => __( 'Sidebar', 'gnucommerce-2016-summer-ipha' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', SIR_CMM_NAME ),
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'gnucommerce-2016-summer-ipha' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -161,9 +148,9 @@ function sircomm_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 1', SIR_CMM_NAME ),
+		'name'          => __( 'Content Bottom 1', 'gnucommerce-2016-summer-ipha' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', SIR_CMM_NAME ),
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'gnucommerce-2016-summer-ipha' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -171,9 +158,9 @@ function sircomm_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 2', SIR_CMM_NAME ),
+		'name'          => __( 'Content Bottom 2', 'gnucommerce-2016-summer-ipha' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Appears at the bottom of the content on posts and pages.', SIR_CMM_NAME ),
+		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'gnucommerce-2016-summer-ipha' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -198,17 +185,17 @@ function sircomm_fonts_url() {
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', SIR_CMM_NAME ) ) {
+	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'gnucommerce-2016-summer-ipha' ) ) {
 		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', SIR_CMM_NAME ) ) {
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'gnucommerce-2016-summer-ipha' ) ) {
 		$fonts[] = 'Montserrat:400,700';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', SIR_CMM_NAME ) ) {
+	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'gnucommerce-2016-summer-ipha' ) ) {
 		$fonts[] = 'Inconsolata:400';
 	}
 
@@ -250,16 +237,19 @@ function sircomm_scripts() {
 	// Theme stylesheet.
 	wp_enqueue_style( 'sircomm-style', get_stylesheet_uri() );
 
+    wp_enqueue_style( 'bxslider_css', get_template_directory_uri() . '/css/jquery.bxslider.css', array('sircomm-style'), '20160523' );
+    wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . '/css/font-awesome.css', array('sircomm-style'), '20160523' );
+
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'sircomm-ie', get_template_directory_uri() . '/css/ie.css', array( 'sircomm-style' ), '20160412' );
+	wp_enqueue_style( 'sircomm-ie', get_template_directory_uri() . '/css/ie.css', array( 'sircomm-style' ), '20160523' );
 	wp_style_add_data( 'sircomm-ie', 'conditional', 'lt IE 10' );
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'sircomm-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'sircomm-style' ), '20160412' );
+	wp_enqueue_style( 'sircomm-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'sircomm-style' ), '20160523' );
 	wp_style_add_data( 'sircomm-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'sircomm-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'sircomm-style' ), '20160412' );
+	wp_enqueue_style( 'sircomm-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'sircomm-style' ), '20160523' );
 	wp_style_add_data( 'sircomm-ie7', 'conditional', 'lt IE 8' );
 
 	// Load the html5 shiv.
@@ -279,9 +269,11 @@ function sircomm_scripts() {
 	wp_enqueue_script( 'sircomm-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160412', true );
 
 	wp_localize_script( 'sircomm-script', 'screenReaderText', array(
-		'expand'   => __( 'expand child menu', SIR_CMM_NAME ),
-		'collapse' => __( 'collapse child menu', SIR_CMM_NAME ),
+		'expand'   => __( 'expand child menu', 'gnucommerce-2016-summer-ipha' ),
+		'collapse' => __( 'collapse child menu', 'gnucommerce-2016-summer-ipha' ),
 	) );
+
+    wp_enqueue_script( 'bxslider_jscript', get_template_directory_uri() . '/js/jquery.bxslider.min.js', array('jquery'), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'sircomm_scripts' );
 
@@ -418,4 +410,85 @@ function sircomm_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'sircomm_widget_tag_cloud_args' );
 
-require get_template_directory() . '/classes/plugin_require.php';
+require get_template_directory() . '/core/plugin_require.php';
+
+function summeripha_get_function_file($field){
+
+    $path = trailingslashit( get_template_directory() ) . 'core/admin/inc/'.$field.'.php';
+
+    if( file_exists($path) ){
+        include_once($path);
+    }
+}
+
+function summeripha_footer_default_content_by($type=''){
+    return '';
+}
+
+function summeripha_get_wordpress_data($type = false, $args=array()){
+    $data = array();
+
+    if( ! $type ){
+        return $data;
+    }
+
+    $data = wp_cache_get( 'summeripha_get_theme_data_'.$type );
+    
+    if ( false === $data ) {
+        if( $type == "pages" || $type == "page" ){
+            $data[] = '';
+
+            if ( ! isset ( $args['posts_per_page'] ) ) {
+                $args['posts_per_page'] = 40;
+            }
+            $pages = get_pages( $args );
+            if ( ! empty ( $pages ) ) {
+                foreach ( $pages as $page ) {
+                    $data[ $page->ID ] = $page->post_title;
+                }
+                //foreach
+            }
+            //if
+        }
+
+        wp_cache_set( 'summeripha_get_theme_data_'.$type, $data );
+    }
+
+    return $data;
+}
+
+function summeripha_get_var_by($key='icon_class'){
+
+    if( $key == 'icon_class' ){
+        return array(
+                    'sc_notice'=>'sc_notice',
+                    'sc_latest'=>'sc_latest',
+                    'sc_g5'=>'sc_g5',
+                    'sc_yc5'=>'sc_yc5',
+                    'sc_data'=>'sc_data',
+                    'sc_gallery'=>'sc_gallery',
+                    'sc_nquiryt'=>'sc_nquiryt',
+                    'sc_contact'=>'sc_contact',
+                    'sc_tip'=>'sc_tip',
+                    'sc_customer'=>'sc_customer'
+                );
+    } else if( $key == 'link_target' ){
+        return array(
+                    '_self'=>'_self',
+                    '_blank'=>'_blank',
+                );
+    } else if( $key == 'icon_text' ){
+        return array(
+            0=> __('공지', 'gnucommerce-2016-summer-ipha'),
+            1=> __('최근글', 'gnucommerce-2016-summer-ipha'),
+            2=> __('그누보드5', 'gnucommerce-2016-summer-ipha'),
+            3=> __('영카트5', 'gnucommerce-2016-summer-ipha'),
+            4=> __('회원자료', 'gnucommerce-2016-summer-ipha'),
+            5=> __('갤러리', 'gnucommerce-2016-summer-ipha'),
+            6=> __('1:1문의', 'gnucommerce-2016-summer-ipha'),
+            7=> __('오시는 길', 'gnucommerce-2016-summer-ipha'),
+            8=> __('강좌/팁', 'gnucommerce-2016-summer-ipha'),
+            9=> __('고객센터', 'gnucommerce-2016-summer-ipha'),
+            );
+    }
+}

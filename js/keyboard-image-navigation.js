@@ -1,7 +1,3 @@
-/**
- * Twenty Sixteen keyboard support for image navigation.
- */
-
 ( function( $ ) {
 	$( document ).on( 'keydown.sircomm', function( e ) {
 		var url = false;

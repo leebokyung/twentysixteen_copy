@@ -11,7 +11,6 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
  */
 
 get_header(); ?>
@@ -44,9 +43,9 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', SIR_CMM_NAME ),
-				'next_text'          => __( 'Next page', SIR_CMM_NAME ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', SIR_CMM_NAME ) . ' </span>',
+				'prev_text'          => __( 'Previous page', 'gnucommerce-2016-summer-ipha' ),
+				'next_text'          => __( 'Next page', 'gnucommerce-2016-summer-ipha' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'gnucommerce-2016-summer-ipha' ) . ' </span>',
 			) );
 
 		// If no content, include the "No posts found" template.
