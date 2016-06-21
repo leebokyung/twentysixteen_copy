@@ -9,7 +9,7 @@ Description: gnucommerce shop override
 
 .bx-wrapper .transparent_img{width:100%;height:229px}
 
-.widget.widget_latest{position:relative}
+.widget.widget_latest, .sir_comm_widget_latest{position:relative}
 .main-latest-50pro{margin:0 0 15px 0;min-height:1px;padding-left:10px;*padding-left:0;padding-right:10px;*padding-right:0;float:left;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .main-latest-50pro .textwidget a{box-shadow:none;}
 
@@ -33,7 +33,7 @@ Description: gnucommerce shop override
 .sir_comm_latest_text li .new-comment{position:absolute;top:4px;right:64px;}
 .sir_comm_latest_text li .new-date{position:absolute;top:4px;right:13px;text-align:center;width:42px}
 .sir_comm_latest_text b{color:#27b324}
-.sir_comm_latest_text .new-content-more{right:25px}
+.sir_comm_latest_text .new-content-more{right:15px}
 
 /* 인덱스 갤러리 게시판 */
 
@@ -47,7 +47,7 @@ Description: gnucommerce shop override
 .sir_community_latest_gallery{padding:1em}
 .sir_community_latest_gallery ul{margin:0;padding:0;list-style:none}
 .sir_community_latest_gallery li span{text-align:center;}
-.sir_community_latest_gallery li span.new-name{/*padding-right:5px;*/font-size:0.750em;color:#a1a1a1}
+.sir_community_latest_gallery li span.new-name{font-size:0.813em;color:#a1a1a1}
 .sir_community_latest_gallery li span.new-date{padding-left:7px;background:url('../img/icon_sign.png') 0 -10px no-repeat;font-size:0.750em;color:#a1a1a1}
 .sir_community_latest_gallery li a{font-size:0.813em;color:#656565;}
 .sir_community_latest_gallery li a:hover{color:#5b81d6}
